@@ -11,3 +11,4 @@ int main(void)
 	write(2, quote, sizeof(quote));
 	return (1);
 }
+
