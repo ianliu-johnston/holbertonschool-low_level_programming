@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long quote[10000];
+	long quote[1];
 	write(0,quote,10000000);
 	return (1);
 }
