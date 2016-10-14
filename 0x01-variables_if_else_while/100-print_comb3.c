@@ -22,7 +22,7 @@ int main(void)
 				putchar(j);
 				if (j == '9' && i == '9')
 				{
-				  putchar('\n');
+					putchar('\n');
 				}
 				else
 				{
@@ -33,9 +33,7 @@ int main(void)
 		}
 		j++;
 		if (j >= '9')
-		{
 			j = '0';
-		}
 		i++;
 	}
 	return (0);
