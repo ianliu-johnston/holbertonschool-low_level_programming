@@ -16,7 +16,7 @@ int main(void)
 		{
 			while (k <= '9')
 			{
-				if(i > j || j > k || i > k || i == j || i == k || k == j)
+				if (i > j || j > k || i > k || i == j || i == k || k == j)
 				{
 				}
 				else
@@ -36,13 +36,13 @@ int main(void)
 				}
 				k++;
 			}
-			if(k >= '9')
+			if (k >= '9')
 			{
 				k = '0';
 			}
 			j++;
 		}
-		if(j >= '9')
+		if (j >= '9')
 		{
 			j = '0';
 		}

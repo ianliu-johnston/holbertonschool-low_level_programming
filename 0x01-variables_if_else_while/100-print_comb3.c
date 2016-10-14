@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
- * main - print all unique combinations of two digit numbers, 
- * regardless of the order of the digits.
+ * main - print numbers from 00 to 99.
 (*
  * Return: 0 on success
  */
@@ -23,7 +22,7 @@ int main(void)
 				putchar(j);
 				if (j == '9' && i == '9')
 				{
-			  		putchar('\n');
+				  putchar('\n');
 				}
 				else
 				{
@@ -31,8 +30,8 @@ int main(void)
 					putchar(' ');
 				}
 			}
-			j++;
 		}
+		j++;
 		if (j >= '9')
 		{
 			j = '0';
