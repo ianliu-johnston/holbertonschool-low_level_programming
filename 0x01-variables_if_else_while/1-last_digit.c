@@ -14,9 +14,9 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n % 10 < 6 && n % 10 != 0)
+	if (n % 10 > 5)
 	{
-		printf("%s %d is %d and is less than 6 and not zero\n", last, n, n % 10);
+		printf("%s %d is %d and is greater than 5\n", last, n, n % 10);
 	}
 	else if (n == 0)
 	{
@@ -25,6 +25,10 @@ int main(void)
 	else if (n % 10 > 5)
 	{
 		printf("%s %d is %d and is greater than 5\n", last, n, n % 10);
+	}
+	else
+	{
+		printf("%s %d is %d and is less than 6     and not zero\n", last, n, n % 10);
 	}
 	return (0);
 
