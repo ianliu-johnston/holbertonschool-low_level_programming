@@ -17,7 +17,7 @@ int main(void)
 			putchar(j);
 			if (j == '9' && i == '9')
 			{
-			  putchar('\n');
+				putchar('\n');
 			}
 			else
 			{
