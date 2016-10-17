@@ -1,0 +1,1642 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Holberton School">
+    <link rel="icon" href="../../favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <title>Holberton School's awesome intranet</title>
+
+    <link rel="stylesheet" media="all" href="/assets/application-df3ae5a2f8b982500e5c8960ea16627e8b686b42c4d63c90fe8c963f7f3ab86d.css" />
+    <script src="/assets/application-891c9d030a8142037aa0d240e8ab0c51548ce2d036f474a0ef70b188be45a30e.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="4fgcvGKhejJ+zpedXtWRL47BFahgC4q1w05msLvOCCkGM8IzrU/uryzOg89fK3T919IeNe09OXypIjUOLyWOSg==" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="signed_in">
+
+      <nav id="nav-left" class="hidden-xs title-font">
+        <a href="/">
+          <div id="holberton-logo">
+            <img alt="Holberton School" src="/assets/holberton-logo-simplified-d4e8a1e8bf5ad93c8c3ce32895b4b53749b477b7ba7342d7f064e6883bcd3be2.png" />
+          </div>
+</a>        <ul>
+            <li>
+    <a href="/dashboards/my_planning">
+        <div class="icon">
+          <i class="fa fa-calendar"></i>
+        </div>
+      My planning
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_current_projects">
+        <div class="icon">
+          <i class="fa fa-list"></i>
+        </div>
+      My projects
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_concepts">
+        <div class="icon">
+          <i class="fa fa-file-text"></i>
+        </div>
+      My concepts
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_batchmates">
+        <div class="icon">
+          <i class="fa fa-users"></i>
+        </div>
+      My batchmates
+</a>  </li>
+  <li>
+    <a href="/dashboards/corrections_i_can_make">
+        <div class="icon">
+          <i class="fa fa-check"></i>
+        </div>
+      QA reviews I can make
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_captain_log">
+        <div class="icon">
+          <i class="fa fa-book"></i>
+        </div>
+      My Captain's Logs
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_officers">
+        <div class="icon">
+          <i class="fa fa-building"></i>
+        </div>
+      My Officers
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_server">
+        <div class="icon">
+          <i class="fa fa-server"></i>
+        </div>
+      My Servers
+</a>  </li>
+
+<li>
+  <a href="/users/my_profile">
+      <div class="icon">
+        <i class="fa fa-user"></i>
+      </div>
+    My profile
+</a></li>
+
+        </ul>
+      </nav>
+
+    <main>
+
+        <nav class="navbar navbar-default navbar-main visible-xs">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                  <img alt="Holberton School" src="/assets/holberton-logo-simplified-d4e8a1e8bf5ad93c8c3ce32895b4b53749b477b7ba7342d7f064e6883bcd3be2.png" />
+</a>            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+    <a href="/dashboards/my_planning">
+      My planning
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_current_projects">
+      My projects
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_concepts">
+      My concepts
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_batchmates">
+      My batchmates
+</a>  </li>
+  <li>
+    <a href="/dashboards/corrections_i_can_make">
+      QA reviews I can make
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_captain_log">
+      My Captain's Logs
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_officers">
+      My Officers
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_server">
+      My Servers
+</a>  </li>
+
+<li>
+  <a href="/users/my_profile">
+    My profile
+</a></li>
+
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ian Liu-Johnston <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a rel="nofollow" data-method="delete" href="/auth/sign_out">Log out</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+
+
+      <article class="">
+
+        
+<h1 class="gap">0x02. C - functions, nested loops</h1>
+
+<div id="project_id" style="display: none" data-project-id="214"></div>
+
+<p class="sm-gap">
+  <small>
+    <i class="fa fa-folder-open"></i>
+    Low-level programming &amp; Algorithm ― Hatching out
+  </small>
+</p>
+
+  <p>
+    <em>
+      <small>
+        <i class="fa fa-user"></i> by Julien Barbier, co-founder at Holberton School
+      </small>
+    </em>
+  </p>
+
+
+
+  <p>
+    <small>
+      <i class="fa fa-calendar"></i>
+        Ongoing project - started 10-17-2016, must end by 10-19-2016 (in 2 days)
+        - <span id="student_task_done_percentage">you're 0</span>% done.
+    </small>
+  </p>
+
+
+
+
+
+<article id="description" class="gap formatted-content">
+  <h2>Readme</h2>
+
+<p>Read or watch, <a href="https://www.youtube.com/watch?v=Z3iGeQ1gIss">Nested while loops</a>, <a href="http://www.tutorialspoint.com/cprogramming/c_functions.htm">C - Functions</a>, <a href="https://www.youtube.com/watch?v=qMlnFwYdqIw">Learning to Program in C (Part 06)</a> (stop at 14:00), <a href="http://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/">What is the purpose of a function prototype?</a> and <a href="https://www.tutorialspoint.com/cprogramming/c_header_files.htm">C - Header Files</a> (stop before the &quot;Once-Only Headers&quot; paragraph).</p>
+
+<p>You do not have to understand the call by reference (address), stack, static variables, recursions or arrays, yet.</p>
+
+<h2>What you should learn from this project</h2>
+
+<p>At the end of this project you are expected to be able to explain to anyone, without the help of Google:</p>
+
+<ul>
+<li>What are nested loops and how to use them</li>
+<li>What is a function and how do you use functions</li>
+<li>What is the difference between a declaration and a definition of a function</li>
+<li>What is a prototype</li>
+<li>Scope of variables</li>
+<li>What are the <code>gcc</code> flags <code>-Wall -Werror -pedantic -Wextra</code></li>
+<li>What are header files and how to to use them with <code>#include</code></li>
+</ul>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be compiled on Ubuntu 14.04 LTS</li>
+<li>Your programs and functions will be compiled with <code>gcc</code> using the flags <code>-Wall</code> <code>-Werror</code> <code>-Wextra</code> <code>and -pedantic</code></li>
+<li>All your files should end with a new line</li>
+<li>A <code>Readme.md</code> file, at the root of the folder of the project is mandatory</li>
+<li>Your code should use the <code>Betty</code> style. It will be checked using <a href="https://github.com/holbertonschool/Betty/blob/master/betty-style.pl">betty-style.pl</a> and <a href="https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl">betty-doc.pl</a></li>
+<li>You are not allowed to use global variables</li>
+<li>No more than 5 functions per file</li>
+<li>You are not allowed to use the standard library. Any use of functions like <code>printf</code>, <code>puts</code>, etc... is forbidden</li>
+<li>You are allowed to use <a href="https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c">_putchar</a></li>
+<li>You don&#39;t have to push <code>_putchar.c</code>, we will use our file. If you do it won&#39;t be taken into account</li>
+<li>In the following examples, the <code>main.c</code> files are showed as examples. You can use them to test your functions, but you don&#39;t have to push them to your repo (if you do we won&#39;t take them into account). We will use our own <code>main.c</code> files at compilation. Our <code>main.c</code> files might be different from the one showed in the examples</li>
+<li>The prototypes of all your functions and the prototype of the function <code>_putchar</code> should be included in your header file called <code>holberton.h</code></li>
+<li>Don&#39;t forget to push your header file</li>
+</ul>
+
+</article>
+
+  <hr class="gap">
+  <h2 class="gap">Tasks</h2>
+  <section class="formatted-content">
+        <div data-role="task846" data-position="1">
+            <div class=" clearfix gap" id="task-846">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="846">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="846" data-toggle="modal" data-target="#task-846-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-846-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "_putchar"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/846/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="846" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    0. _putchar
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="846" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a program that prints <code>Holberton</code>, followed by a new line.</p>
+
+<ul>
+<li>The program should return 0</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x02$  gcc -Wall -pedantic -Werror -Wextra _putchar.c 0-holberton.c -o 0-holberton
+julien@ubuntu:~/0x02$ ./0-holberton 
+Holberton
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>0-holberton.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task847" data-position="2">
+            <div class=" clearfix gap" id="task-847">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="847">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="847" data-toggle="modal" data-target="#task-847-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-847-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "I sometimes suffer from insomnia. And when I can&#39;t fall asleep, I play what I call the alphabet game"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/847/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="847" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    1. I sometimes suffer from insomnia. And when I can&#39;t fall asleep, I play what I call the alphabet game
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="847" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a function that prints the alphabet, in lowercase, followed by a new line.</p>
+
+<ul>
+<li>Prototype: <code>void print_alphabet(void);</code></li>
+<li>You can only use <code>_putchar</code> twice in your code</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x02$ cat 1-main.c
+#include &quot;holberton.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_alphabet();
+    return (0);
+}
+julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 1-main.c 1-alphabet.c -o 1-alphabet
+julien@ubuntu:~/0x02$ ./1-alphabet 
+abcdefghijklmnopqrstuvwxyz
+julien@ubuntu:~/0x02$
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>1-alphabet.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task848" data-position="3">
+            <div class=" clearfix gap" id="task-848">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="848">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="848" data-toggle="modal" data-target="#task-848-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-848-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "10 x alphabet"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/848/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="848" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    2. 10 x alphabet
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="848" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a function that prints 10 times the alphabet, in lowercase, followed by a new line.</p>
+
+<ul>
+<li>Prototype: <code>void print_alphabet(void);</code></li>
+<li>You can only use <code>_putchar</code> twice in your code</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x02$ cat 2-main.c
+#include &quot;holberton.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_alphabet_x10();
+    return (0);
+}
+julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 2-main.c 2-print_alphabet_x10.c -o 2-alphabet_x10
+julien@ubuntu:~/0x02$ ./2-alphabet_x10 
+abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>2-print_alphabet_x10.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task849" data-position="4">
+            <div class=" clearfix gap" id="task-849">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="849">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="849" data-toggle="modal" data-target="#task-849-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-849-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "islower"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/849/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="849" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    3. islower
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="849" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a function that checks for lowercase character. </p>
+
+<ul>
+<li>Prototype: <code>int _islower(int c);</code></li>
+<li>Returns 1 if <code>c</code> is lowercase</li>
+<li>Returns 0 otherwise</li>
+</ul>
+
+<p>FYI: The standard library provides a similar function: <code>islower</code>. Run <code>man islower</code> to learn more.</p>
+
+<pre><code>julien@ubuntu:~/0x02$ cat 3-main.c 
+#include &quot;holberton.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = _islower(&#39;H&#39;);
+    _putchar(r + &#39;0&#39;);
+    r = _islower(&#39;o&#39;);
+    _putchar(r + &#39;0&#39;);
+    r = _islower(108);
+    _putchar(r + &#39;0&#39;);
+    _putchar(&#39;\n&#39;);
+    return (0);
+}
+julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 3-main.c 3-islower.c -o 3-islower
+julien@ubuntu:~/0x02$ ./3-islower 
+011
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>3-islower.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task850" data-position="5">
+            <div class=" clearfix gap" id="task-850">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="850">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="850" data-toggle="modal" data-target="#task-850-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-850-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "isalpha"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/850/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="850" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    4. isalpha
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="850" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a function that checks for alphabetic character. </p>
+
+<ul>
+<li>Prototype: <code>int _isalpha(int c);</code></li>
+<li>Returns 1 if <code>c</code> is a letter, lowercase or uppercase</li>
+<li>Returns 0 otherwise</li>
+</ul>
+
+<p>FYI: The standard library provides a similar function: <code>isalpha</code>. Run <code>man isalpha</code> to learn more.</p>
+
+<pre><code>julien@ubuntu:~/0x02$ cat 4-main.c 
+#include &quot;holberton.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = _isalpha(&#39;H&#39;);
+    _putchar(r + &#39;0&#39;);
+    r = _isalpha(&#39;o&#39;);
+    _putchar(r + &#39;0&#39;);
+    r = _isalpha(108);
+    _putchar(r + &#39;0&#39;);
+    r = _isalpha(&#39;;&#39;);
+    _putchar(r + &#39;0&#39;);
+    _putchar(&#39;\n&#39;);
+    return (0);
+}
+julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 4-main.c 4-isalpha.c -o 4-isalpha
+julien@ubuntu:~/0x02$ ./4-isalpha 
+1110
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>4-isalpha.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task851" data-position="6">
+            <div class=" clearfix gap" id="task-851">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="851">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="851" data-toggle="modal" data-target="#task-851-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-851-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Sign"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/851/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="851" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    5. Sign
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="851" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a function that prints the sign of a number.</p>
+
+<ul>
+<li>Prototype: <code>int print_sign(int n);</code></li>
+<li>Returns 1 and prints <code>+</code> if <code>n</code> is greater than zero</li>
+<li>Returns 0 and prints <code>0</code> if <code>n</code> is zero</li>
+<li>Returns -1 and prints <code>-</code> if <code>n</code> is less than zero</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x02$ cat 5-main.c
+#include &quot;holberton.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = print_sign(98);
+    _putchar(&#39;,&#39;);
+    _putchar(&#39; &#39;);
+    _putchar(r + &#39;0&#39;);
+    _putchar(&#39;\n&#39;);
+    r = print_sign(0);
+    _putchar(&#39;,&#39;);
+    _putchar(&#39; &#39;);
+    _putchar(r + &#39;0&#39;);
+    _putchar(&#39;\n&#39;);
+    r = print_sign(0xff);
+    _putchar(&#39;,&#39;);
+    _putchar(&#39; &#39;);
+    _putchar(r + &#39;0&#39;);
+    _putchar(&#39;\n&#39;);
+    r = print_sign(-1);
+    _putchar(&#39;,&#39;);
+    _putchar(&#39; &#39;);
+    _putchar(r + &#39;0&#39;);
+    _putchar(&#39;\n&#39;);
+    return (0);
+}
+julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 5-main.c 5-sign.c -o 5-sign
+julien@ubuntu:~/0x02$ ./5-sign 
++, 1
+0, 0
++, 1
+-, /
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>5-sign.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task852" data-position="7">
+            <div class=" clearfix gap" id="task-852">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="852">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="852" data-toggle="modal" data-target="#task-852-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-852-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/852/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="852" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="852" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a function that computes the absolute value of an integer.</p>
+
+<ul>
+<li>Prototype: <code>int _abs(int);</code></li>
+</ul>
+
+<p>FYI: The standard library provides a similar function: <code>abs</code>. Run <code>man abs</code> to learn more.</p>
+
+<pre><code>julien@ubuntu:~/0x02$ cat 6-main.c
+#include &quot;holberton.h&quot;
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = _abs(-1);
+    printf(&quot;%d\n&quot;, r);
+    r = _abs(0);
+    printf(&quot;%d\n&quot;, r);
+    r = _abs(1);
+    printf(&quot;%d\n&quot;, r);
+    r = _abs(-98);
+    printf(&quot;%d\n&quot;, r);
+    return (0);
+}
+julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 6-main.c 6-abs.c -o 6-abs
+julien@ubuntu:~/0x02$ ./6-abs 
+1
+0
+1
+98
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>6-abs.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task853" data-position="8">
+            <div class=" clearfix gap" id="task-853">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="853">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="853" data-toggle="modal" data-target="#task-853-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-853-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "There are only 3 colors, 10 digits, and 7 notes; its what we do with them that&#39;s important"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/853/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="853" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    7. There are only 3 colors, 10 digits, and 7 notes; its what we do with them that&#39;s important
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="853" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a function that prints the last digit of a number.</p>
+
+<ul>
+<li>Prototype: <code>int print_last_digit(int);</code></li>
+<li>Returns the value of the last digit</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x02$ cat 7-main.c
+#include &quot;holberton.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    print_last_digit(98);
+    print_last_digit(0);
+    r = print_last_digit(-1024);
+    _putchar(&#39;0&#39; + r);
+    _putchar(&#39;\n&#39;);
+    return (0);
+}
+julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 7-main.c 7-print_last_digit.c -o 7-last_digit
+julien@ubuntu:~/0x02$ ./7-last_digit 
+8044
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>7-print_last_digit.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task854" data-position="9">
+            <div class=" clearfix gap" id="task-854">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="854">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="854" data-toggle="modal" data-target="#task-854-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-854-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "I&#39;m federal agent Jack Bauer, and today is the longest day of my life"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/854/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="854" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    8. I&#39;m federal agent Jack Bauer, and today is the longest day of my life
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="854" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.</p>
+
+<ul>
+<li>Prototype: <code>void jack_bauer(void);</code></li>
+<li>You can listen to <a href="https://www.youtube.com/watch?v=btAfXqgMkPs">this soundtrack</a> while coding :)</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x02$ cat 8-main.c
+#include &quot;holberton.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    jack_bauer();
+    return (0);
+}
+julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 8-main.c 8-24_hours.c -o 8-24
+julien@ubuntu:~/0x02$ ./8-24 | head
+00:00
+00:01
+00:02
+00:03
+00:04
+00:05
+00:06
+00:07
+00:08
+00:09
+julien@ubuntu:~/0x02$ ./8-24 | tail
+23:50
+23:51
+23:52
+23:53
+23:54
+23:55
+23:56
+23:57
+23:58
+23:59
+julien@ubuntu:~/0x02$ ./8-24 | wc -l
+1440
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>8-24_hours.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task855" data-position="10">
+            <div class=" clearfix gap" id="task-855">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="855">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="855" data-toggle="modal" data-target="#task-855-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-855-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Learn your times table"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/855/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="855" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    9. Learn your times table
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="855" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a function that prints the 9 times table, starting with 0.</p>
+
+<ul>
+<li>Prototype: <code>void times_table(void)</code></li>
+<li>Format: see example</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x02$ cat 9-main.c
+#include &quot;holberton.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    times_table();
+    return (0);
+}
+julien@ubuntu:~/c/curriculum_by_julien/holbertonschool-low_level_programming/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 9-main.c 9-times_table.c -o 9-times_table
+ulien@ubuntu:~/0x02$ ./9-times_table | cat -e
+0,  0,  0,  0,  0,  0,  0,  0,  0,  0$
+0,  1,  2,  3,  4,  5,  6,  7,  8,  9$
+0,  2,  4,  6,  8, 10, 12, 14, 16, 18$
+0,  3,  6,  9, 12, 15, 18, 21, 24, 27$
+0,  4,  8, 12, 16, 20, 24, 28, 32, 36$
+0,  5, 10, 15, 20, 25, 30, 35, 40, 45$
+0,  6, 12, 18, 24, 30, 36, 42, 48, 54$
+0,  7, 14, 21, 28, 35, 42, 49, 56, 63$
+0,  8, 16, 24, 32, 40, 48, 56, 64, 72$
+0,  9, 18, 27, 36, 45, 54, 63, 72, 81$
+julien@ubuntu:~/0x02$ ./9-times_table | tr &#39; &#39; . | cat -e
+0,..0,..0,..0,..0,..0,..0,..0,..0,..0$
+0,..1,..2,..3,..4,..5,..6,..7,..8,..9$
+0,..2,..4,..6,..8,.10,.12,.14,.16,.18$
+0,..3,..6,..9,.12,.15,.18,.21,.24,.27$
+0,..4,..8,.12,.16,.20,.24,.28,.32,.36$
+0,..5,.10,.15,.20,.25,.30,.35,.40,.45$
+0,..6,.12,.18,.24,.30,.36,.42,.48,.54$
+0,..7,.14,.21,.28,.35,.42,.49,.56,.63$
+0,..8,.16,.24,.32,.40,.48,.56,.64,.72$
+0,..9,.18,.27,.36,.45,.54,.63,.72,.81$
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>9-times_table.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task856" data-position="11">
+            <div class=" clearfix gap" id="task-856">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="856">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="856" data-toggle="modal" data-target="#task-856-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-856-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "a + b"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/856/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="856" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    10. a + b
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="856" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <pre><code>julien@ubuntu:~/$ cat 10-main.c
+#include &quot;holberton.h&quot;
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int n;
+
+    n = add(89, 9);
+    printf(&quot;%d\n&quot;, n);
+    return (0);
+}
+julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 10-main.c 10-add.c -o 10-add
+julien@ubuntu:~/0x02$ ./10-add 
+98
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>10-add.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task857" data-position="12">
+            <div class=" clearfix gap" id="task-857">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="857">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="857" data-toggle="modal" data-target="#task-857-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-857-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Holberton School, 98 Battery Street, San Francisco CA 94111"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/857/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="857" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    11. Holberton School, 98 Battery Street, San Francisco CA 94111
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+    <div class="task_progress_score_bar" data-task-id="857" data-correction-id="5524">
+      <div class="task_progress_bar">
+        <div class="task_score_bar">
+        </div>    
+      </div>
+      <div class="task_progress_score_text">
+        Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">completion score: 0%</span>)
+      </div>
+    </div>
+
+  
+
+  <p>Write a function that prints all natural numbers from <code>n</code> to <code>98</code>, followed by a new line.</p>
+
+<ul>
+<li>Prototype: <code>void print_to_98(int n);</code></li>
+<li>Numbers must be separated by a coma, followed by a space</li>
+<li>Numbers should be printed in order</li>
+<li>The first printed number should be the number passed to your function</li>
+<li>The last printed number should be <code>98</code></li>
+<li>You are allowed to use the standard library</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x02$ cat 11-main.c
+#include &quot;holberton.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_to_98(0);
+    print_to_98(98);
+    print_to_98(111);
+    print_to_98(81);
+    print_to_98(-10);
+    return (0);
+}
+julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 11-main.c 11-print_to_98.c -o 11-98
+julien@ubuntu:~/0x02$ ./11-98 
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98
+98
+111, 110, 109, 108, 107, 106, 105, 104, 103, 102, 101, 100, 99, 98
+81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98
+-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98
+julien@ubuntu:~/0x02$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x02_functions_nested_loops</code></li>
+        <li>File: <code>11-print_to_98.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+  </section>
+
+  <p class="lg-gap formatted-content">
+      <a class="btn btn-primary btn-block" data-confirm="Are you sure? You still have mandatory tasks to do on the project &quot;0x02. C - functions, nested loops&quot;, you really should focus on those first." href="/projects/214/unlock_optionals">Done with the mandatory tasks? Unlock 5 advanced tasks now!</a>
+  </p>
+
+
+
+
+
+      </article>
+
+    </main>
+
+
+
+
+
+    
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-67152800-6', 'auto');
+        ga('send', 'pageview');
+      </script>
+
+  </body>
+</html>
