@@ -1,4 +1,4 @@
-int _putchar(char c);
+#include "holberton.h"
 /**
  * add - adds two numbers together.
  *
@@ -21,5 +21,3 @@ void jack_bauer(void)
 		}
 	}
 }
-
-int main(void);

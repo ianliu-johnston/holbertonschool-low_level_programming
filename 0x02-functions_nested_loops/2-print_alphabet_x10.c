@@ -1,8 +1,8 @@
+#include "holberton.h"
 /**
  * print_alphabet - prints the English alphabet, from a-z
  * Return: Nothing.
  */
-int _putchar(char c);
 void print_alphabet(void)
 {
 	char c;
@@ -24,4 +24,3 @@ void print_abc_10x(void)
 	for (i = 0; i < 10; ++i)
 		print_alphabet();
 }
-int main(void);

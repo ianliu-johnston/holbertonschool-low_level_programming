@@ -1,4 +1,4 @@
-int _putchar(int c);
+#include "holberton.h"
 /**
  * _isalpha - prints the times table from 0 - 9.
  *
@@ -32,5 +32,3 @@ void times_table(void)
 		_putchar('\n');
 	}
 }
-
-int main(void);

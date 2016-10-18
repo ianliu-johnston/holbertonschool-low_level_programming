@@ -1,5 +1,4 @@
-int _putchar(char c);
-int _abs(int);
+#include "holberton.h"
 /**
  * print_last_digit - prints the last digit of a numer.
  * Return: The last digit.

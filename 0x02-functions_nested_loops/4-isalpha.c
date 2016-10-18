@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
  * _isalpha - tests whether a character is from the English alphabet.
  *
@@ -12,5 +13,3 @@ int _isalpha(int c)
 		return (0);
 
 }
-
-int main(void);

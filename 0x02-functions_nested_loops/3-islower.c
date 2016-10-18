@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
  * _islower - tests whether a character is a
  * lowercase letter from the English alphabet.
@@ -12,5 +13,3 @@ int _islower(int c)
 		return (0);
 
 }
-
-int main(void);
