@@ -7,7 +7,7 @@ void print_alphabet(void)
 {
 	char c;
 
-	for(c = 'a'; c <= 'z'; c++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		_putchar(c);
 	}
@@ -17,9 +17,11 @@ void print_alphabet(void)
   * print_abc_10x - repeats the print_alphabet 10 times.
   * Return: Nothing.
   */
-void print_abc_10x(void){
+void print_abc_10x(void)
+{
 	int i;
-	for(i = 0; i < 10; ++i)
+
+	for (i = 0; i < 10; ++i)
 		print_alphabet();
 }
 int main(void);

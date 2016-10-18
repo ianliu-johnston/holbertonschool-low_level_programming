@@ -2,7 +2,7 @@ int _putchar(char c);
 /**
  * add - adds two numbers together.
  *
- * Return: the sum of two numbers. 
+ * Return: the sum of two numbers.
  */
 void jack_bauer(void)
 {
