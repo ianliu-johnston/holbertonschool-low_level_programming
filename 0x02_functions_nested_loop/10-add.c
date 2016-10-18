@@ -1,11 +1,11 @@
-#include <stdio.h>
 /**
- * main - 
+ * add - adds two numbers together.
  *
- * Return:
+ * Return: the sum of two numbers. 
  */
-
-int main(void)
+int add(int i, int j)
 {
-	return (0);
+	return (i + j);
 }
+
+int main(void);

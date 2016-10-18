@@ -1,11 +1,25 @@
-#include <stdio.h>
+int _putchar(char c);
 /**
- * main - 
+ * add - adds two numbers together.
  *
- * Return:
+ * Return: the sum of two numbers. 
  */
-
-int main(void)
+void jack_bauer(void)
 {
-	return (0);
+	int h, m;
+
+	for (h = 0; h < 24; h++)
+	{
+		for (m = 0; m < 60; m++)
+		{
+			_putchar((h / 10) + '0');
+			_putchar((h % 10) + '0');
+			_putchar(':');
+			_putchar((m / 10) + '0');
+			_putchar((m % 10) + '0');
+			_putchar('\n');
+		}
+	}
 }
+
+int main(void);
