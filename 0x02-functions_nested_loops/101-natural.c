@@ -1,19 +1,17 @@
-#include "holberton.h"
+#include <stdio.h>
 /**
-  * print_alphabet_x10 - repeats the print_alphabet 10 times.
+  * main - computes and prints the sum of all the multiples of
+  * 3 or 5 below 1024.
   * Return: Nothing.
   */
-void print_alphabet_x10(void)
-{
-	int i;
-	char c;
 
-	for (i = 0; i < 10; ++i)
-	{
-		for (c = 'a'; c <= 'z'; c++)
-		{
-			_putchar(c);
-		}
-		_putchar('\n');
-	}
+int main(void)
+{
+	int i, res;
+
+	for (i = 0; i < 1024; i++)
+		if (i % 3 == 0 || i % 5 == 0)
+			res += i;
+	printf("%d\n", res);
+	return (0);
 }
