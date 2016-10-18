@@ -1,15 +1,14 @@
-#include "holberton.h"#include "holberton.h"
+#include "holberton.h"
 /**
  * main - prints the string "Holberton" from a character array.
  * Return: 0 on success.
  */
-
 int main(void)
 {
 	char c[] = "Holberton";
 	int i;
 
-	for (i = 0; i < (int)(sizeof(c) / sizeof(c[0])); i++)
+	for (i = 0; i < 7; i++)
 	{
 		_putchar(c[i]);
 	}
