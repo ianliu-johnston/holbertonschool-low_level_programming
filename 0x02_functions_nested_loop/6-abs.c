@@ -1,11 +1,14 @@
-#include <stdio.h>
 /**
  * main - 
  *
  * Return:
  */
 
-int main(void)
+int _abs(int i)
 {
-	return (0);
+	if(i < 0)
+		i = i * -1;
+	return (i);
 }
+
+int main(void);
