@@ -2,6 +2,8 @@
 
 int main(void)
 {
-	print_alphabet_x10();
+	print_times_table(3);
+	print_times_table(9);
+	print_times_table(13);
 	return (0);
 }
