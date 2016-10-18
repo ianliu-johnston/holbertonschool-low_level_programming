@@ -3,6 +3,7 @@
 /**
  * print_to_98 - print all natural numbers from n to 98.
  * @n: the number to start counting from to 98
+ * Return: void returns nothing.
  */
 void print_to_98(int n)
 {
@@ -19,20 +20,4 @@ void print_to_98(int n)
 		printf("%d\n", 98);
 	}
 	putchar('\n');
-}
-
-/**
- * main - test functions for print_to_98
- *
- * Return: 0 on success.
- */
-
-int main(void)
-{
-	print_to_98(0);
-	print_to_98(98);
-	print_to_98(111);
-	print_to_98(81);
-	print_to_98(-10);
-	return (0);
 }
