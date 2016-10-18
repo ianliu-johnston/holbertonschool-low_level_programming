@@ -13,6 +13,7 @@ void print_alphabet(void)
 	}
 	_putchar('\n');
 }
+
 /**
   * print_abc_10x - repeats the print_alphabet 10 times.
   * Return: Nothing.
