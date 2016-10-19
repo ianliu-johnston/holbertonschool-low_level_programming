@@ -1,19 +1,26 @@
-#include "holberton.h"
+#include <stdio.h> 
 /**
-  * print_alphabet_x10 - repeats the print_alphabet 10 times.
+  * main - print the first 50 fibonacci numbers.
   * Return: Nothing.
   */
-void print_alphabet_x10(void)
+int main(void)
 {
-	int i;
-	char c;
-
-	for (i = 0; i < 10; ++i)
+	unsigned long count, i, j, k;
+	
+	i = 0;
+	j = 1;
+	for (count = 0; count <= 50; count++)	
 	{
-		for (c = 'a'; c <= 'z'; c++)
+		k = i + j;
+		i = j;
+		j = k;
+		printf("%lu", k);
+		if (count >= 50)
+			putchar('\n');
+		else
 		{
-			_putchar(c);
+			printf(", ");
 		}
-		_putchar('\n');
 	}
+	return (0);
 }
