@@ -1,5 +1,5 @@
 /**
- * _isdigit - checks for digits 1-9 
+ * _isdigit - checks for digits 1-9
  * @c: character to check.
  * Return: 1 if c is a digit, otherwise return 0.
  */
