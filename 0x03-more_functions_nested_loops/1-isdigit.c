@@ -1,17 +1,12 @@
-#include "holberton.h"
 /**
- * main - prints the string "Holberton" from a character array.
- * Return: 0 on success.
+ * _isdigit - checks for digits 1-9 
+ * @c: character to check.
+ * Return: 1 if c is a digit, otherwise return 0.
  */
-int main(void)
+int _isdigit(int c)
 {
-	char c[] = "Holberton";
-	int i;
-
-	for (i = 0; i < 9; i++)
-	{
-		_putchar(c[i]);
-	}
-	_putchar('\n');
-	return (0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
