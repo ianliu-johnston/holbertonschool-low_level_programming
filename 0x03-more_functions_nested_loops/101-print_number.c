@@ -7,9 +7,8 @@
 void print_number(int n)
 {
 	int len, res, i, temp, expo;
-	if(n == -2147483648) /*lower limit of int*/
+	if (n == -2147483648) /*lower limit of int*/
 		n += 1; /*decriment by one.*/
-	
 	res = n;
 	expo = len =  1;
 
@@ -33,7 +32,7 @@ void print_number(int n)
 		_putchar((res / expo) % 10 + '0');
 		expo /= 10;
 	}
-	if(n == -2147483647) /*lower limit of int*/
+	if (n == -2147483647) /*lower limit of int*/
 		_putchar('8');
 	else
 		_putchar(res % 10 + '0');
