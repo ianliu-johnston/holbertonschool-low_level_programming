@@ -1,17 +1,14 @@
 #include "holberton.h"
 /**
- * main - prints the string "Holberton" from a character array.
- * Return: 0 on success.
+ * print_line - draws a straight line (n) characters long.
+ * @n: the number of underscores to print.
  */
-int main(void)
+void print_line(int n)
 {
-	char c[] = "Holberton";
 	int i;
 
-	for (i = 0; i < 9; i++)
-	{
-		_putchar(c[i]);
-	}
+	if (n > 0)
+		for (i = 0; i < n; i++)
+			_putchar('_');
 	_putchar('\n');
-	return (0);
 }

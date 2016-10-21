@@ -1,17 +1,27 @@
 #include "holberton.h"
 /**
- * main - prints the string "Holberton" from a character array.
- * Return: 0 on success.
+ * more_numbers - prints the range 0-14 ten times.
  */
-int main(void)
+void more_numbers(void)
 {
-	char c[] = "Holberton";
-	int i;
+	int i, j;
 
-	for (i = 0; i < 9; i++)
+	i = j = 0;
+	while (i < 10)
 	{
-		_putchar(c[i]);
+		while (j <= 14)
+		{
+			if (j < 10)
+				_putchar(j + '0');
+			else
+			{
+				_putchar(j / 10 + '0');
+				_putchar(j % 10 + '0');
+			}
+			++j;
+		}
+		_putchar('\n');
+		j = 0;
+		i++;
 	}
-	_putchar('\n');
-	return (0);
 }

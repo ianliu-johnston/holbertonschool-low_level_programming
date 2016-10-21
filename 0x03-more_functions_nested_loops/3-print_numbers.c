@@ -1,17 +1,15 @@
 #include "holberton.h"
 /**
- * main - prints the string "Holberton" from a character array.
- * Return: 0 on success.
+ * print_numbers - prints the digits 1-9
  */
-int main(void)
+void print_numbers(void)
 {
-	char c[] = "Holberton";
-	int i;
+	int i = 0;
 
-	for (i = 0; i < 9; i++)
+	while (i <= 9)
 	{
-		_putchar(c[i]);
+		_putchar(i + '0');
+		++i;
 	}
 	_putchar('\n');
-	return (0);
 }

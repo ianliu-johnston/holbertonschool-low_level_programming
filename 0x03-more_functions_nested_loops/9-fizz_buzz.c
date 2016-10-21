@@ -1,17 +1,29 @@
-#include "holberton.h"
+#include <stdio.h>
 /**
- * main - prints the string "Holberton" from a character array.
+ * main - Prints the numbers 1 - 100,
+ *   instead of multiples of 3, print Fizz
+ *   instead of multiples of 5, print Buzz
+ *   for multiples of 3 and 5, print FizzBuzz.
+(*
  * Return: 0 on success.
  */
 int main(void)
 {
-	char c[] = "Holberton";
 	int i;
 
-	for (i = 0; i < 9; i++)
+	for (i = 1; i <= 100; i++)
 	{
-		_putchar(c[i]);
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
+		else
+			printf("%d", i);
+		if (i != 100)
+			putchar(' ');
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }

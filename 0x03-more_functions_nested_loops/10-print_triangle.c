@@ -1,17 +1,26 @@
 #include "holberton.h"
 /**
- * main - prints the string "Holberton" from a character array.
- * Return: 0 on success.
+ * print_triangle - draws a triangle using multiple terminal lines and #'s.
+ * @n: the height of the triangle.
  */
-int main(void)
+void print_triangle(int size)
 {
-	char c[] = "Holberton";
-	int i;
+	int i, j;
 
-	for (i = 0; i < 9; i++)
+	if (size > 0)
 	{
-		_putchar(c[i]);
+		for (i = 1; i <= size; i++)
+		{
+			for (j = size; j >= 1; j--)
+			{
+				if (i < j)
+					_putchar('.');
+				else
+					_putchar('#');
+			}
+			_putchar('\n');
+		}
 	}
-	_putchar('\n');
-	return (0);
+	else
+		_putchar('\n');
 }

@@ -1,17 +1,27 @@
 #include "holberton.h"
 /**
- * main - prints the string "Holberton" from a character array.
- * Return: 0 on success.
+ * print_diagonal - draws a diagonal line across (n) terminal lines.
+ * @n: the number of lines to print
  */
-int main(void)
+void print_diagonal(int n)
 {
-	char c[] = "Holberton";
-	int i;
+	int i, j;
 
-	for (i = 0; i < 9; i++)
+	if (n > 0)
 	{
-		_putchar(c[i]);
+		for (j = 0; j <= n; j++)
+		{
+			for (i = 0; i <= j; i++)
+			{
+				_putchar(' ');
+				if (i == j)
+				{
+					_putchar('\\');
+					_putchar('\n');
+				}
+			}
+		}
 	}
-	_putchar('\n');
-	return (0);
+	else
+		_putchar('\n');
 }

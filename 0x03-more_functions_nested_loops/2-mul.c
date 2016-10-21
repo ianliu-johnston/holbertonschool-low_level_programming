@@ -1,17 +1,10 @@
-#include "holberton.h"
 /**
- * main - prints the string "Holberton" from a character array.
- * Return: 0 on success.
+ * mul - multiplies two integers.
+ * @a: first integer to multiply
+ * @b: second integer to multiply
+ * Return: product of a and b
  */
-int main(void)
+int mul(int a, int b)
 {
-	char c[] = "Holberton";
-	int i;
-
-	for (i = 0; i < 9; i++)
-	{
-		_putchar(c[i]);
-	}
-	_putchar('\n');
-	return (0);
+	return (a * b);
 }
