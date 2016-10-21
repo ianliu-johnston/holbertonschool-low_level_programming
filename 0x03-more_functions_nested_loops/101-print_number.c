@@ -6,10 +6,10 @@
 
 void print_number(int n)
 {
-	int len, res, i, temp, exp;
+	int len, res, i, temp, expo;
 
 	res = n;
-	exp = len =  1;
+	expo = len =  1;
 
 	if (res < 0)
 	{
@@ -17,6 +17,7 @@ void print_number(int n)
 		_putchar('-');
 	}
 	temp = res;
+	
 	while (temp >= 10)
 	{
 		len++;
@@ -24,12 +25,11 @@ void print_number(int n)
 	}
 
 	for (i = 1; i < len; i++)
-		exp *= 10;
-
-	while (exp > 1)
+		expo *= 10;
+	while (expo > 1)
 	{
-		_putchar((res / exp) % 10 + '0');
-		exp /= 10;
+		_putchar((res / expo) % 10 + '0');
+		expo /= 10;
 	}
 	_putchar(res % 10 + '0');
 }
