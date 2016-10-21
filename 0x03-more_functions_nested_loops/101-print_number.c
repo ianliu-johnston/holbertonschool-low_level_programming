@@ -7,6 +7,7 @@
 void print_number(int n)
 {
 	int len, res, i, temp, expo;
+
 	if (n == -2147483648) /*lower limit of int*/
 		n += 1; /*decriment by one.*/
 	res = n;
