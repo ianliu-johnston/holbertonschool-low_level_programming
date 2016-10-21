@@ -6,10 +6,10 @@
 
 void print_number(int n)
 {
-	long len, res, i, temp, expo;
+	long res, temp, expo;
 
 	res = n;
-	expo = len =  1;
+	expo = 1;
 /*Check negatives*/
 	if (res < 0)
 	{
@@ -17,22 +17,17 @@ void print_number(int n)
 		_putchar('-');
 	}
 
-/**/
+/*Initialize exponent variable*/
 	temp = res;
 	while (temp >= 10)
 	{
-		len++;
+		expo *= 10;
 		temp /= 10;
 	}
-
-/*Create Exponent*/
-	for (i = 1; i < len; i++)
-		expo *= 10;
 /*Main */
-	while (expo > 1)
+	while (expo >= 1)
 	{
 		_putchar((res / expo) % 10 + '0');
 		expo /= 10;
 	}
-	_putchar(res % 10 + '0');
 }
