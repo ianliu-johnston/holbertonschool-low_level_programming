@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <math.h>
 /**
- * _isupper - checks for uppercase.
- * @c: character to check.
- * Return: 1 if c is uppercase, otherwise return 0.
+ * main - Prints out the larget prime factor of 612852475143
+ * Return:return 0 with success.
  */
 int main(void)
 {
 	long i;
 	long num = 612852475143;
+
 	for (i = 2; i < num; i++)
 	{
 		if (num % i == 0)
