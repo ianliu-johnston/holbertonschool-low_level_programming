@@ -1,10 +1,9 @@
-#import "holberton.h"
 /**
- * main -
+ * reset_to_98 - updates value of pointer to 98.
  * Return:
  */
 
-void reset_to_98(int *n);
+void reset_to_98(int *n)
 {
-	return (0);
+	*n = 98;	
 }

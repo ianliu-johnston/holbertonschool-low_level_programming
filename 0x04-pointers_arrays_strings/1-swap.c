@@ -1,9 +1,13 @@
-#import "holberton.h"
+#include "holberton.h"
 /**
  * main -
  * Return:
  */
-int main(void)
+void swap_int(int *a, int *b)
 {
-	return (0);
+	int temp;
+	
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
