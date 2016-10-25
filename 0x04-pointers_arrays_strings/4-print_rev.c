@@ -1,9 +1,23 @@
-#import "holberton.h"
+#include <stdio.h>
+#include "holberton.h"
 /**
- * main -
- * Return:
+ * print_rev - prints a string, followed by a new line.
+ * @*str: input string to print.
  */
-int main(void)
+void print_rev(char *s)
 {
-	return (0);
+	int i, count, temp;
+
+	while(*s != '\0')
+	{
+		i++;
+		s++;
+	}
+
+	for (count = i; count > 0; count --)
+	{
+		temp = *s;
+		_putchar(temp);
+	}
+	_putchar('\n');
 }
