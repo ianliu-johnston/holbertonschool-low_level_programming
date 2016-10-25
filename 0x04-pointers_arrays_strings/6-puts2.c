@@ -1,9 +1,16 @@
-#import "holberton.h"
+#include "holberton.h"
 /**
- * main -
- * Return:
+ * puts2 - Prints out every other char of the string.
+ * @str: input string to print.
  */
-int main(void)
+void puts2(char *str)
 {
-	return (0);
+	int i;
+	while (str[i] != '\0')
+	{
+		if (i % 2 == 0)
+			_putchar(str[i]);
+		i++;
+	}
+	_putchar('\n');
 }
