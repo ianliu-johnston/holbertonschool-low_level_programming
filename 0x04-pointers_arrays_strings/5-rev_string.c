@@ -1,6 +1,6 @@
 /**
  * rev_string - reverses a string.
- * @str: input string to reverse.
+ * @s: input string to reverse.
  */
 void rev_string(char *s)
 {
