@@ -11,12 +11,14 @@ int _atoi(char *s)
 	char temp;
 	
 	i = j = minus = result = boolean = 0;
+	minus = 1;
 	expo = 10;
 
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
-			expo *= -1;
+			minus *= -1;
+
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			result *= expo;	
@@ -31,5 +33,6 @@ int _atoi(char *s)
 			break;
 
 	}
+	result *= minus;
 	return (result);
 }
