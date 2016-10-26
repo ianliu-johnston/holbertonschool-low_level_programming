@@ -7,11 +7,10 @@
 int _atoi(char *s)
 {
 	short boolean;
-	int i, minus, result, expo;
+	int i, minus, result;
 
 	i = minus = result = boolean = 0;
-	minus = 1;
-	expo = 10;
+	minus = -1;
 
 	while (s[i] != '\0')
 	{
@@ -20,13 +19,13 @@ int _atoi(char *s)
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			result *= expo;
+			result *= 10;
 			result -= (s[i] - '0');
 			boolean = 1;
 		}
-		i++;
-		if ((s[i] < '0' || s[i] > '9') && boolean == 1)
+		else if(boolean == 1)
 			break;
+		i++;
 	}
 	result *= minus;
 	return (result);
