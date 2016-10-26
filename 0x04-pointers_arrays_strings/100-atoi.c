@@ -7,7 +7,6 @@ int _atoi(char *s)
 {
 	short boolean;
 	int i, j, minus, result, expo;
-	char temp;
 
 	i = j = minus = result = boolean = 0;
 	minus = 1;
