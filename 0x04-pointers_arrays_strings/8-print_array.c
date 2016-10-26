@@ -1,9 +1,21 @@
-#import "holberton.h"
+#include <stdio.h>
+#include "holberton.h"
 /**
- * main -
- * Return:
+ * print_array - Print an array up to n.
+ * @a: the array of elements
+ * @n: the number of elements of the array *a.
  */
-int main(void)
+void print_array(int *a, int n)
 {
-	return (0);
+	int i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (i != n - 1)
+			printf("%d, ", a[i]);
+		else
+			printf("%d\n", a[i]);
+		i++;
+	}
 }
