@@ -12,9 +12,7 @@ void print_number(int n)
 	expo = 1;
 /*Check negatives*/
 	if (n > 0)
-	{
 		res = n * -1;
-	}
 	else
 	{
 		res = n;
@@ -31,7 +29,6 @@ void print_number(int n)
 /*Main */
 	while (expo >= 1)
 	{
-
 		_putchar(((res / expo) % 10) * -1 + '0');
 		expo /= 10;
 	}
