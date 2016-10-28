@@ -5,10 +5,20 @@
  */
 char *cap_string(char *s)
 {
-	int i;
+	int i, j;
+	char sep[] = " \t,;.!?""(){}\n";
 
-	for (i = 0; s[i] != '\0'; i++)
-		if ((s[i] >= 'a' && s[i] <= 'z') && (s[i - 1] == ' ' || s[i - 1] == '\n' || s[i-1] == '\t' || s[i - 1] == '.'))
-			s[i] = s[i] - ('a' - 'A');
-	return (s); 
+	i = 1;
+	while (s[i] != '\0')
+	{
+		j = 0;
+		while (sep[j] != '\0')
+		{
+			if (s[i - 1] == sep[j] && (s[i] >= 'a' && s[i] <= 'z'))
+				s[i] -= ('a' - 'A');
+			j++;
+		}
+		i++;
+	}
+	return (s);
 }
