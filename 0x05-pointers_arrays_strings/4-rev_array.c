@@ -5,14 +5,14 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i, j;
+	int i, temp;
 
-	i = j =  0;
+	i = temp =  0;
 	n -= 1;
 	while (i <= n)
 	{
-		j = a[n];
+		temp = a[n];
 		a[n--] = a[i];
-		a[i++] = j;
+		a[i++] = temp;
 	}
 }
