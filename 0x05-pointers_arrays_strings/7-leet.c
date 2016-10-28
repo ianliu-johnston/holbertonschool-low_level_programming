@@ -18,13 +18,3 @@ char *leet(char *s)
 	}
 	return (s);
 }
-
-/*
- * only use one if, no switch statements.
-(*
- * a, A = 4
- * e, E = 3
- * l, L = 1
- * o, O = 0
- * t, T = 7
- */
