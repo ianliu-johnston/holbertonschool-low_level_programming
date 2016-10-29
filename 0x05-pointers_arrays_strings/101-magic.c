@@ -16,7 +16,7 @@ int main(void)
    * - only one statement
    * - you are not allowed to code anything else than this line of code
    */
-  *(p + 5) = 98; /* --use: *(p + (&a[2] - &n)) = 98 if you need to declare more vars.*/
+  *(p + 5) = 98;
   /* ...so that this prints 98\n */
   return (0);
 }
