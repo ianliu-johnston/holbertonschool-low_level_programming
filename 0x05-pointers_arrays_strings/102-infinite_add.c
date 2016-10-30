@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * infinite_add - prints a number
  * @n: Input number
@@ -7,20 +8,22 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, n; /* i = iterator, n = carry over number */
-	
+	i = size_r;	
 	n = 0;
-	i = 0;
-	while (r[i] != '\0' && n1[i] != '\0' && n2[i] != '\0')
+	while (i >= 0)
 	{
-		r[i] = n1[i] + n2[i] + n; 
-		if (r[i] >= 10)
+		r[i] = (n1[i] - '0') + (n2[i] - '0') + n;
+		if (r[i] >= 10&& i != 0)
 		{
 			r[i] = r[i] % 10;
-			n++;
+			n = 1;
 		}
-		i++;
+		else
+			n = 0;
+		printf("counter: %d, n1: %d, n2: %d, result: %d\n", i, n1[i] - '0', n2[i] - '0', r[i]);
+		r[i] += '0';
+		i--;
 	}
-	_putchar(size_r + '0');
 	r[i] = '\0';
 	return (r);
 }
