@@ -1,13 +1,14 @@
 /**
- * _memset - fills memory with a constant byte
- * @s: pointer to memory area 's'
- * @b: constant byte to fill
- * @n: number of bytes to fill
- * Return: pointer to memory area 's'
+ * _strchr - locates a character in a string 
+ * @s: pointer to string
+ * @c: character to locate
+ * Return: pointer to first occurence of character c
+ * or NULL if character is not found.
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_strchr(char *s, char c) 
 {
-
+	while (*s != '\0' && *s != c)
+		s++;
 	return (s);
 }
