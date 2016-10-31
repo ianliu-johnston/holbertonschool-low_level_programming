@@ -1,13 +1,20 @@
+#include <stdio.h>
 /**
- * _memset - fills memory with a constant byte
- * @s: pointer to memory area 's'
- * @b: constant byte to fill
- * @n: number of bytes to fill
- * Return: pointer to memory area 's'
+ * _strstr - locates a substring
+ * @haystack: string to look though
+ * @needle: substring to find
+ * Return: pointer to string with result of search
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_strstr(char *haystack, char *needle)
 {
+	int i;
 
-	return (s);
+	for ( ; *haystack != '\0'; haystack++)
+	{
+		for (i = 0; *(needle + i) != '\0'; i++)
+			if (*(needle +i) == *(haystack + i) && *(needle + i + 1) == '\0')
+				return (haystack);
+	}
+	return (haystack);
 }
