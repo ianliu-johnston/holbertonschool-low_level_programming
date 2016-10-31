@@ -1,13 +1,24 @@
 /**
- * _memset - fills memory with a constant byte
- * @s: pointer to memory area 's'
- * @b: constant byte to fill
- * @n: number of bytes to fill
- * Return: pointer to memory area 's'
+ * _strspn - gets the length of a prefix substring 
+ * @s: segment to compare bytes from
+ * @accept: string of bytes to compare with
+ * Return: number of bytes in segment s which consist of bytes from accept
  */
 
-char *_memset(char *s, char b, unsigned int n)
+unsigned int _strspn(char *s, char *accept)
 {
+	unsigned int i, j;
 
-	return (s);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		j = 0;
+		while (accept[j] != '\0' && s[i] != accept[j])
+			j++;
+		if (accept[j] == '\0')
+			return (i);
+		else
+			i++;
+	}	
+	return (i);
 }
