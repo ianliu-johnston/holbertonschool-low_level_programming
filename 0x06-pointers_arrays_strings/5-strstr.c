@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include <stdio.h>
 /**
  * _strncmp - compares two strings within b bytes.
  * @s1: string to check
@@ -11,7 +11,7 @@ int _strncmp(char *s1, char *s2, unsigned int b)
 {
 	unsigned int i;
 
-	for (i = 0; i <= b && s1[i] == s2[i] && *s1 && *s2; i++)
+	for (i = 0; i <= b && s1[i] == s2[i] && *s1 != '\0' && *s2 != '\0'; i++)
 		;
 	return (i - b);
 }
@@ -31,9 +31,10 @@ char *_strstr(char *haystack, char *needle)
 	/*compare substring*/
 	while (*haystack != '\0')
 	{
+		printf("hay: %s ==> needle: %s\n", haystack, needle);
 		if (_strncmp(haystack, needle, len) == 0)
 			return (haystack);
 		haystack++;
 	}
-	return (NULL);
+	return (haystack);
 }
