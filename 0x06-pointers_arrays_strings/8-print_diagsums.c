@@ -7,24 +7,26 @@
 
 void print_diagsums(char *a, int size)
 {
-	int i, j, resx, resy;
+	int i, sum, next;
 
-	i = resx = resy = 0;
-	while (i <= size)
+	i = sum = next = 0; 
+
+	while (i < (size * size))
 	{
-		while (j <= size)
-		{
-			if (i == j)
-				resx += a[i][j];
-		j++;
-		}
-		while (j >= 0)
-		{
-			if (i == j)
-				resy += a[i][j];
-			j--;
-		}
-		i++;
+		printf("i = %d, sum = %d\n", i, sum);
+		next = a[i];
+		sum += next;
+		i += size + 1;
 	}
-	printf("%d, %d\n", resx, resy);
+	printf("%d, ", sum);
+	i = size - 1;
+	sum = 0;
+	while (i < (size * size - 1))
+	{
+		printf("i = %d, sum = %d\n", i, sum);
+		next = a[i];	
+		sum += next;
+		i += size - 1;	
+	}
+	printf("%d\n", sum);
 }
