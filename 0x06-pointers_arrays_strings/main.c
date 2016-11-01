@@ -8,21 +8,27 @@
  */
 int main(void)
 {
-    char *s0 = "Ann";
-    char *s1 = "Asa";
-
-    printf("%s, %s\n", s0, s1);
-    set_string(&s1, s0);
-    printf("%s, %s\n", s0, s1);
+    int c3[3][3] = {
+        {0, 1, 5},
+        {10, 11, 12},
+        {1000, 101, 102},
+    };
+    int c5[5][5] = {
+        {0, 1, 5, 12124, 1234},
+        {10, 11, 12, 123521, 12512},
+        {1000, 101, 102, 12545, 214543435},
+        {100, 1012451, 11102, 12545, 214543435},
+        {10, 12401, 10452, 11542545, 1214543435},
+    };
+    print_diagsums((int *)c3, 3);
+    print_diagsums((int *)c5, 5);
     return (0);
 }
 
 /*
-Write a function that sets the value of a pointer to a char.
-    Prototype: void set_string(char **s, char *to);
+Sample output:
 
-   Sample Output:
- Anne Cognet, Asaia Palacios
- Anne Cognet, Anne Cognet
- 
- */
+113, 1016
+1214556093, 1137318
+
+*/
