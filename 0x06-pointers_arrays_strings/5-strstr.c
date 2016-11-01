@@ -31,7 +31,6 @@ char *_strstr(char *haystack, char *needle)
 	/*compare substring*/
 	while (*haystack != '\0')
 	{
-		printf("hay: %s ==> needle: %s\n", haystack, needle);
 		if (_strncmp(haystack, needle, len) == 0)
 			return (haystack);
 		haystack++;
