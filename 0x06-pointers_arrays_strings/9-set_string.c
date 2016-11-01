@@ -1,13 +1,10 @@
 /**
- * _memset - fills memory with a constant byte
- * @s: pointer to memory area 's'
- * @b: constant byte to fill
- * @n: number of bytes to fill
- * Return: pointer to memory area 's'
+ * set_string - sets the value of a pointer to a char
+ * @s: double pointer to set
+ * @to: the char to point to.
  */
 
-char *_memset(char *s, char b, unsigned int n)
+void set_string(char **s, char *to)
 {
-
-	return (s);
+	*s = to;
 }
