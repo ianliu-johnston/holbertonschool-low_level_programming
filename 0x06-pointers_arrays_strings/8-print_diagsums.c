@@ -7,28 +7,11 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, j, sum;
-	int dia1, dia2;
+	int i, sumx, sumy;
 
-	i = sum = 0; 
-	j = size;
-	while (i < size)
-	{
-		
-		i++
-	}
-	/*while (i < (size * size))
-	{
-		sum += a[i];
-		i += size + 1;
-	}
-	printf("%d, ", sum);
-	i = size - 1;
-	sum = 0;
-	while (i < (size * size - 1))
-	{
-		sum += a[i];
-		i += size - 1;	
-	}
-	printf("%d\n", sum);*/
+	for (i = 0; i < (size * size); i += size + 1)
+		sumx += a[i];
+	for (i = size - 1; i < (size * size - 1); i += size - 1)
+		sumy += a[i];
+	printf("%d, %d\n", sumx, sumy);
 }
