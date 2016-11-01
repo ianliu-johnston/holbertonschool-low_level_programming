@@ -5,17 +5,21 @@
  * @size: which diagonal to add.
  */
 
-void print_diagsums(char *a, int size)
+void print_diagsums(int *a, int size)
 {
-	int i, sum, next;
+	int i, j, sum;
+	int dia1, dia2;
 
-	i = sum = next = 0; 
-
-	while (i < (size * size))
+	i = sum = 0; 
+	j = size;
+	while (i < size)
 	{
-		printf("i = %d, sum = %d\n", i, sum);
-		next = a[i];
-		sum += next;
+		
+		i++
+	}
+	/*while (i < (size * size))
+	{
+		sum += a[i];
 		i += size + 1;
 	}
 	printf("%d, ", sum);
@@ -23,10 +27,8 @@ void print_diagsums(char *a, int size)
 	sum = 0;
 	while (i < (size * size - 1))
 	{
-		printf("i = %d, sum = %d\n", i, sum);
-		next = a[i];	
-		sum += next;
+		sum += a[i];
 		i += size - 1;	
 	}
-	printf("%d\n", sum);
+	printf("%d\n", sum);*/
 }
