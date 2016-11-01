@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "holberton.h"
 /**
  * _strncmp - compares two strings within b bytes.
  * @s1: string to check
@@ -36,5 +36,5 @@ char *_strstr(char *haystack, char *needle)
 			return (haystack);
 		haystack++;
 	}
-	return (haystack);
+	return (NULL);
 }
