@@ -1,13 +1,25 @@
+#include "holberton.h"
+#include <stdio.h>
 /**
- * _memset - fills memory with a constant byte
- * @s: pointer to memory area 's'
- * @b: constant byte to fill
- * @n: number of bytes to fill
- * Return: pointer to memory area 's'
+ * print_chessboard - prints the chessboard
+ * @a: the board to print
  */
 
-char *_memset(char *s, char b, unsigned int n)
+void print_chessboard(char (*a)[8])
 {
+	int i, j;
 
-	return (s);
+	i = j = 0;
+	while (i < 8)
+	{
+		j = 0;
+		while (j < 8)
+		{
+			_putchar(a[i][j]);
+			j++;
+		}
+		_putchar('\n');
+		i++;
+	}
+
 }
