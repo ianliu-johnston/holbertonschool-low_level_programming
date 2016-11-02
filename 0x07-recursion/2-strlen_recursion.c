@@ -1,14 +1,11 @@
 /*
- * _strlen_recursion - returns the length of a string
- * @s: the tring
- * Return: length of the string
+ * _print_rev_recursion - prints a string in reverse
+ * @s: the string to print
  */
 int _strlen_recursion(char *s)
 {
-	int i;
-	i = 0;
 	if (*s == '\0')
 		return (0);
 	s++;
-	return (_strlen_recursion(s));
+	return (1 + _strlen_recursion(s));
 }
