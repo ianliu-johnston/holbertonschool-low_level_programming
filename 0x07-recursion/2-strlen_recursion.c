@@ -1,6 +1,7 @@
-/*
- * _print_rev_recursion - prints a string in reverse
- * @s: the string to print
+/**
+ * _strlen_recursion - returns the length of a string.
+ * @s: the string to count
+ * Return: length of the string
  */
 int _strlen_recursion(char *s)
 {
