@@ -1,10 +1,17 @@
-void _puts_recursion(char *s);
-void _print_rev_recursion(char *s);
-int _strlen_recursion(char *s);
-int factorial(int n);
-int _pow_recursion(int x, int y);
-int _sqrt_recursion(int n);
-int is_prime_number(int n);
-int is_palindrome(char *s);
-int wildcmp(char *s1, char *s2);
-int _putchar.c(char c);
+#include <stdio.h>
+/**
+ * _pow_recursion - returns the value of x raised to the power of y.
+ * @x: base number
+ * @y: power of
+ * Return: x to the power of y
+ */
+int _pow_recursion(int x, int y)
+{
+	printf("x: %d, y: %d\n", x, y);
+	if (y < 0)
+		return (-1);
+	else if (y <= 0)
+		return (1);
+	else
+		return (x * _pow_recursion(x, y - 1));
+}
