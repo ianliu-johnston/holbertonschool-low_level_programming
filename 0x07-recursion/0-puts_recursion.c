@@ -1,5 +1,5 @@
 #include "holberton.h"
-/*
+/**
  * _puts_recursion - prints a string with recursion
  * @s: string to print
  */
