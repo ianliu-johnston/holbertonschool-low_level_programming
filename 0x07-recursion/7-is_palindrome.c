@@ -1,10 +1,46 @@
-void _puts_recursion(char *s);
-void _print_rev_recursion(char *s);
-int _strlen_recursion(char *s);
-int factorial(int n);
-int _pow_recursion(int x, int y);
-int _sqrt_recursion(int n);
-int is_prime_number(int n);
-int is_palindrome(char *s);
-int wildcmp(char *s1, char *s2);
-int _putchar.c(char c);
+#include <stdio.h>
+#include "holberton.h"
+/**
+ * _strlen_recursion - returns the length of a string.
+ * @s: the string to count
+ * Return: length of the string
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s)
+	{
+		s++;
+		return (1 + _strlen_recursion(s));
+	}
+	return (0);
+}
+/**
+ * checker - helper function for is_palindrome
+ * @str: the string
+ * @len: length of string
+ * @count: counter of recursion
+ * Return: 1 if string is a palindrome, 0 if it is not.
+ */
+int checker(char *str, int len, int count)
+{
+	if (count >= len)
+		return (1);
+	if (str[len] == str[count])
+	{
+		printf("in checker: %d, %d\n", len, count);
+		return (checker(str, len - 1, count + 1));
+	}
+	return (0);
+}
+/**
+ * is_palindrome - checks if the string is a palindrome
+ * @s: the string to check
+ * Return: 1 if string is a palindrome, 0 if it is not.
+ */
+int is_palindrome(char *s)
+{
+	int len = _strlen_recursion(s);
+	int count = 0;
+printf("len: %d\n", len);
+	return (checker(s, len - 1, count));
+}
