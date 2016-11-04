@@ -1,11 +1,11 @@
- * _print_rev_recursion - prints a string in reverse
- * @s: the string to print
+#include <stdio.h>
+/**
+ * main - program prints its own name.
+ * @argc: 
  */
-void _print_rev_recursion(char *s)
+int main(int argc, char *argv[])
 {
-	if (*s)
-	{
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
-	}
+	argc--;
+	printf("%s\n", argv[0]);
+	return (0);
 }
