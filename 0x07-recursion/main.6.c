@@ -28,3 +28,17 @@ int main(void)
     printf("%d\n", r);
     return (0);
 }
+
+/*
+   Write a function that returns 1 if a number is a prime number, 0 otherwise.
+
+Expected Output:
+0
+0
+0
+1
+0
+0
+1
+1
+ */
