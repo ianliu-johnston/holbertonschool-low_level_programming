@@ -24,3 +24,13 @@ int main(void)
     printf("%d\n", r);
     return (0);
 }
+
+/*
+ Expected output: 
+	 1
+	 32
+	 4
+	 -1
+	 5
+	 -1
+ */
