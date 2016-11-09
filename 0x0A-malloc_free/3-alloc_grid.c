@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * alloc_grid - creates a 2-D integer grid
  * @width: width of grid
