@@ -12,8 +12,10 @@ char *str_concat(char *s1, char *s2)
 	int s1count, s2count, sizeBuffer, i;
 
 	/*Check for valid strings*/
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	for (s1count = 0; s1[s1count]; s1count++)
 		;
 	for (s2count = 0; s2[s2count]; s2count++)
