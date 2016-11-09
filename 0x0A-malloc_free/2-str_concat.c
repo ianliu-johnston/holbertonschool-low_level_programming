@@ -16,7 +16,14 @@ char *str_concat(char *s1, char *s2)
 	for (s2count = 0; s2[s2count]; s2count++)
 		;
 	sizeBuffer = s1count + s2count + 1;
-	p = (char *)malloc(sizeBuffer * sizeof(char));
+	if (sizeBuffer > 1)
+	{
+		p = (char *)malloc(sizeBuffer * sizeof(char));
+		if (p == NULL)
+			return (NULL);
+	}
+	else
+		return (NULL);
 	for (i = 0; i < sizeBuffer; i++)
 		i < s1count ? (p[i] = s1[i]) : (p[i] = s2[i - s1count]);
 	p[sizeBuffer] = '\0';
