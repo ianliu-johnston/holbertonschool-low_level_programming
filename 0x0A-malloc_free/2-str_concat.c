@@ -11,6 +11,8 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 	int s1count, s2count, sizeBuffer, i;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	for (s1count = 0; s1[s1count]; s1count++)
 		;
 	for (s2count = 0; s2[s2count]; s2count++)
