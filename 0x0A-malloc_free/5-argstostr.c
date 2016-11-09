@@ -18,7 +18,7 @@ char *argstostr(int ac, char **av)
 			count++;
 	}
 	p = (char *)malloc(count * sizeof(char) + ac + 1);
-	for (i = 1; av[i]; i++)
+	for (i = 0; av[i]; i++)
 	{
 		for (j = 0; av[i][j]; j++, totalCount++)
 			p[totalCount] = av[i][j];
