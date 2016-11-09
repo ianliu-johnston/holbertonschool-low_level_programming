@@ -35,21 +35,28 @@ int *lengthchecks(char *str)
 }
 char **strtow(char *str)
 {
+	int i, j, outer, inner;
 	char **p;
-	int i, outer, inner;
 	int *checks;
 
 	checks = lengthchecks(str);
 	outer = checks[0];
 	inner = checks[1];
-	printf("outer: %d, inner: %d\n", outer, inner);
 	p = (char **)malloc(inner * sizeof(char *) + outer + 1);
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0, j = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] != ' ' && str[i + 1] == ' ')
-			p[i + 1] = '\n';	
-		if (str[i] != ' ')
-			p[i] = str[i];
+		if (str[i] == ' ' && str[i + 1] != ' ' && str[i + 1] != '\0')
+		{
+			for (j = 0; str[i + j] != '\0' && str[i + j] != ' '; j++)
+				;
+			p[i] = (char *)malloc(j * sizeof(char) + 1);
+			p[i][j] = '\0';
+			j--;
+			for ( ; j >= 0; j--)
+				p[i][j] = str[i + j];
+			printf("%s\n", p[i]);
+		}
+
 	}
 	return (p);
 }
