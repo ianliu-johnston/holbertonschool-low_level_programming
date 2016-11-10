@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * str_concat - concatenates two strings
  * @s1: first string
@@ -24,13 +23,7 @@ char *str_concat(char *s1, char *s2)
 	p = malloc(sizeBuffer * sizeof(char));
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; i < sizeBuffer - 1; i++)
-	{
-		if (i < s1count)
-		       p[i] = s1[i];
-		else
-			p[i] = s2[i - s1count];
-	}
-	p[sizeBuffer] = '\0';
+	for (i = 0; i < sizeBuffer; i++)
+		i < s1count ? (p[i] = s1[i]) : (p[i] = s2[i - s1count]);
 	return (p);
 }
