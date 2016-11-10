@@ -9,7 +9,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j, count, totalCount;
+	int i, j, len, bufferlen;
 	char *p;
 
 	if (ac < 2)
@@ -20,17 +20,18 @@ char *argstostr(int ac, char **av)
 	for (i = 0; av[i]; i++)
 	{
 		for (j = 0; av[i][j]; j++)
-			count++;
+			len++;
 	}
-	p = (char *)malloc(count * sizeof(char) + ac + 1);
+	p = (char *)malloc(len * sizeof(char) + ac + 1);
 	if (p == NULL)
 		return (NULL);
+	bufferlen = 0;
 	for (i = 0; av[i]; i++)
 	{
-		for (j = 0; av[i][j]; j++, totalCount++)
-			p[totalCount] = av[i][j];
-		p[totalCount] = '\n';
-		totalCount++;
+		for (j = 0; av[i][j]; j++, bufferlen++)
+			p[bufferlen] = av[i][j];
+		p[bufferlen] = '\n';
+		bufferlen++;
 	}
 	return (p);
 }
