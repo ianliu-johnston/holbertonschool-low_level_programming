@@ -31,9 +31,10 @@ int wordcounter(char *str, int location)
 }
 char **strtow(char *str)
 {
-	int i, j, wordcount, countchar;
+	int i, j, flag, wordcount, countchar;
 	char **p;
 
+	flag = 0;
 	if (str == NULL)
 		return (NULL);
 	wordcount = wordcounter(str, -1);
@@ -52,11 +53,23 @@ char **strtow(char *str)
 			free(p);
 			return (NULL);
 		}
-		for (j = 0; j < countchar; j++)
+	}
+	for (i = 0, j = 0; *str; str++) 
+	{
+		if (*str != ' ')
 		{
-			p[i][j] = str[6 + i + j];
+			p[i][j] = *str; 
+			if (flag == 0)
+			{
+				flag = 1;
+				i++;
+			}
+			j++;
 		}
-		p[i][j] = '\0';
+		else
+		{
+			j = flag = 0;
+		}
 	}
 	return (p);
 }
