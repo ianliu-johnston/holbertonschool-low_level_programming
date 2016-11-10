@@ -12,12 +12,19 @@ char *argstostr(int ac, char **av)
 	int i, j, count, totalCount;
 	char *p;
 
+	if (ac < 2)
+		return (NULL);
+	if (av == NULL)
+		return (NULL);
+
 	for (i = 0; av[i]; i++)
 	{
 		for (j = 0; av[i][j]; j++)
 			count++;
 	}
 	p = (char *)malloc(count * sizeof(char) + ac + 1);
+	if (p == NULL)
+		return (NULL);
 	for (i = 0; av[i]; i++)
 	{
 		for (j = 0; av[i][j]; j++, totalCount++)
