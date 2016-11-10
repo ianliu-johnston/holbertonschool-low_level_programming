@@ -6,57 +6,57 @@
  * @c: char to initialize the array with
  * Return: pointer to the array of chars
  */
-int *lengthchecks(char *str)
+int wordcounter(char *str, int location)
 {
-	int i, innernest, outernest, boolean;
-	int res[2] = {0,0};
-	int *results;
+	char boolean, wc, wordlength;
 
-	results = res;
-	i = boolean = innernest = outernest = 0;
-	for (i = 0, innernest = 0; str[i] != '\0'; i++)
+	boolean = wc = wordlength = 0;
+	for ( ; *str; str++)
 	{
-		if ((str[i] == ' ' || str[i] == '\t') && boolean == 0)
+		if (*str == ' ' && *(str + 1) != ' ' && *(str + 1) != '\0' && boolean == 0)
 		{
-			if (str[i + 1] != ' ' && str[i + 1] != '\0')
-				outernest++;
 			boolean = 1;
+			wc++;
+			if (location > 0 && wc == location)
+			{
+				for (wordlength = 0; *(str + wordlength + 1) != '\0' && *(str + wordlength + 1) != ' '; wordlength++)
+					;	
+				return (wordlength);
+
+			}
 		}
-		else
-		{
-			boolean = 0;
-			innernest++;
-		}
-/*printf("str[%d]: %c, boolean: %d, innernest: %d, outernest: %d\n", i, str[i], boolean, innernest, outernest);*/
+		boolean = 0;
 	}
-	results[0] = innernest;
-	results[1] = outernest;
-	return (results);
+	return (wc);
 }
 char **strtow(char *str)
 {
-	int i, j, outer, inner;
+	int i, j, wordcount, countchar;
 	char **p;
-	int *checks;
 
-	checks = lengthchecks(str);
-	outer = checks[0];
-	inner = checks[1];
-	p = (char **)malloc(inner * sizeof(char *) + outer + 1);
-	for (i = 0, j = 0; str[i] != '\0'; i++)
+	if (str == NULL)
+		return (NULL);
+	wordcount = wordcounter(str, -1);
+	p = malloc(wordcount * sizeof(void *));
+	if (p == NULL)
+		return (NULL);
+	for (i = 0; i < wordcount; i++)
 	{
-		if (str[i] == ' ' && str[i + 1] != ' ' && str[i + 1] != '\0')
+		countchar = wordcounter(str, i + 1);
+		printf("i: %d, countchar: %d\n", i, countchar);
+		p[i] = malloc(countchar * sizeof(char) + 1);
+		if (p[i] == NULL)
 		{
-			for (j = 0; str[i + j] != '\0' && str[i + j] != ' '; j++)
-				;
-			p[i] = (char *)malloc(j * sizeof(char) + 1);
-			p[i][j] = '\0';
-			j--;
-			for ( ; j >= 0; j--)
-				p[i][j] = str[i + j];
-			printf("%s\n", p[i]);
+			for ( ; i > 0; i--)
+				free(p[i]);
+			free(p);
+			return (NULL);
 		}
-
+		for (j = 0; j < countchar; j++)
+		{
+			p[i][j] = str[6 + i + j];
+		}
+		p[i][j] = '\0';
 	}
 	return (p);
 }
