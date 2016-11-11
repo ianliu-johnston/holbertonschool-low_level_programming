@@ -12,9 +12,9 @@ void *malloc_checked(unsigned int b)
 	{
 		p = malloc(b);
 		if (p == NULL)
-			return (98);
+			return (NULL);
 	}
 	else
-		return (98);
+		return (NULL);
 	return (p);
 }
