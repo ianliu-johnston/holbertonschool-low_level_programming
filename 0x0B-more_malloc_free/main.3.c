@@ -1,8 +1,8 @@
-nclude "holberton.h"
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <limits.h>
 /**
  * simple_print_buffer - prints buffer in hexa
  * @buffer: the address of memory to print
@@ -10,25 +10,23 @@ nclude "holberton.h"
  *
  * Return: Nothing.
  */
-void simple_print_buffer(char *buffer, unsigned int size)
+void simple_print_buffer(int *buffer, unsigned int start, unsigned int size)
 {
-    unsigned int i;
-
-    i = 0;
-    while (i < size)
-    {
-        if (i % 10)
-        {
-            printf(" ");
-        }
-        if (!(i % 10) && i)
-        {
-            printf("\n");
-        }
-        printf("0x%02x", buffer[i]);
-        i++;
-    }
-    printf("\n");
+	if (buffer != NULL)
+	{
+		while (start < size)
+		{
+			if (start % 10)
+				printf(" ");
+			if (!(start % 10) && start)
+				printf("\n");
+			printf("%020d", buffer[start]);
+			start++;
+		}
+		printf("\n");
+	}
+	else
+		printf("exiting simple_print_function\n");
 }
 
 /**
@@ -38,12 +36,10 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char *a;
+    int *a;
 
-    a = _calloc(98, sizeof(char));
-    strcpy(a, "Holberton");
-    strcpy(a + 9, " School! :)\n");
-    a[97] = '!';
-    simple_print_buffer(a, 98);
+    a = array_range(INT_MIN, INT_MIN + 100);
+    simple_print_buffer(a, 0, 100);
+    free(a);
     return (0);
 }
