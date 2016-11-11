@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 /**
   * _abs - get absolute value
   * @n: number to calculate
@@ -19,19 +18,17 @@ int _abs(int n)
 int *array_range(int min, int max)
 {
 	int *p;
-	int absmin, absmax, i;
+	int absmin, absmax, range, i;
 
 	if (min > max)
 		return (NULL);
 	absmin = _abs(min);
 	absmax = _abs(max);
-	if (absmin > absmax)
-		p = malloc((absmin - absmax) * sizeof(int));
-	else
-		p = malloc((absmax - absmin) * sizeof(int));
+	absmin > absmax ? (range = absmin - absmax) : (range = absmax - absmin);
+	p = malloc(range * sizeof(int) + 1);
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; i < absmax; i++)
+	for (i = 0; i <= range; i++)
 		p[i] = min + i;
 	return (p);
 }
