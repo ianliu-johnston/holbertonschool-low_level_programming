@@ -19,24 +19,15 @@ int _abs(int n)
 int *array_range(int min, int max)
 {
 	int *p;
-	int absmin, absmax, range, i;
+	int range, i;
 
-	printf("Entered array_range function\n");
 	if (min > max)
-	{
-		printf("invalid input: min must not be greater than max\n");
 		return (NULL);
-	}
-	printf("passed first check\n");
-	absmin = _abs(min);
-	absmax = _abs(max);
-	absmin > absmax ? (range = absmin - absmax) : (range = absmax - absmin);
+	range = max - min + 1;
 	p = malloc(range * sizeof(int));
-	printf("%d memory allocated\n", range);
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; i <= range; i++)
-		p[i] = min + i;
-	printf("exiting array_range function\n");
+	for (i = 0; i < range; min++, i++)
+		p[i] = min;
 	return (p);
 }
