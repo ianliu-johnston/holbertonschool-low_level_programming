@@ -1,10 +1,14 @@
 #include <stdlib.h>
 /**
-  * name - description
-  * @var - variable and what it does
-  * Return: return 0 on success
-  */
-int main(void)
+ * string_nconcat - description
+ * @s1: variable and what it does
+ * @s2:
+ * @n:
+ * Return: return 0 on success
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	return (0);
+	char *p;
+
+	return (p);
 }

@@ -4,7 +4,7 @@
   * @var - variable and what it does
   * Return: return 0 on success
   */
-int main(void)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	return (0);
 }

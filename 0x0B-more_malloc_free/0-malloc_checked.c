@@ -1,10 +1,20 @@
 #include <stdlib.h>
 /**
-  * name - description
-  * @var - variable and what it does
-  * Return: return 0 on success
+  * malloc_checked - allocates memory using malloc
+  * @b: size of buffer
+  * Return: pointer to buffer
   */
-int main(void)
+void *malloc_checked(unsigned int b)
 {
-	return (0);
+	void *p;
+
+	if (b > 1)
+	{
+		p = malloc(b);
+		if (p == NULL)
+			return (98);
+	}
+	else
+		return (98);
+	return (p);
 }
