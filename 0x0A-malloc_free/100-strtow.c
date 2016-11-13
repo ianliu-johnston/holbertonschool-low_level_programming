@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * wordcounter - counts words and the letters in them
  * @str: string to count
@@ -15,7 +16,7 @@ int wordcounter(char *str, int pos, char firstchar)
 {
 	int i, wordcount, charcount, flag;
 
-	wordcount = charcount = 0;
+	str[0] != ' ' ? (wordcount = 1) : (wordcount = 0);
 	for (i = 0, flag = 0; str[i]; i++)
 	{
 		if (str[i] == ' ' && str[i + 1] != ' ' && str[i + 1] != '\0' && flag == 0)
@@ -56,7 +57,10 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 0, wordlen = 0; i < wc; i++)
 	{
+		/* Allocate memory for nested elements */
 		wordlen = wordcounter(str, i + 1, 0);
+		if (i == 0 && str[i] != ' ')
+			wordlen++;
 		p[i] = malloc(wordlen * sizeof(char) + 1);
 		if (p[i] == NULL)
 		{
@@ -67,8 +71,12 @@ char **strtow(char *str)
 		}
 		/* initialize each element of the nested array with the word*/
 		getfirstchar = wordcounter(str, i + 1, 1);
+		if (str[0] != ' ' && i > 0)
+			getfirstchar++;
+		else if (str[0] == ' ')
+			getfirstchar++;
 		for (j = 0; j < wordlen; j++)
-			p[i][j] = str[getfirstchar + 1 + j];
+			p[i][j] = str[getfirstchar + j];
 		p[i][j] = '\0';
 	}
 	p[i] = NULL;
