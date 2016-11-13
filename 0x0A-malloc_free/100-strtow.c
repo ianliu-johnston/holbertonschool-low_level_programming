@@ -5,7 +5,8 @@
  * @str: string to count
  * @pos: position of the word to count characters from
  * @firstchar: position of the first letter of the word
- * if pos = 0, count the number of chars in the word, else count number of words
+ * if pos = 0, count the number of chars in the word
+ * else count number of words
  * Return: wordcount if pos == 0,
  * length of word if pos > 0,
  * position of word if pos > 0 && firstchar > 0
@@ -36,7 +37,7 @@ int wordcounter(char *str, int pos, char firstchar)
 	return (wordcount);
 }
 /**
- * strow - convert a string into a 2d array of words
+ * strtow - convert a string into a 2d array of words
  * @str: string to convert
  * Return: double pointer to 2d array
  */
