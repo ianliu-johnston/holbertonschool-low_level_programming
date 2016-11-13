@@ -49,9 +49,9 @@ char **strtow(char *str)
 
 	for (len = 0; str[len]; len++)
 		;
-	if (len == 0)
-		return (NULL);
 	wc = wordcounter(str, 0, 0);
+	if (len == 0 || wc == 0)
+		return (NULL);
 	p = malloc(wc * sizeof(void *));
 	if (p == NULL)
 		return (NULL);
