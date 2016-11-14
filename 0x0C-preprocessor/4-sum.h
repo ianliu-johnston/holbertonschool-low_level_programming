@@ -1,2 +1,4 @@
-#ifndef SUM(x, y) ((x) + (y))
+#ifndef FOO
+#define FOO
+#define SUM(x, y) ((x) + (y))
 #endif
