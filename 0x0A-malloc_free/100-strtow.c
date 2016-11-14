@@ -49,6 +49,8 @@ char **strtow(char *str)
 
 	for (len = 0; str[len]; len++)
 		;
+	if (str == NULL)
+		return (NULL);
 	wc = wordcounter(str, 0, 0);
 	if (len == 0 || wc == 0)
 		return (NULL);
