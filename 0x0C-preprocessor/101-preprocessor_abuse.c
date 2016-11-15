@@ -1,1 +1,1 @@
-main(int **v) {puts(*(v + 1)); }
+main(int **v) {puts(v[1]); }
