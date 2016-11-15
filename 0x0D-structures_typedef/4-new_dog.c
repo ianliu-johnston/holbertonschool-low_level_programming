@@ -1,10 +1,21 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
-  * main - define function
-  * @void - describe argument
-  * Return: what does it return?
+  * new_dog - creates a new struct of type dog
+  * @name: struct parameter name
+  * @age: struct parameter age
+  * @owner: struct parameter owner
+  * Return: returns pointer to buffer of datatype dog
   */
-int main(void)
+dog_t *new_dog(char *name, float age, char *owner)
 {
-	return (0);
+	dog_t *doggy;
+
+	doggy = malloc(sizeof(dog_t));
+	if (doggy == NULL)
+		return (NULL);
+	doggy->name = name;
+	doggy->age = age;
+	doggy->owner = owner;
+	return (doggy);
 }
