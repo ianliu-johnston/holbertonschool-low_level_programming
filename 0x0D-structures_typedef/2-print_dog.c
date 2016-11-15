@@ -1,14 +1,16 @@
 #include "dog.h"
 #include <stdio.h>
 /**
-  * main - define function
-  * @void - describe argument
-  * Return: what does it return?
+  * print_dog - prints the dog struct
+  * @d: pointer to the dog struct
   */
 void print_dog(struct dog *d)
 {
-	struct dog my_dog;
+	struct dog _dog;
 
-	my_dog = *d;
-	printf("Name: %s\nAge: %f\nOwner: %s\n", my_dog.name, my_dog.age, my_dog.owner);
+	if (d)
+	{
+		_dog = *d;
+		printf("Name: %s\nAge: %f\nOwner: %s\n", _dog.name, _dog.age, _dog.owner);
+	}
 }
