@@ -1,10 +1,11 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
-  * main - define function
+  * free_dog - frees
   * @void - describe argument
   * Return: what does it return?
   */
-int main(void)
+void free_dog(dog_t *d)
 {
-	return (0);
+	free(d);
 }
