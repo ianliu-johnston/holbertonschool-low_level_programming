@@ -4,39 +4,38 @@ int main (void)
 {
 	/* key:
 	_DAH_ = string
-	_DIT = froggy
+	_DIT = buffer
 	DAH_ = giraffe
-	DIT_ = elephant
+	DIT_ = lastPointerToBuffer
 	_DIT_ = octopus
 	__DIT = cactus
-	_DAH = kitty
+	_DAH = morseConvert
 	 */
-	char *froggy, *giraffe, *elephant, *octopus;
-	for (froggy = malloc(81), elephant = froggy++; froggy == gets(froggy); cactus('\n'))
+	char *buffer, *giraffe, *lastPointerToBuffer, *octopus;
+	for (buffer = malloc(81), lastPointerToBuffer = buffer++; buffer == gets(buffer); _putchar('\n'))
 	{
-	       	for (giraffe = froggy; *giraffe; cactus(*octopus ? kitty(*elephant) : '?'), cactus(' '), giraffe++)
+	       	for (giraffe = buffer; *giraffe; _putchar(*octopus ? morseConvert(*lastPointerToBuffer) : '?'), _putchar(' '), giraffe++)
 		{
-	  		for (*elephant = 2, octopus = string; *octopus && (*octopus != (*giraffe >= 'a' ? *giraffe & 223 : *giraffe)); (*elephant)++, octopus++)
+	  		for (*lastPointerToBuffer = 2, octopus = string; *octopus && (*octopus != (*giraffe >= 'a' ? *giraffe & 223 : *giraffe)); (*lastPointerToBuffer)++, octopus++)
 			{
-				/* assigns value of *elephant
+				/* assigns value of *lastPointerToBuffer
 				   if *octopus is greater than 97('a')
 				      then return the value *octopus minus 97 ('a')
 				   otherwise
 				      return 0
 				 */
-				*elephant += ( *octopus >= 'a' ? *octopus - 'a' : 0);
+				*lastPointerToBuffer += ( *octopus >= 'a' ? *octopus - 'a' : 0);
 			}
 		}
 	}
 }
-kitty (elephant)
+char morseConvert(lastPointerToBuffer)
 {
-	cactus( elephant > 3 ? kitty ( elephant >> 1 ) : '\0' );
-	return (elephant & 1 ? '-' : '.');
+	_putchar( lastPointerToBuffer > 3 ? morseConvert( lastPointerToBuffer >> 1 ) : '\0' );
+	return (lastPointerToBuffer & 1 ? '-' : '.');
 }
 
-cactus (elephant)
-       	char elephant;
+void _putchar (char lastPointerToBuffer)
 {
-	(void) write(1, &elephant, 1);
+	(void) write(1, &lastPointerToBuffer, 1);
 }
