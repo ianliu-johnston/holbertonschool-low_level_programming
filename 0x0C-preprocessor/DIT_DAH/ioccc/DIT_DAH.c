@@ -25,4 +25,4 @@ DITDAH DIT_+=		DIT DITDAH _DIT_>='a'?	DITDAH _DIT_-'a':0
 DAH;}_DAH DIT DIT_	DAH{			__DIT DIT
 DIT_>3?_DAH		DIT			 DIT_>>1 DAH:'\0'DAH;return
 DIT_&1?'-':'.';}__DIT DIT			DIT_ DAH _DAHDIT
-DIT_;{DIT void DAH write DIT
+DIT_;{DIT void DAH write DIT			1,&DIT_,1 DAH;}
