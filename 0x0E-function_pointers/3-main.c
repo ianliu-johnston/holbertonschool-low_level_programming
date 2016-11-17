@@ -9,7 +9,7 @@
   */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
+	int num1, num2;
 
 	if (argc != 4)
 	{
@@ -23,13 +23,12 @@ int main(int argc, char *argv[])
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	result = 0;
 	if (num1 == 0 && (*argv[2] == '%' || *argv[2] == '/'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	result = get_op_func(argv[2])(num1, num2);
-	printf("%d\n", result);
+	get_op_func(argv[2])(num1, num2);
+	printf("%d\n", get_op_func(argv[2])(num1, num2));
 	return (0);
 }
