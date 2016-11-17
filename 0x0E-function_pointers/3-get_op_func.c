@@ -1,5 +1,4 @@
 #include "3-calc.h"
-#include <stdio.h>
 #include <stdlib.h>
 /**
   * get_op_func - decides which math to use based on the operator

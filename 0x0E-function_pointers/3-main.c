@@ -1,7 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
 /**
   * main - define function
   * @argc: count of arguments
