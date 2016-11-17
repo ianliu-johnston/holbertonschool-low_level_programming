@@ -16,7 +16,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*' && *argv[2] != '/' && *argv[2] != '%')
+	if (*argv[2] != '+' && *argv[2] != '-'
+			&& *argv[2] != '*' && *argv[2] != '/' && *argv[2] != '%')
 	{
 		printf("Error\n");
 		exit(99);
