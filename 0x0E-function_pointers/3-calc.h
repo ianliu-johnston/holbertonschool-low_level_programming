@@ -3,11 +3,8 @@
 
 typedef struct ops
 {
-	int add;
-	int sub;
-	int mul;
-	int div;
-	int mod;
+	char *op;
+	int (*f)(int a, int b);
 } opt_t;
 int (*get_op_func(char *s))(int, int);
 int op_add(int a, int b);

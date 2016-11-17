@@ -19,13 +19,9 @@ int (*get_op_func(char *s))(int a, int b)
 	};
 
 	i = 0;
-	while (i < 6)
+	while (i < 6 && *ops[i].op != *s)
 	{
-		if (ops[i] == (opt_t)*s)
-		{
-			printf("I got a %s\n", s);
-		}
 		i++;
 	}
-	return (0);
+	return (ops[i].f);
 }
