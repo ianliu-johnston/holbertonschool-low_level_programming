@@ -4,8 +4,9 @@
 #include <ctype.h>
 /**
   * main - define function
-  * @void - describe argument
-  * Return: what does it return?
+  * @argc: count of arguments
+  * @argv: pointer to array of pointers
+  * Return: 0 on success, 98 on malformed arguments, 99 if no operator
   */
 int main(int argc, char *argv[])
 {
@@ -16,8 +17,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (*argv[2] != '+' && *argv[2] != '-' \
-	&& *argv[2] != '*' && *argv[2] != '/' && *argv[3] != '%')
+	if (*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*' && *argv[2] != '/' && *argv[3] != '%')
 	{
 		printf("Error\n");
 		exit(99);
