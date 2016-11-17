@@ -5,7 +5,7 @@
   * @s: pointer to string
   * Return: result of the operation
   */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	int i;
 	opt_t ops[] = {
