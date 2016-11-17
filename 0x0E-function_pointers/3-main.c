@@ -22,14 +22,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
 	if (*argv[3] == '0' && (*argv[2] == '%' || *argv[2] == '/'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	get_op_func(argv[2])(num1, num2);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 	printf("%d\n", get_op_func(argv[2])(num1, num2));
 	return (0);
 }
