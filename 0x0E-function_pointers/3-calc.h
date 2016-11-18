@@ -1,14 +1,17 @@
 #ifndef CALC_H
 #define CALC_H
 
-typedef struct ops
+/**
+  * struct op - structure of function call
+  * @op: operator (+, -, *, /, %)
+  * @f: function to call
+  */
+typedef struct op
 {
-	int add;
-	int sub;
-	int mul;
-	int div;
-	int mod;
-} opt_t;
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
+
 int (*get_op_func(char *s))(int, int);
 int op_add(int a, int b);
 int op_sub(int a, int b);

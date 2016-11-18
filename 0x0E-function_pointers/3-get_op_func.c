@@ -1,15 +1,14 @@
-#include "3-calc.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include "3-calc.h"
 /**
   * get_op_func - decides which math to use based on the operator
   * @s: pointer to string
   * Return: result of the operation
   */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	int i;
-	opt_t ops[] = {
+	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -17,15 +16,12 @@ int (*get_op_func(char *s))(int a, int b)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-
 	i = 0;
-	while (i < 6)
+	while (i < 5)
 	{
-		if (ops[i] == (opt_t)*s)
-		{
-			printf("I got a %s\n", s);
-		}
+		if (*ops[i].op == *s && !(*(s + 1)))
+			return (ops[i].f);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
