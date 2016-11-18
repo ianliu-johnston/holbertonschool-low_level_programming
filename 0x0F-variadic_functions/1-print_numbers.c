@@ -4,7 +4,6 @@
 /**
   * print_numbers - prints numbers
   * @separator: character to use to delimit
-  * @n: number of items to print
   */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
