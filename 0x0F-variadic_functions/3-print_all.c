@@ -42,7 +42,8 @@ void p_string(va_list s)
 void print_all(const char * const format, ...)
 {
 	unsigned int i, j;
-	va_list ap;
+	char *separator;
+	va_list argp;
 	v_types valid_types[] = {
 		{"c", p_char},
 		{"i", p_int},
@@ -51,15 +52,18 @@ void print_all(const char * const format, ...)
 	};
 
 	i = j = 0;
-	va_start(ap, format);
-	while (format && format[i] != '\0')
+	separator = "";
+	va_start(argp, format);
+	while (format && format[i])
 	{
 		j = 0;
 		while (j < 4)
 		{
 			if (format[i] == *valid_types[j].valid)
 			{
-				valid_types[j].f(ap);
+				printf("%s", separator);
+				valid_types[j].f(argp);
+				separator = ", ";
 			}
 			j++;
 		}
