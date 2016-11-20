@@ -32,6 +32,7 @@ void p_float(va_list f)
 void p_string(va_list s)
 {
 	char *string;
+
 	string = va_arg(s, char *);
 	if (string == NULL)
 		string = "(nil)";
