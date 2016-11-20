@@ -43,8 +43,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i, j;
 	va_list ap;
-	v_types valid_types[] =
-	{
+	v_types valid_types[] = {
 		{"c", p_char},
 		{"i", p_int},
 		{"f", p_float},
