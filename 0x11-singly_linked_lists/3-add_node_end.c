@@ -1,10 +1,11 @@
-#include "dog.h"
+#include "lists.h"
 /**
-  * main - define function
-  * @void - describe argument
-  * Return: what does it return?
+  * add_node_end -
+  * @head:
+  * @str:
+  * Return: pointer to
   */
-int main(void)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	return (0);
 }

@@ -1,10 +1,9 @@
-#include "dog.h"
+#include "lists.h"
 /**
-  * main - define function
-  * @void - describe argument
-  * Return: what does it return?
+  * free_list - frees a linked list
+  * @head: the beginning of the list
   */
-int main(void)
+void free_list(list_t *head)
 {
-	return (0);
+	puts("hello\n");
 }

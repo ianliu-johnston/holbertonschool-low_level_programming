@@ -1,10 +1,10 @@
-#include "dog.h"
+#include "lists.h"
 /**
-  * main - define function
-  * @void - describe argument
+  * list_len - get length of the list
+  * @h: list
   * Return: what does it return?
   */
-int main(void)
+size_t list_len(const list_t *h)
 {
 	return (0);
 }

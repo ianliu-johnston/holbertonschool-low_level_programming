@@ -1,10 +1,10 @@
 #include "lists.h"
 /**
-  * main - define function
-  * @void - describe argument
+  * print_list - prints all elements of a list_t list
+  * @h: singly linked list to print
   * Return: what does it return?
   */
-int main(void)
+size_t print_list(const list_t *h)
 {
 	return (0);
 }
