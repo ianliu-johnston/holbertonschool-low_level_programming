@@ -36,7 +36,7 @@ int main(void)
     second->len = strlen(second->str);
     second->next = head;
     head = second;
-    n = list_len(head);
+    n = print_list(head);
     printf("-> %lu elements\n", n);
     free(first->str);
     free(first);

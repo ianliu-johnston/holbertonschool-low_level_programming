@@ -12,6 +12,8 @@ size_t print_list(const list_t *h)
 	int i;
 	list_t *head;
 
+	if (h == NULL)
+		return (1);
 	head = malloc(sizeof(list_t));
 	if (head == NULL)
 		return (1);
