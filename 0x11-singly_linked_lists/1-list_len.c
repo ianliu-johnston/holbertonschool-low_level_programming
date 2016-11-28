@@ -2,8 +2,8 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
-  * print_list - finds number of elements in a linked list
-  * @h: singly linked list to print
+  * list_len - finds the number of nodes in a list
+  * @h: singly linked list
   * Return: number of elements in a linked list
   */
 size_t list_len(const list_t *h)
