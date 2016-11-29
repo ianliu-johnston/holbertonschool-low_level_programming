@@ -1,10 +1,10 @@
-#include "lists.h"
+#include <stdio.h>
 /**
-  * main - define function
-  * @void - describe argument
-  * Return: what does it return?
+  * b - prints from init by the loader before main
   */
-int main(void)
+void b(void) __attribute__ ((constructor));
+void b(void)
 {
-	return (0);
+	printf("You're beat! and yet, you must allow,\n
+			I bore my house upon my back!\n");
 }
