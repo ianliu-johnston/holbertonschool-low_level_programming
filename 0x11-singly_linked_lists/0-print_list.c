@@ -8,20 +8,12 @@
   */
 size_t print_list(const list_t *h)
 {
-	int i;
-	list_t *head;
+	size_t i;
 
-	if (h == NULL)
-		return (1);
-	head = malloc(sizeof(list_t));
-	if (head == NULL)
-		return (1);
-	*head = *h;
-	for (i = 0; head; i++)
+	for (i = 0; h; i++)
 	{
-		printf("[%d] %s\n", head->len, head->str);
-		head = head->next;
+		printf("[%d] %s\n", h->len, h->str);
+		h = h->next;
 	}
-	free(head);
 	return (i);
 }
