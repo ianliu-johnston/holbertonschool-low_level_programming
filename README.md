@@ -19,7 +19,7 @@ Each directory is named according to the key concept shared by all exercises in 
 * [valgrind](http://valgrind.org) - Check for memory leaks
 * [radare2](https://github.com/radare/radare2) - CLI disassembler, debugger, and reverse-engineering
 * [gdb](http://www.gnu.org/software/gdb/) - GNU debugging tool for reverse-engineering
-* [vim](http://www.vim.org/) - The best CLI text editor
+* [vim](http://www.vim.org/) - The CLI text editor
 ## Feedback
 I welcome any feedback on the code, as they aid in the ability to understand core concepts for low level programming in C. However, because they are primarily for my personal education, this repository is not open to contribution.
 ## Author
