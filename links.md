@@ -4,9 +4,21 @@ This is a simple list of links to resources not directly related to the content 
 ## C
 * [Pragma](https://gcc.gnu.org/onlinedocs/cpp/Pragmas.html)
 
+## Assembly
+* [Modern x86 Assembly blogpost](http://t-a-w.blogspot.com/2007/03/modern-x86-assembly.html)
+
+## Compilers
+* [How libgc is loaded at runtime](http://dustin.schultz.io/blog/2010/10/02/how-is-glibc-loaded-at-runtime/)
+* [PDF on the ELF format](http://www.skyfree.org/linux/references/ELF_Format.pdf)
+* [PLT: Library calls and function calls from objdump](http://stackoverflow.com/questions/5469274/what-does-plt-mean-here)
+
+## Linux
+* [the /etc/shadow file](http://www.slashroot.in/how-are-passwords-stored-linux-understanding-hashing-shadow-utils)
+
 ## Bash
 * [Difference between TTY and the program called Terminal](http://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con)
 * View headers of programs: ``View headers of programs: echo | gcc -E -xc -include 'string.h' -``
+* Debugging tools: ``strace``, ``ltrace``, ``objdump``, ``gdb``
 
 ### Docker
 * Delete all docker containers and images: ``docker rm $(docker ps -a -q)  && docker rmi $(docker images -q)``
@@ -22,4 +34,5 @@ This is a simple list of links to resources not directly related to the content 
 
 ## Straight up Hacking
 * [Poison Tap](https://samy.pl/poisontap/)
+* [Samy Kamkar](https://samy.pl/)
 * [Fork Bomb](https://en.wikipedia.org/wiki/Fork_bomb) - ``:(){ :|:& };:`` DANGER!DANGER! This will crash your terminal if you don't have safeguards in place.
