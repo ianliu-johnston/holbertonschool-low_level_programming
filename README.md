@@ -21,6 +21,8 @@ Each directory is named according to the key concept shared by all exercises in 
 * [gdb](http://www.gnu.org/software/gdb/) - GNU debugging tool for reverse-engineering
 * [vim](http://www.vim.org/) - The CLI text editor
 
+## Links
+See Links.md for a list of links that are supplimental to the material.
 ## Feedback
 I welcome any feedback on the code, as they aid in the ability to understand core concepts for low level programming in C. However, because they are primarily for my personal education, this repository is not open to contribution.
 ## Author
