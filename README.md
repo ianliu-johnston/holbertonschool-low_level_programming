@@ -13,8 +13,12 @@ chmod u+x file
 ```
 ### Directory Structure
 Each directory is named according to the key concept shared by all exercises in the directory. They are numbered sequentially to provide a linear timeline, and build on the key concepts from all previous concepts. Project 0x10-printf is missing from the directory structure, because it is in a separate repository, with another contributor. Each directory contains its own README.md with a short description of the program or script. Additionally, there is a template file in the root of the directory, with the correct styling for all C programs. Also, there is a short c program, ``_putchar.c``, which replicates the functionality of the putchar function from the standard library.
-### Tools
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [betty style](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl) - Style checker. Run with ``./betty-style.pl``
+* [betty documentation](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl) - Documentation style checker. Run with ``./betty-doc.pl``
+* [valgrind](http://valgrind.org) - Check for memory leaks
+* [radare2](https://github.com/radare/radare2) - CLI disassembler, debugger, and reverse-engineering
+* [gdb](http://www.gnu.org/software/gdb/) - GNU debugging tool for reverse-engineering
+* [vim](http://www.vim.org/) - The CLI text editor
 ## Feedback
 I welcome any feedback on the code, as they aid in the ability to understand core concepts for low level programming in C. However, because they are primarily for my personal education, this repository is not open to contribution.
 ## Author
