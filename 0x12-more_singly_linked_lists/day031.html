@@ -1,0 +1,2366 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Holberton School">
+    <link rel="icon" href="../../favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <title>Holberton School's awesome intranet</title>
+
+	<link rel="stylesheet" media="all" href="/assets/application-db3812a3f2ca9d0bad785735e12c914d1cd84a76ea29dae954e190aef0d9dbcc.css" />
+	<script src="/assets/application-b65826c3beecf5a65e93e1191e46e48f464bf900e16f3ca9c398b124bb50c700.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.ico" />
+	<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="jcMbsB4FQjJFWMHbkVp+CBeerhZmtNW/wezoWQCoj54XiTeE9yMPkjp7lgQlZ2XvCuKznmpdabT9ILohNI5+cg==" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="signed_in">
+
+      <nav id="nav-left" class="hidden-xs title-font">
+        <a href="/">
+          <div id="holberton-logo">
+            <img alt="Holberton School" src="/assets/holberton-logo-simplified-d4e8a1e8bf5ad93c8c3ce32895b4b53749b477b7ba7342d7f064e6883bcd3be2.png" />
+          </div>
+</a>        <ul>
+            <li>
+    <a href="/dashboards/my_planning">
+        <div class="icon">
+          <i class="fa fa-calendar"></i>
+        </div>
+      My planning
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_current_projects">
+        <div class="icon">
+          <i class="fa fa-list"></i>
+        </div>
+      My projects
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_concepts">
+        <div class="icon">
+          <i class="fa fa-file-text"></i>
+        </div>
+      My concepts
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_batchmates">
+        <div class="icon">
+          <i class="fa fa-users"></i>
+        </div>
+      My batchmates
+</a>  </li>
+  <li>
+    <a href="/dashboards/corrections_i_can_make">
+        <div class="icon">
+          <i class="fa fa-check"></i>
+        </div>
+      QA reviews I can make
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_captain_log">
+        <div class="icon">
+          <i class="fa fa-book"></i>
+        </div>
+      My Captain's Logs
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_officers">
+        <div class="icon">
+          <i class="fa fa-building"></i>
+        </div>
+      My Officers
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_speakers_of_the_day">
+        <div class="icon">
+          <i class="fa fa-microphone"></i>
+        </div>
+      My Speakers of the day
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_server">
+        <div class="icon">
+          <i class="fa fa-server"></i>
+        </div>
+      My Servers
+</a>  </li>
+
+<li>
+  <a href="/users/my_profile">
+      <div class="icon">
+        <i class="fa fa-user"></i>
+      </div>
+    My profile
+</a></li>
+
+        </ul>
+      </nav>
+
+    <main>
+
+        <nav class="navbar navbar-default navbar-main visible-xs">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                  <img alt="Holberton School" src="/assets/holberton-logo-simplified-d4e8a1e8bf5ad93c8c3ce32895b4b53749b477b7ba7342d7f064e6883bcd3be2.png" />
+</a>            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+    <a href="/dashboards/my_planning">
+      My planning
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_current_projects">
+      My projects
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_concepts">
+      My concepts
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_batchmates">
+      My batchmates
+</a>  </li>
+  <li>
+    <a href="/dashboards/corrections_i_can_make">
+      QA reviews I can make
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_captain_log">
+      My Captain's Logs
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_officers">
+      My Officers
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_speakers_of_the_day">
+      My Speakers of the day
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_server">
+      My Servers
+</a>  </li>
+
+<li>
+  <a href="/users/my_profile">
+    My profile
+</a></li>
+
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ian Liu-Johnston <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a rel="nofollow" data-method="delete" href="/auth/sign_out">Log out</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+
+
+      <article class="">
+
+        
+<h1 class="gap">0x12. C - More singly linked lists</h1>
+
+<div id="project_id" style="display: none" data-project-id="230"></div>
+
+<p class="sm-gap">
+  <small>
+    <i class="fa fa-folder-open"></i>
+    Low-level programming &amp; Algorithm ― Data structures and Algorithms
+  </small>
+</p>
+
+  <p>
+    <em>
+      <small>
+        <i class="fa fa-user"></i> by Julien Barbier, co-founder at Holberton School
+      </small>
+    </em>
+  </p>
+
+
+
+  <p>
+    <small>
+      <i class="fa fa-calendar"></i>
+        Ongoing project - started 11-30-2016, must end by 12-02-2016 (in 2 days)
+        - <span id="student_task_done_percentage">you're 0</span>% done.
+    </small>
+  </p>
+
+  <p>
+    <small>
+      <i class="fa fa-check-square"></i>
+      QA review fully automated.
+    </small>
+  </p>
+
+
+
+
+<article id="description" class="gap formatted-content">
+  <p><img src="" /></p>
+
+<h2>Readme</h2>
+
+<p>Read or watch: <a href="https://www.google.com/#q=linked+lists">Google</a>, <a href="https://www.youtube.com/results?search_query=linked+lists">Youtube</a>.</p>
+
+<h2>What you should learn from this project</h2>
+
+<p>At the end of this project you are expected to be able to explain to anyone, without the help of Google:</p>
+
+<ul>
+<li>How to use linked lists</li>
+<li>Start to look for the right source of information without too much help</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be compiled on Ubuntu 14.04 LTS</li>
+<li>Your programs and functions will be compiled with <code>gcc</code> using the flags <code>-Wall</code> <code>-Werror</code> <code>-Wextra</code> <code>and -pedantic</code></li>
+<li>All your files should end with a new line</li>
+<li>A <code>README.md</code> file, at the root of the folder of the project is mandatory</li>
+<li>Your code should use the <code>Betty</code> style. It will be checked using <a href="https://github.com/holbertonschool/Betty/blob/master/betty-style.pl">betty-style.pl</a> and <a href="https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl">betty-doc.pl</a></li>
+<li>You are not allowed to use global variables</li>
+<li>No more than 5 functions per file</li>
+<li>The only C standard library functions allowed are <code>malloc</code>, <code>free</code> and <code>exit</code>. Any use of functions like <code>printf</code>, <code>puts</code>, <code>calloc</code>, <code>realloc</code> etc... is forbidden</li>
+<li>You are allowed to use <a href="https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c">_putchar</a></li>
+<li>You don&#39;t have to push <code>_putchar.c</code>, we will use our file. If you do it won&#39;t be taken into account</li>
+<li>In the following examples, the <code>main.c</code> files are showed as examples. You can use them to test your functions, but you don&#39;t have to push them to your repo (if you do we won&#39;t take them into account). We will use our own <code>main.c</code> files at compilation. Our <code>main.c</code> files might be different from the one showed in the examples</li>
+<li>The prototypes of all your functions and the prototype of the function <code>_putchar</code> should be included in your header file called <code>lists.h</code></li>
+<li>Don&#39;t forget to push your header file</li>
+<li>All your header files should be include guarded</li>
+<li>Please this data structure for this project:</li>
+</ul>
+
+<pre><code>/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * for Holberton project
+ */
+typedef struct listint_s
+{
+    int n;
+    struct listint_s *next;
+} listint_t;
+</code></pre>
+
+</article>
+
+  <hr class="gap">
+  <h2 class="gap">Tasks</h2>
+  <section class="formatted-content">
+        <div data-role="task992" data-position="1">
+            <div class=" clearfix gap" id="task-992">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="992">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="992" data-toggle="modal" data-target="#task-992-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-992-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Print list"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/992/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="992" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    0. Print list
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that prints all the elements of a <code>listint_t</code> list.</p>
+
+<ul>
+<li>Prototype: <code>size_t print_listint(const listint_t *h);</code></li>
+<li>Return: the number of nodes</li>
+<li>Format: see example</li>
+<li>You are allowed to use <code>printf</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 0-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    listint_t *new;
+    listint_t hello = {8, NULL};
+    size_t n;
+
+    head = &amp;hello;
+    new = malloc(sizeof(listint_t));
+    if (new == NULL)
+    {
+        printf(&quot;Error\n&quot;);
+        return (1);
+    }
+    new-&gt;n = 9;
+    new-&gt;next = head;
+    head = new;
+    n = print_listint(head);
+    printf(&quot;-&gt; %lu elements\n&quot;, n);
+    free(new);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 0-main.c 0-print_listint.c -o a
+julien@ubuntu:~/0x12. More singly linked lists$ ./a 
+9
+8
+-&gt; 2 elements
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>0-print_listint.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task993" data-position="2">
+            <div class=" clearfix gap" id="task-993">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="993">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="993" data-toggle="modal" data-target="#task-993-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-993-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "List length"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/993/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="993" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    1. List length
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that returns the number of elements in a linked <code>listint_t</code> list.</p>
+
+<ul>
+<li>Prototype: <code>size_t listint_len(const listint_t *h);</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 1-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    listint_t *new;
+    listint_t hello = {8, NULL};
+    size_t n;
+
+    head = &amp;hello;
+    new = malloc(sizeof(listint_t));
+    if (new == NULL)
+    {
+        printf(&quot;Error\n&quot;);
+        return (1);
+    }
+    new-&gt;n = 9;
+    new-&gt;next = head;
+    head = new;
+    n = listint_len(head);
+    printf(&quot;-&gt; %lu elements\n&quot;, n);
+    free(new);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-listint_len.c -o b
+julien@ubuntu:~/0x12. More singly linked lists$ ./b 
+-&gt; 2 elements
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>1-listint_len.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task994" data-position="3">
+            <div class=" clearfix gap" id="task-994">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="994">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="994" data-toggle="modal" data-target="#task-994-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-994-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Add node"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/994/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="994" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    2. Add node
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that adds a new node at the beginning of a <code>listint_t</code> list.</p>
+
+<ul>
+<li>Prototype: <code>listint_t *add_nodeint(listint_t **head, const int n);</code></li>
+<li>Return: the address of the new element, or <code>NULL</code> if it failed</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 2-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint(&amp;head, 0);
+    add_nodeint(&amp;head, 1);
+    add_nodeint(&amp;head, 2);
+    add_nodeint(&amp;head, 3);
+    add_nodeint(&amp;head, 4);
+    add_nodeint(&amp;head, 98);
+    add_nodeint(&amp;head, 402);
+    add_nodeint(&amp;head, 1024);
+    print_listint(head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 2-main.c 2-add_nodeint.c 0-print_listint.c -o c
+julien@ubuntu:~/0x12. More singly linked lists$ ./c 
+1024
+402
+98
+4
+3
+2
+1
+0
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>2-add_nodeint.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task995" data-position="4">
+            <div class=" clearfix gap" id="task-995">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="995">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="995" data-toggle="modal" data-target="#task-995-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-995-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Add node at the end"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/995/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="995" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    3. Add node at the end
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that adds a new node at the end of a <code>listint_t</code> list.</p>
+
+<ul>
+<li>Prototype: <code>listint_t *add_nodeint_end(listint_t **head, const int n);</code></li>
+<li>Return: the address of the new element, or <code>NULL</code> if it failed</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 3-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&amp;head, 0);
+    add_nodeint_end(&amp;head, 1);
+    add_nodeint_end(&amp;head, 2);
+    add_nodeint_end(&amp;head, 3);
+    add_nodeint_end(&amp;head, 4);
+    add_nodeint_end(&amp;head, 98);
+    add_nodeint_end(&amp;head, 402);
+    add_nodeint_end(&amp;head, 1024);
+    print_listint(head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 3-main.c 3-add_nodeint_end.c 0-print_listint.c -o d
+julien@ubuntu:~/0x12. More singly linked lists$ ./d 
+0
+1
+2
+3
+4
+98
+402
+1024
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>3-add_nodeint_end.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task996" data-position="5">
+            <div class=" clearfix gap" id="task-996">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="996">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="996" data-toggle="modal" data-target="#task-996-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-996-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Free list"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/996/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="996" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    4. Free list
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that free a <code>listint_t</code> list.</p>
+
+<ul>
+<li>Prototype: <code>void free_list(listint_t *head);</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 4-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&amp;head, 0);
+    add_nodeint_end(&amp;head, 1);
+    add_nodeint_end(&amp;head, 2);
+    add_nodeint_end(&amp;head, 3);
+    add_nodeint_end(&amp;head, 4);
+    add_nodeint_end(&amp;head, 98);
+    add_nodeint_end(&amp;head, 402);
+    add_nodeint_end(&amp;head, 1024);
+    print_listint(head);
+    free_listint(head);
+    head = NULL;
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 4-main.c 3-add_nodeint_end.c 0-print_listint.c 4-free_listint.c -o e
+julien@ubuntu:~/0x12. More singly linked lists$ valgrind ./e 
+==3643== Memcheck, a memory error detector
+==3643== Copyright (C) 2002-2015, and GNU GPL&#39;d, by Julian Seward et al.
+==3643== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3643== Command: ./e
+==3643== 
+0
+1
+2
+3
+4
+98
+402
+1024
+==3643== 
+==3643== HEAP SUMMARY:
+==3643==     in use at exit: 0 bytes in 0 blocks
+==3643==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
+==3643== 
+==3643== All heap blocks were freed -- no leaks are possible
+==3643== 
+==3643== For counts of detected and suppressed errors, rerun with: -v
+==3643== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>4-free_listint.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task997" data-position="6">
+            <div class=" clearfix gap" id="task-997">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="997">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="997" data-toggle="modal" data-target="#task-997-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-997-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Free"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/997/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="997" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    5. Free
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that free a <code>listint_t</code> list.</p>
+
+<ul>
+<li>Prototype: <code>void free_list(listint_t **head);</code></li>
+<li>The function sets the <code>head</code> to <code>NULL</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 5-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&amp;head, 0);
+    add_nodeint_end(&amp;head, 1);
+    add_nodeint_end(&amp;head, 2);
+    add_nodeint_end(&amp;head, 3);
+    add_nodeint_end(&amp;head, 4);
+    add_nodeint_end(&amp;head, 98);
+    add_nodeint_end(&amp;head, 402);
+    add_nodeint_end(&amp;head, 1024);
+    print_listint(head);
+    free_listint2(&amp;head);
+    printf(&quot;%p\n&quot;, (void *)head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 5-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c -o f
+julien@ubuntu:~/0x12. More singly linked lists$ valgrind ./f 
+==3843== Memcheck, a memory error detector
+==3843== Copyright (C) 2002-2015, and GNU GPL&#39;d, by Julian Seward et al.
+==3843== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3843== Command: ./f
+==3843== 
+0
+1
+2
+3
+4
+98
+402
+1024
+(nil)
+==3843== 
+==3843== HEAP SUMMARY:
+==3843==     in use at exit: 0 bytes in 0 blocks
+==3843==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
+==3843== 
+==3843== All heap blocks were freed -- no leaks are possible
+==3843== 
+==3843== For counts of detected and suppressed errors, rerun with: -v
+==3843== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>5-free_listint2.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task998" data-position="7">
+            <div class=" clearfix gap" id="task-998">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="998">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="998" data-toggle="modal" data-target="#task-998-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-998-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Pop"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/998/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="998" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    6. Pop
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that deletes the head node of a <code>listint_t</code> linked list, and returns the head node&#39;s data (n).</p>
+
+<ul>
+<li>Prototype: <code>int pop_listint(listint_t **head);</code></li>
+<li>if the linked list is empty return <code>0</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 6-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    int n;
+
+    head = NULL;
+    add_nodeint_end(&amp;head, 0);
+    add_nodeint_end(&amp;head, 1);
+    add_nodeint_end(&amp;head, 2);
+    add_nodeint_end(&amp;head, 3);
+    add_nodeint_end(&amp;head, 4);
+    add_nodeint_end(&amp;head, 98);
+    add_nodeint_end(&amp;head, 402);
+    add_nodeint_end(&amp;head, 1024);
+    print_listint(head);
+    n = pop_listint(&amp;head);
+    printf(&quot;- %d\n&quot;, n);
+    print_listint(head);
+    n = pop_listint(&amp;head);
+    printf(&quot;- %d\n&quot;, n);
+    print_listint(head);
+    free_listint2(&amp;head);
+    printf(&quot;%p\n&quot;, (void *)head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 6-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 6-pop_listint.c -o g
+julien@ubuntu:~/0x12. More singly linked lists$ valgrind ./g 
+==4369== Memcheck, a memory error detector
+==4369== Copyright (C) 2002-2015, and GNU GPL&#39;d, by Julian Seward et al.
+==4369== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==4369== Command: ./g
+==4369== 
+0
+1
+2
+3
+4
+98
+402
+1024
+- 0
+1
+2
+3
+4
+98
+402
+1024
+- 1
+2
+3
+4
+98
+402
+1024
+(nil)
+==4369== 
+==4369== HEAP SUMMARY:
+==4369==     in use at exit: 0 bytes in 0 blocks
+==4369==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
+==4369== 
+==4369== All heap blocks were freed -- no leaks are possible
+==4369== 
+==4369== For counts of detected and suppressed errors, rerun with: -v
+==4369== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>6-pop_listint.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task999" data-position="8">
+            <div class=" clearfix gap" id="task-999">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="999">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="999" data-toggle="modal" data-target="#task-999-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-999-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Get node at index"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/999/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="999" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    7. Get node at index
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that returns the nth node of a <code>listint_t</code> linked list.</p>
+
+<ul>
+<li>Prototype: <code>listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)</code></li>
+<li>where <code>index</code> is the index of the nore, starting at <code>0</code></li>
+<li>if the node does not exist, return <code>NULL</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 7-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    listint_t *node;
+
+    head = NULL;
+    add_nodeint_end(&amp;head, 0);
+    add_nodeint_end(&amp;head, 1);
+    add_nodeint_end(&amp;head, 2);
+    add_nodeint_end(&amp;head, 3);
+    add_nodeint_end(&amp;head, 4);
+    add_nodeint_end(&amp;head, 98);
+    add_nodeint_end(&amp;head, 402);
+    add_nodeint_end(&amp;head, 1024);
+    print_listint(head);
+    node = get_nodeint_at_index(head, 5);
+    printf(&quot;%d\n&quot;, node-&gt;n);
+    print_listint(head);
+    free_listint2(&amp;head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 7-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 7-get_nodeint.c -o h
+julien@ubuntu:~/0x12. More singly linked lists$ ./h 
+0
+1
+2
+3
+4
+98
+402
+1024
+98
+0
+1
+2
+3
+4
+98
+402
+1024
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>7-get_nodeint.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task1000" data-position="9">
+            <div class=" clearfix gap" id="task-1000">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="1000">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="1000" data-toggle="modal" data-target="#task-1000-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-1000-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Sum list"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/1000/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="1000" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    8. Sum list
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that returns the sum of all the data (n) of a <code>listint_t</code> linked list.</p>
+
+<ul>
+<li>Prototype: <code>int sum_listint(listint_t *head);</code></li>
+<li>if the list is empty, return <code>0</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 8-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    int sum;
+
+    head = NULL;
+    add_nodeint_end(&amp;head, 0);
+    add_nodeint_end(&amp;head, 1);
+    add_nodeint_end(&amp;head, 2);
+    add_nodeint_end(&amp;head, 3);
+    add_nodeint_end(&amp;head, 4);
+    add_nodeint_end(&amp;head, 98);
+    add_nodeint_end(&amp;head, 402);
+    add_nodeint_end(&amp;head, 1024);
+    sum = sum_listint(head);
+    printf(&quot;sum = %d\n&quot;, sum);
+    free_listint2(&amp;head);
+    return (0);
+}
+julien@ubuntu:~/c0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 8-main.c 3-add_nodeint_end.c 5-free_listint2.c 8-sum_listint.c -o i
+julien@ubuntu:~/0x12. More singly linked lists$ ./i 
+sum = 1534
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>8-sum_listint.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task1001" data-position="10">
+            <div class=" clearfix gap" id="task-1001">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="1001">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="1001" data-toggle="modal" data-target="#task-1001-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-1001-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Insert"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/1001/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="1001" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    9. Insert
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that inserts a new node at a given position.</p>
+
+<ul>
+<li>Prototype: <code>listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n);</code></li>
+<li>where <code>index</code> is the index of the list where the new node should be added. Index starts at <code>0</code></li>
+<li>Returns: the address of the new node, or <code>NULL</code> if it failed</li>
+<li>if it is not possible to add the new node at index <code>index</code>, do not add the new node and return <code>NULL</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 9-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&amp;head, 0);
+    add_nodeint_end(&amp;head, 1);
+    add_nodeint_end(&amp;head, 2);
+    add_nodeint_end(&amp;head, 3);
+    add_nodeint_end(&amp;head, 4);
+    add_nodeint_end(&amp;head, 98);
+    add_nodeint_end(&amp;head, 402);
+    add_nodeint_end(&amp;head, 1024);
+    print_listint(head);
+    printf(&quot;-----------------\n&quot;);
+    insert_nodeint_at_index(&amp;head, 5, 4096);
+    print_listint(head);
+    free_listint2(&amp;head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 9-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 9-insert_nodeint.c -o j
+julien@ubuntu:~/0x12. More singly linked lists$ ./j 
+0
+1
+2
+3
+4
+98
+402
+1024
+-----------------
+0
+1
+2
+3
+4
+4096
+98
+402
+1024
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>9-insert_nodeint.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task1002" data-position="11">
+            <div class=" clearfix gap" id="task-1002">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="1002">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="1002" data-toggle="modal" data-target="#task-1002-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-1002-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Delete at index"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/1002/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="1002" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    10. Delete at index
+    <span class="alert alert-warning mandatory-optional">
+      mandatory
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that deletes the node at index <code>index</code> of a <code>listint_t</code> linked list.</p>
+
+<ul>
+<li>Prototype: <code>int delete_nodeint_at_index(listint_t **head, unsigned int index);</code></li>
+<li>where <code>index</code> is the index of the node that should be deleted. Index starts at <code>0</code></li>
+<li>Returns: <code>1</code> if it succeeded, <code>-1</code> if it failed</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 10-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&amp;head, 0);
+    add_nodeint_end(&amp;head, 1);
+    add_nodeint_end(&amp;head, 2);
+    add_nodeint_end(&amp;head, 3);
+    add_nodeint_end(&amp;head, 4);
+    add_nodeint_end(&amp;head, 98);
+    add_nodeint_end(&amp;head, 402);
+    add_nodeint_end(&amp;head, 1024);
+    print_listint(head);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 5);
+    print_listint(head);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    print_listint(head);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    print_listint(head);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    print_listint(head);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    print_listint(head);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    print_listint(head);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    print_listint(head);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    printf(&quot;-----------------\n&quot;);
+    delete_nodeint_at_index(&amp;head, 0);
+    print_listint(head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 10-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 10-delete_nodeint.c -o k
+julien@ubuntu:~/0x12. More singly linked lists$ valgrind ./k 
+==5571== Memcheck, a memory error detector
+==5571== Copyright (C) 2002-2015, and GNU GPL&#39;d, by Julian Seward et al.
+==5571== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5571== Command: ./k
+==5571== 
+0
+1
+2
+3
+4
+98
+402
+1024
+-----------------
+0
+1
+2
+3
+4
+402
+1024
+-----------------
+1
+2
+3
+4
+402
+1024
+-----------------
+2
+3
+4
+402
+1024
+-----------------
+3
+4
+402
+1024
+-----------------
+4
+402
+1024
+-----------------
+402
+1024
+-----------------
+1024
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+==5571== 
+==5571== HEAP SUMMARY:
+==5571==     in use at exit: 0 bytes in 0 blocks
+==5571==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
+==5571== 
+==5571== All heap blocks were freed -- no leaks are possible
+==5571== 
+==5571== For counts of detected and suppressed errors, rerun with: -v
+==5571== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>10-delete_nodeint.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task1003" data-position="12">
+            <div class=" clearfix gap" id="task-1003">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="1003">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="1003" data-toggle="modal" data-target="#task-1003-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-1003-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Reverse list"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/1003/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="1003" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    11. Reverse list
+    <span class="alert alert-info mandatory-optional">
+      #advanced
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that reverses a <code>listint_t</code> linked list.</p>
+
+<ul>
+<li>Prototype: <code>listint_t *reverse_listint(listint_t **head);</code></li>
+<li>You should go though the list only once</li>
+<li>You are not allowed to use <code>malloc</code>, <code>free</code> or arrays</li>
+<li>You can only declare a maximum of two variables in your function</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 100-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&amp;head, 0);
+    add_nodeint_end(&amp;head, 1);
+    add_nodeint_end(&amp;head, 2);
+    add_nodeint_end(&amp;head, 3);
+    add_nodeint_end(&amp;head, 4);
+    add_nodeint_end(&amp;head, 98);
+    add_nodeint_end(&amp;head, 402);
+    add_nodeint_end(&amp;head, 1024);
+    print_listint(head);
+    reverse_listint(&amp;head);
+    print_listint(head);    
+    free_listint2(&amp;head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 100-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 100-reverse_listint.c -o l
+julien@ubuntu:~/0x12. More singly linked lists$ valgrind ./l 
+==3117== Memcheck, a memory error detector
+==3117== Copyright (C) 2002-2015, and GNU GPL&#39;d, by Julian Seward et al.
+==3117== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3117== Command: ./l
+==3117== 
+0
+1
+2
+3
+4
+98
+402
+1024
+1024
+402
+98
+4
+3
+2
+1
+0
+==3117== 
+==3117== HEAP SUMMARY:
+==3117==     in use at exit: 0 bytes in 0 blocks
+==3117==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
+==3117== 
+==3117== All heap blocks were freed -- no leaks are possible
+==3117== 
+==3117== For counts of detected and suppressed errors, rerun with: -v
+==3117== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>100-reverse_listint.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task1004" data-position="13">
+            <div class=" clearfix gap" id="task-1004">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="1004">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="1004" data-toggle="modal" data-target="#task-1004-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-1004-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Print (safe version)"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/1004/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="1004" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    12. Print (safe version)
+    <span class="alert alert-info mandatory-optional">
+      #advanced
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that prints a <code>listint_t</code> linked list.</p>
+
+<ul>
+<li>Prototype: <code>size_t print_listint_safe(const listint_t *head);</code></li>
+<li>Returns: the number of nodes in the list</li>
+<li>This function can print lists with a loop</li>
+<li>You should go though the list only once</li>
+<li>If the function fails, exit the program with status <code>98</code></li>
+<li>Output format: see example</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 101-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    listint_t *head2;
+    listint_t *node;
+
+    head2 = NULL;
+    add_nodeint(&amp;head2, 0);
+    add_nodeint(&amp;head2, 1);
+    add_nodeint(&amp;head2, 2);
+    add_nodeint(&amp;head2, 3);
+    add_nodeint(&amp;head2, 4);
+    add_nodeint(&amp;head2, 98);
+    add_nodeint(&amp;head2, 402);
+    add_nodeint(&amp;head2, 1024);
+    print_listint_safe(head2);
+    head = NULL;
+    node = add_nodeint(&amp;head, 0);
+    add_nodeint(&amp;head, 1);
+    add_nodeint(&amp;head, 2);
+    add_nodeint(&amp;head, 3);
+    add_nodeint(&amp;head, 4);
+    node-&gt;next = add_nodeint(&amp;head, 98);
+    add_nodeint(&amp;head, 402);
+    add_nodeint(&amp;head, 1024);
+    print_listint_safe(head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 101-main.c 2-add_nodeint.c 101-print_listint_safe.c -o m
+julien@ubuntu:~/0x12. More singly linked lists$ ./m
+[0x1b500f0] 1024
+[0x1b500d0] 402
+[0x1b500b0] 98
+[0x1b50090] 4
+[0x1b50070] 3
+[0x1b50050] 2
+[0x1b50030] 1
+[0x1b50010] 0
+[0x1b50600] 1024
+[0x1b505e0] 402
+[0x1b505c0] 98
+[0x1b505a0] 4
+[0x1b50580] 3
+[0x1b50560] 2
+[0x1b50540] 1
+[0x1b50110] 0
+-&gt; [0x1b505c0] 98
+julien@ubuntu:~/0x12. More singly linked lists$
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>101-print_listint_safe.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task1005" data-position="14">
+            <div class=" clearfix gap" id="task-1005">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="1005">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="1005" data-toggle="modal" data-target="#task-1005-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-1005-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Free (safe version)"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/1005/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="1005" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    13. Free (safe version)
+    <span class="alert alert-info mandatory-optional">
+      #advanced
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that free a <code>listint_t</code> list.</p>
+
+<ul>
+<li>Prototype: <code>size_t free_listint_safe(listint_t **h);</code></li>
+<li>This function can free lists with a loop</li>
+<li>You should go though the list only once</li>
+<li>Returns: the size of the list that was free&#39;d</li>
+<li>The function sets the <code>head</code> to <code>NULL</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 102-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    listint_t *head2;
+    listint_t *node;
+
+    head2 = NULL;
+    add_nodeint(&amp;head2, 0);
+    add_nodeint(&amp;head2, 1);
+    add_nodeint(&amp;head2, 2);
+    add_nodeint(&amp;head2, 3);
+    add_nodeint(&amp;head2, 4);
+    add_nodeint(&amp;head2, 98);
+    add_nodeint(&amp;head2, 402);
+    add_nodeint(&amp;head2, 1024);
+    print_listint_safe(head2);
+    head = NULL;
+    node = add_nodeint(&amp;head, 0);
+    add_nodeint(&amp;head, 1);
+    add_nodeint(&amp;head, 2);
+    add_nodeint(&amp;head, 3);
+    add_nodeint(&amp;head, 4);
+    node-&gt;next = add_nodeint(&amp;head, 98);
+    add_nodeint(&amp;head, 402);
+    add_nodeint(&amp;head, 1024);
+    print_listint_safe(head);
+    free_listint_safe(&amp;head2);
+    free_listint_safe(&amp;head);
+    printf(&quot;%p, %p\n&quot;, (void *)head2, (void *)head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 102-main.c 2-add_nodeint.c 101-print_listint_safe.c 102-free_listint_safe.c -o n
+julien@ubuntu:~/0x12. More singly linked lists$ ./n 
+[0x11260f0] 1024
+[0x11260d0] 402
+[0x11260b0] 98
+[0x1126090] 4
+[0x1126070] 3
+[0x1126050] 2
+[0x1126030] 1
+[0x1126010] 0
+[0x1126600] 1024
+[0x11265e0] 402
+[0x11265c0] 98
+[0x11265a0] 4
+[0x1126580] 3
+[0x1126560] 2
+[0x1126540] 1
+[0x1126110] 0
+-&gt; [0x11265c0] 98
+(nil), (nil)
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>102-free_listint_safe.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+        <div data-role="task1006" data-position="15">
+            <div class=" clearfix gap" id="task-1006">
+<span id="user_id" data-id="62"></span>
+
+    <div class="student_task_controls">
+      
+      <!-- button Done -->
+        <button class="student_task_done btn btn-default no" data-task-id="1006">
+          <span class="no"><i class="fa fa-square-o"></i></span>
+          <span class="yes"><i class="fa fa-check-square-o"></i></span>
+          <span class="pending"><i class="fa fa-spinner fa-pulse"></i></span>
+          Done<span class="no pending">?</span><span class="yes">!</span>
+        </button>
+        <br>
+      
+      <!-- button Who is done? -->
+      <button class="users_done_for_task btn btn-default btn-sm" data-task-id="1006" data-toggle="modal" data-target="#task-1006-users-done-modal">
+        Who is done?
+      </button>
+      <div class="modal fade users-done-modal" id="task-1006-users-done-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Batchmates who are done with "Find the loop"</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+              </div>
+                  <a class="btn btn-default btn-sm student_task_help" data-confirm="Are you sure you wish to notify people?" href="/tasks/1006/mark_as_help">Help!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- button Help! / Canel help -->
+          <button class="student_task_help btn btn-default btn-sm" data-task-id="1006" >
+            Help!
+          </button>
+    </div>
+
+  <h4 class="task">
+    14. Find the loop
+    <span class="alert alert-info mandatory-optional">
+      #advanced
+    </span>
+  </h4>
+
+
+  <!-- Progress vs Score -->
+
+  
+
+  <p>Write a function that finds the loop in a linked list.</p>
+
+<ul>
+<li>Prototype: <code>listint_t *find_listint_loop(listint_t *head);</code></li>
+<li>Returns: The address of the node where the loop starts, or <code>NULL</code> if there is no loop</li>
+<li>You are not allowed to use <code>malloc</code>, <code>free</code> or arrays</li>
+<li>You can only declare a maximum of two variables in your function</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x12. More singly linked lists$ cat 103-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;lists.h&quot;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    listint_t *head2;
+    listint_t *node;
+
+    head2 = NULL;
+    add_nodeint(&amp;head2, 0);
+    add_nodeint(&amp;head2, 1);
+    add_nodeint(&amp;head2, 2);
+    add_nodeint(&amp;head2, 3);
+    add_nodeint(&amp;head2, 4);
+    add_nodeint(&amp;head2, 98);
+    add_nodeint(&amp;head2, 402);
+    add_nodeint(&amp;head2, 1024);
+    print_listint_safe(head2);
+    node = find_listint_loop(head2);
+    if (node != NULL)
+    {
+        printf(&quot;Loop starts at [%p] %d\n&quot;, (void *)node, node-&gt;n);
+    }
+    free_listint_safe(&amp;head2);
+    head = NULL;
+    node = add_nodeint(&amp;head, 0);
+    add_nodeint(&amp;head, 1);
+    add_nodeint(&amp;head, 2);
+    add_nodeint(&amp;head, 3);
+    add_nodeint(&amp;head, 4);
+    add_nodeint(&amp;head, 5);
+    add_nodeint(&amp;head, 6);
+    node-&gt;next = add_nodeint(&amp;head, 7);
+    add_nodeint(&amp;head, 98);
+    add_nodeint(&amp;head, 402);
+    add_nodeint(&amp;head, 1024);
+    print_listint_safe(head);
+    node = find_listint_loop(head);
+    if (node != NULL)
+    {
+        printf(&quot;Loop starts at [%p] %d\n&quot;, (void *)node, node-&gt;n);
+    }
+    free_listint_safe(&amp;head);
+    return (0);
+}
+julien@ubuntu:~/0x12. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 103-main.c 2-add_nodeint.c 101-print_listint_safe.c 102-free_listint_safe.c 103-find_loop.c -o o
+julien@ubuntu:~/0x12. More singly linked lists$ ./o 
+[0x13700f0] 1024
+[0x13700d0] 402
+[0x13700b0] 98
+[0x1370090] 4
+[0x1370070] 3
+[0x1370050] 2
+[0x1370030] 1
+[0x1370010] 0
+[0x1370560] 1024
+[0x1370540] 402
+[0x1370010] 98
+[0x1370030] 7
+[0x1370050] 6
+[0x1370070] 5
+[0x1370090] 4
+[0x13700b0] 3
+[0x13700d0] 2
+[0x13700f0] 1
+[0x1370110] 0
+-&gt; [0x1370030] 7
+Loop starts at [0x1370030] 7
+julien@ubuntu:~/0x12. More singly linked lists$ 
+</code></pre>
+
+
+    <p class="sm-gap"><strong>Repo:</strong></p>
+    <ul>
+      <li>GitHub repository: <code>holbertonschool-low_level_programming</code></li>
+        <li>Directory: <code>0x12-more_singly_linked_lists</code></li>
+        <li>File: <code>103-find_loop.c</code></li>
+    </ul>
+
+
+
+  
+      
+</div>
+
+        </div>
+  </section>
+
+
+
+
+
+
+      </article>
+
+    </main>
+
+
+
+
+
+    
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-67152800-6', 'auto');
+        ga('send', 'pageview');
+      </script>
+
+  </body>
+</html>
+
