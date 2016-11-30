@@ -1,4 +1,4 @@
-# HolbertonSchool_Day007 #
+# HolbertonSchool-C_Hello_world
 Commands used: gcc, printf, puts, putchar
 http://harmful.cat-v.org/software/c++/linus
 http://www.woohooitsbacon.com/10-reasons-why-c-is-still-the-best-programming-language/
