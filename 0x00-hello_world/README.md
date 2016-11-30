@@ -1,11 +1,11 @@
-# HolbertonSchool-C_Hello_world
+# Holberton School - 0x00-hello_world
 ## Commands used:
 ``gcc, printf, puts, putchar``
 ## Helpful Links
-[Linux Torvalds on C++](http://harmful.cat-v.org/software/c++/linus)
-[10 reasons C is the still best](http://www.woohooitsbacon.com/10-reasons-why-c-is-still-the-best-programming-language/)
-[Who is Dennis Ritchie](https://en.wikipedia.org/wiki/Dennis_Ritchie)
-[Brian Kernighan on C](https://www.youtube.com/watch?v=de2Hsvxaf8M)
+* [Linux Torvalds on C++](http://harmful.cat-v.org/software/c++/linus)
+* [10 reasons C is the still best](http://www.woohooitsbacon.com/10-reasons-why-c-is-still-the-best-programming-language/)
+* [Who is Dennis Ritchie](https://en.wikipedia.org/wiki/Dennis_Ritchie)
+* [Brian Kernighan on C](https://www.youtube.com/watch?v=de2Hsvxaf8M)
 
 ## Description of Files
 <h6>0-preprocessor</h6>
@@ -26,19 +26,19 @@ Write a script that compiles a C file and creates an executable named cisfun. Th
 Write a C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
 
 
-    Use the function puts
-    You are not allowed to use printf
-    Your program should end with the value 0
+Use the function puts
+You are not allowed to use printf
+Your program should end with the value 0
 
 
 <h6>5-printf.c</h6>
 Write a C program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line.
 
 
-    Use the function printf
-    You are not allowed to use the function puts
-    Your program should return 0
-    Your program should compile without warning when using the -Wall gcc option
+Use the function printf
+You are not allowed to use the function puts
+Your program should return 0
+Your program should compile without warning when using the -Wall gcc option
 
 
 <h6>6-size.c</h6>
