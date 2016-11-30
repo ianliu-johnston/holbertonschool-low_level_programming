@@ -1,10 +1,19 @@
+#include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
 /**
-  * print_listint - define function
-  * @h - describe argument
-  * Return: what does it return?
+  * print_list - prints all elements of a list_t list
+  * @h: singly linked list to print
+  * Return: number of nodes in the list
   */
 size_t print_listint(const listint_t *h)
 {
-	return (0);
+	size_t i;
+
+	for (i = 0; h; i++)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+	}
+	return (i);
 }
