@@ -28,7 +28,7 @@ Prints all numbers of base 10, starting from 0, followed by a new line.
 Prints all numbers of base 10, starting from 0, followed by a new line.
 
 
-	You are not allowed to use any variable of type char. You can only use the putchar function (every other functions (printf, puts, etc...) are forbidden). You can only use putchar twice in your code
+You are not allowed to use any variable of type char. You can only use the putchar function (every other functions (printf, puts, etc...) are forbidden). You can only use putchar twice in your code
 
 <h6>7-print_tebahpla.c</h6>
 Prints the alphabet, in reverse order, in lowercase, followed by a new line.
