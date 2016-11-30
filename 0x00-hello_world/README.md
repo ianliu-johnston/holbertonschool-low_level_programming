@@ -1,5 +1,5 @@
 # Holberton School - 0x00-hello_world
-## Commands used:
+## Commands / functions used:
 ``gcc, printf, puts, putchar``
 ## Helpful Links
 * [Linux Torvalds on C++](http://harmful.cat-v.org/software/c++/linus)
