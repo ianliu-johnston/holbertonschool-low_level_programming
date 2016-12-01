@@ -1,9 +1,19 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
-  * free_list - define function
-  * @head: describe argument
-  * Return: what does it return?
+  * free_listint2 - Frees a list and sets its head to NULL
+  * @head: pointer to list
   */
-void free_list(listint_t **head)
+void free_listint2(listint_t **head)
 {
+	listint_t *temp, *current;
+
+	current = *head;
+	while (current != NULL)
+	{
+		temp = current;
+		current = current->next;
+		free(temp);
+	}
+	*head = NULL;
 }
