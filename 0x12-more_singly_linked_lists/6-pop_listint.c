@@ -1,10 +1,18 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
-  * pop_listint - define function
-  * @head: describe argument
-  * Return: what does it return?
+  * pop_listint - pops off the head of the list and returns its contents
+  * @head: head of the list
+  * Return: contents of head
   */
 int pop_listint(listint_t **head)
 {
-	return (0);
+	int i;
+	listint_t *current, *tmp;
+
+	tmp = current = *head;
+	*head ? (i  = current->n) : (i = 0);
+	*head = current->next;
+	free(tmp);
+	return (i);
 }
