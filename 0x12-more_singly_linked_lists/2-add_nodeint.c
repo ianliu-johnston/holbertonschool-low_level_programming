@@ -1,11 +1,21 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
-  * add_nodeint - define function
-  * @head:
-  * @n:
-  * Return: what does it return?
+  * add_node - add new nodes to the list
+  * @head: current place in the list
+  * @str: string to add to the head
+  * Return: pointer to current position in list
   */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	return (0);
+	listint_t *new;
+
+	new = *head;
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+	new->n = n;
+	new->next = *head;
+	*head = new;
+	return (*head);
 }

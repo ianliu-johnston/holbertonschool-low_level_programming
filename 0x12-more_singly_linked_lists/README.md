@@ -8,12 +8,14 @@
 * [Additional Linked list Exercises](https://www.hackerrank.com/domains/data-structures/linked-lists)
 
 ## Description of Files
+<h6>lists.h</h6>
+Header file contains prototypes, and the main struct.
 <h6>0-print_listint.c</h6>
 Prints the elements of a linked list. Returns the number of nodes.
 <h6>1-listint_len.c</h6>
-
+Gets the number of nodes in a linked list. 
 <h6>2-add_nodeint.c</h6>
-
+Adds a new node at the beginning.
 <h6>3-add_nodeint_end.c</h6>
 
 <h6>4-free_listint.c</h6>
