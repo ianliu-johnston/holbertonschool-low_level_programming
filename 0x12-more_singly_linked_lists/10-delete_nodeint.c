@@ -20,8 +20,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(current);
 		return (1);
 	}
-	subsequent = current->next;
-	while (index > 1 && subsequent)
+	while (index > 1 && current->next)
 	{
 		current = current->next;
 		subsequent = current->next;
