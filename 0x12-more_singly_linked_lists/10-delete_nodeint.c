@@ -9,24 +9,30 @@
   */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *current, *tmp;
+	listint_t *current, *subsequent;
 
-	printf("Entering\n");
-	if (!*head)
-	   	return (-1);
-	printf("got in: the index here is %u\n", index);
+	if (!head || !*head)
+		return (-1);
 	current = *head;
-	while (index > 0)
+	if (index == 0)
+	{
+		*head = (*head)->next;
+		free(current);
+		return (1);
+	}
+	subsequent = current->next;
+	while (index > 1 && subsequent)
 	{
 		current = current->next;
-		printf("%04u\n", index);
+		subsequent = current->next;
 		index--;
 	}
-	tmp = current->next->next;
-	printf("Your value sir: %u, The next one is %u\n", current->n, current->next->n);
-	printf("Shall I free it for you?");
-	free (current->next);
-	current->next = tmp;
-	printf("Done. The next value is %u\n", current->next->n);
+	if (subsequent->next)
+	{
+		current->next = subsequent->next;
+		free(subsequent);
+	}
+	else
+		free(current);
 	return (1);
 }
