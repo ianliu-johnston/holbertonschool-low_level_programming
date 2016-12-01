@@ -21,11 +21,11 @@ Adds a new node at the end of the list
 <h6>4-free_listint.c</h6>
 Frees all nodes.
 <h6>5-free_listint2.c</h6>
-
+Frees all nodes and sets the head to NULL
 <h6>6-pop_listint.c</h6>
-
+Pops the head off of the list and returns its contents.
 <h6>7-get_nodeint.c</h6>
-
+Returns a sum of all the data in the list
 <h6>8-sum_listint.c</h6>
 
 <h6>9-insert_nodeint.c</h6>
