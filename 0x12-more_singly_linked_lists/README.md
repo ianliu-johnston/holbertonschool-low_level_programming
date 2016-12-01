@@ -25,13 +25,13 @@ Frees all nodes and sets the head to NULL
 <h6>6-pop_listint.c</h6>
 Pops the head off of the list and returns its contents.
 <h6>7-get_nodeint.c</h6>
-Returns a sum of all the data in the list
+Gets the value of a node at index n.
 <h6>8-sum_listint.c</h6>
-
+Returns a sum of all the data in the list.
 <h6>9-insert_nodeint.c</h6>
-
+Inserts a node at a specified point 
 <h6>10-delete_nodeint.c</h6>
-
+Deletes a node at a specified point
 <h6>100-reverse_listint.c</h6>
 
 <h6>101-print_listint_safe.c</h6>

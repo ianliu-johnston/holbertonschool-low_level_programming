@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
   * free_listint2 - Frees a list and sets its head to NULL
-  * @head: pointer to list
+  * @head: double pointer to head of list
   */
 void free_listint2(listint_t **head)
 {
