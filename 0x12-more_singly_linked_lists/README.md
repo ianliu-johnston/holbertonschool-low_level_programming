@@ -17,9 +17,9 @@ Gets the number of nodes in a linked list.
 <h6>2-add_nodeint.c</h6>
 Adds a new node at the beginning.
 <h6>3-add_nodeint_end.c</h6>
-
+Adds a new node at the end of the list
 <h6>4-free_listint.c</h6>
-
+Frees all nodes.
 <h6>5-free_listint2.c</h6>
 
 <h6>6-pop_listint.c</h6>
