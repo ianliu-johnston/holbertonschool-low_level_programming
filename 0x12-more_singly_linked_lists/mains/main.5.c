@@ -15,7 +15,7 @@ int main(void)
     head = NULL;
     add_nodeint_end(&head, 0);
     add_nodeint_end(&head, 1);
-    add_nodeint_end(&head, 2);
+    add_nodeint_end(NULL, 2);
     add_nodeint_end(&head, 3);
     add_nodeint_end(&head, 4);
     add_nodeint_end(&head, 98);
