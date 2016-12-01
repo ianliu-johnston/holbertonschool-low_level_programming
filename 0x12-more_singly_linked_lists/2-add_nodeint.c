@@ -1,9 +1,9 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
-  * add_node - add new nodes to the list
+  * add_nodeint - add new nodes to the list
   * @head: current place in the list
-  * @str: string to add to the head
+  * @n: int to add to the list
   * Return: pointer to current position in list
   */
 listint_t *add_nodeint(listint_t **head, const int n)
