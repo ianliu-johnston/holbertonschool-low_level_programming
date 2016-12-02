@@ -2,13 +2,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
-  * delete_nodeint_at_index - deletes the node at the specified index
-  * @head: describe argument
-  * @index: node to delete
-  * Return: 1 on successs, -1 on failure
+  * insert_nodeint_at_index - insert a node at index
+  * @head: head of the list
+  * @index: location to insert node
+  * @n: value of the inserted node
+  * Return: pointer to head of list
   */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
+	unsigned int i;
 	listint_t *current, *subsequent;
 
 	if (!head || !*head)
@@ -16,36 +18,20 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	current = *head;
 	if (index == 0)
 	{
-		if ((*head)->next)
-		{
-			*head = (*head)->next;
-			free(current);
-			return (1);
-		}
-		else
-		{
-			free(*head);
-			*head = NULL;
-			return (1);
-		}
+		*head = (*head)->next;
+		free(current);
+		return (1);
 	}
-	while (index > 1 && current->next)
+	for (i = 0; i < (index - 1); i++)
 	{
+		printf("index: %d\n", index);
 		current = current->next;
-		index--;
+		if (current == NULL)
+			return (-1);
 	}
-	if (index >= 1)
-		return (-1);
+	printf("Stopped at %d\n", index);
 	subsequent = current->next;
-	if (subsequent->next)
-	{
-		current->next = subsequent->next;
-		free(subsequent);
-	}
-	else
-	{
-		current->next = NULL;
-		free(subsequent);
-	}
+	current->next = subsequent->next;
+	free(subsequent);
 	return (1);
 }
