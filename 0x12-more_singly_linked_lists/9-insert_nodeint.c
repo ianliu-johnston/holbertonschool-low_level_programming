@@ -22,11 +22,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 		*head = new;
 		return (*head);
 	}
-	if (*head == NULL && index != 0)
-	{
-		free(new);
-		return (NULL);
-	}
 	while (index > 1)
 	{
 		current = current->next;
@@ -39,5 +34,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 	}
 	new->next = current->next;
 	current->next = new;
-	return (*head);
+	return (new);
 }
