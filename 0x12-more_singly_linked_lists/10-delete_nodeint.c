@@ -13,10 +13,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *current, *subsequent;
 
 	if (!head || !*head)
-	{
-		printf("Error\n");
 		return (-1);
-	}
 	current = *head;
 	if (index == 0)
 	{
