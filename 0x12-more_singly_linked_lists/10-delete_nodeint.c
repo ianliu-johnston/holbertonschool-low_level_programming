@@ -14,7 +14,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *current, *subsequent;
 
 	if (!head || !*head)
+	{
+		printf("Error\n");
 		return (-1);
+	}
 	current = *head;
 	if (index == 0)
 	{
@@ -24,12 +27,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	for (i = 0; i < (index - 1); i++)
 	{
-		printf("index: %d\n", index);
 		current = current->next;
 		if (current == NULL)
 			return (-1);
 	}
-	printf("Stopped at %d\n", index);
 	subsequent = current->next;
 	current->next = subsequent->next;
 	free(subsequent);
