@@ -1,5 +1,6 @@
 #!/bin/bash
-export INPUT="day038.html"
+echo "Enter the file name of your HTML page."
+read INPUT
 mkdir $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
 cp $INPUT $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
 cd $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
