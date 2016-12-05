@@ -16,11 +16,11 @@ grep Prototype: $INPUT | cut -d \> -f3 | cut -d \< -f1 >> holberton.h
 cp ../_putchar.c .
 find . -type f -name "*.c" -empty -exec cp ../template '{}' \;
 cp ../0x00-hello_world/README.md .
-find . -MAXDEPTH 1 -type f -name "*.c" -exec sed -i 's/dog/holberton/g' '{}' \;
+find . -type f -name "*.c" -exec sed -i 's/dog/holberton/g' '{}' \;
 mkdir mains
 cd mains/
 mv ../$INPUT .
-export TOTAL=$(grep -c "<pre><code>" 0x13-bit_manipulation/day038.html)
+export TOTAL=$(grep -c "<pre><code>" $INPUT)
 for ((i = 1; i <= $TOTAL; i++ ))
 do
 	ITER=$(($i*2))
