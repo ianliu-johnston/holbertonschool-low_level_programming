@@ -1,6 +1,11 @@
 #!/bin/bash
 echo "Enter the file name of your HTML page."
 read INPUT
+ls $INPUT
+if [[ $? != 0 ]]; then
+	exit 1
+fi
+echo $INPUT
 mkdir $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
 cp $INPUT $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
 cd $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
@@ -11,11 +16,11 @@ grep Prototype: $INPUT | cut -d \> -f3 | cut -d \< -f1 >> holberton.h
 cp ../_putchar.c .
 find . -type f -name "*.c" -empty -exec cp ../template '{}' \;
 cp ../0x00-hello_world/README.md .
-find . -type f -name "*.c" -exec sed -i 's/dog/holberton/g' '{}' \;
+find . -MAXDEPTH 1 -type f -name "*.c" -exec sed -i 's/dog/holberton/g' '{}' \;
 mkdir mains
 cd mains/
 mv ../$INPUT .
-export TOTAL=$(grep -n -e "<pre><code>" -e "</code></pre>" $INPUT | cut -d : -f 1 | grep -n "" | grep "[1,3,5,7,9]:" | cut -d : -f2 | sed 's/^/export A=/g' | grep -n "" | tail -1 | cut -d : -f1)
+export TOTAL=$(grep -c "<pre><code>" 0x13-bit_manipulation/day038.html)
 for ((i = 1; i <= $TOTAL; i++ ))
 do
 	ITER=$(($i*2))
