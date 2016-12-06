@@ -13,12 +13,13 @@ int main(void)
     printf("\n");
     print_binary(1);
     printf("\n");
+	print_binary(11);
+	printf("\n");
     print_binary(98);
     printf("\n");
-    print_binary(1024);
+	print_binary(UINT_MAX + 1);
     printf("\n");
-	printf("%lu\n", ULONG_MAX);
-    print_binary((1 << 10) + 1);
+    print_binary((1 << 14) + 8);
     printf("\n");
     return (0);
 }
