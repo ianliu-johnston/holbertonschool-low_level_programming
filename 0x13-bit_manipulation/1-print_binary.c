@@ -2,7 +2,7 @@
 /**
   * print_binary - define function
   * @void: describe argument
-  * Return: what?
+  * Return: 0 on success
 void print_binary(unsigned long int n)
 {
 	return (0);
