@@ -21,7 +21,7 @@ echo -e "a.out\n*.swp\n~*\n_betty-s\n_betty-d\n_putchar.c\n" >> .gitignore
 echo -e "#include <unistd.h>\nint _putchar(char c)\n{\n\treturn (write(1, &c, 1));\n}\n" > _putchar.c
 #Create the files
 touch $(grep File: $INPUT | cut -d \> -f3 | cut -d \< -f1)
-echo -e "#include \"dog.h\"\n/**\n  * main - define function\n  * @void: describe argument\n  * Return: 0 on success\nint main(void)\n{\n\treturn (0);\n}\n" >> template
+echo -e "#include \"dog.h\"\n/**\n  * main - define function\n  * @void: describe argument\n  * Return: 0 on success\n  */\nint main(void)\n{\n\treturn (0);\n}\n" >> template
 find . -type f -name "*.c" -empty -exec cp template '{}' \;
 rm template
 #Create the header
@@ -37,7 +37,7 @@ while read c; do
 done<$HEADER.h
 echo "#define HEADER_H" | cat - $HEADER.h > $HEADER.h.tmp
 echo "#ifndef HEADER_H" | cat - $HEADER.h.tmp > $HEADER.h
-echo "_putchar(char c);" >> $HEADER.h
+echo "int _putchar(char c);" >> $HEADER.h
 echo "#endif" >> $HEADER.h
 rm $HEADER.h.tmp
 #README.md
@@ -63,6 +63,7 @@ do
 	END=$( grep -m$ITER -n -e "<pre><code>" -e "</code></pre>" $INPUT | tail -2 | cut -d : -f 1 | grep -n "" | grep -v "[1,3,5,7,9]:" | cut -d : -f2 )
 	tail -n +$START $INPUT | head -n $(($END-$START)) | grep -v "@ubuntu" | sed 's/\&amp;/\&/g;s/&lt;/</g;s/&gt;/>/g;s/&quot;/"/g' | tac | sed '1,/}/d' | tac | sed '$s/$/\n}/' > main.$(($i-1)).c
 done
+ln -s ../$HEADER.h $HEADER.h
 mv $INPUT ../
 cd ..
 rm ../$INPUT
