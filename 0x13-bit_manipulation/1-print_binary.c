@@ -1,8 +1,7 @@
 #include "holberton.h"
 /**
-  * print_binary - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * print_binary - converts a decimal number to binary
+  * @n: integer to convert
   */
 void print_binary(unsigned long int n)
 {
