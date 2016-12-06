@@ -3,7 +3,8 @@ Description
 ## New commands / functions used:
 ``gcc``
 ## Helpful Links
-*
+* [Bitwise operators from Tutorials Point](https://www.tutorialspoint.com/cprogramming/c_bitwise_operators.htm)
+* [BestDotNetTraining Youtube video](https://www.youtube.com/watch?v=MyxVAq9MifI) 
 
 ## Description of Files
 <h6>0-binary_to_uint.c</h6>
