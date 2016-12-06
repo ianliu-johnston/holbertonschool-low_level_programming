@@ -6,6 +6,6 @@
   */
 void print_binary(unsigned long int n)
 {
-	return (0);
+	n++;
 }
 
