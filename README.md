@@ -1,39 +1,34 @@
-# Holberton School - 0x00-hello_world
-Compiling very simple programs with gcc. Learning the steps of compilation.
-## New commands / functions used:
-``gcc, printf, puts, putchar``
-## Helpful Links
-* [Linux Torvalds on C++](http://harmful.cat-v.org/software/c++/linus)
-* [10 reasons C is the still best](http://www.woohooitsbacon.com/10-reasons-why-c-is-still-the-best-programming-language/)
-* [Who is Dennis Ritchie](https://en.wikipedia.org/wiki/Dennis_Ritchie)
-* [Brian Kernighan on C](https://www.youtube.com/watch?v=de2Hsvxaf8M)
-* [Why C programming is awesome](https://www.youtube.com/watch?v=smGalmxPVYc)
-* [Learning to Program in C part 1](https://www.youtube.com/watch?v=rk2fK2IIiiQ)
-* [Learning to Program in C part 2](https://www.youtube.com/watch?v=FwpP_MsZWnU)
-* [Understanding the C program Compilation Process](https://www.youtube.com/watch?v=VDslRumKvRA)
+# Low Level C Programming Exercises
+Exercises to learn the C programming language at [Holberton School](https://holbertonschool.com). These exercises are designed to take the student from a complete novice to writing fully functional programs.
+## Styling and Specifications
+All C programs are complied with gcc 4.8 on Ubuntu 14.04 LTS. They comply with a [custom formatting checker](https://github.com/holbertonschool/Betty), to facilitate good coding style. Style is based off of [Linux Kernel coding style](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/plain/Documentation/CodingStyle) All programs were written from the Bash shell, with Vim. Most standard library functions are not used. The main exceptions are generally: ``printf``, ``malloc``, ``free`` and  ``exit``. 
+### Compilation
+All errors must compile with the flags below, using the format below.
+```
+gcc -Wall -Werror -Wextra -pedantic main.##.c ##-name.c
+```
+All bash scripts require execution permissions:
+```
+chmod u+x file
+```
+### Directory Structure
+Each directory is named according to the key concept shared by all exercises in the directory. They are numbered sequentially to provide a linear timeline, and build on the key concepts from all previous concepts. Project 0x10-printf is missing from the directory structure, because it is in a separate repository, with another contributor. Each directory contains its own README.md with a short description of the program or script. Additionally, there is a template file in the root of the directory, with the correct styling for all C programs. Also, there is a short c program, ``_putchar.c``, which replicates the functionality of the putchar function from the standard library.
+### Tools
+* [betty style](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl) - Style checker. Run with ``./betty-style.pl``
+* [betty documentation](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl) - Documentation style checker. Run with ``./betty-doc.pl``
+* [valgrind](http://valgrind.org) - Check for memory leaks
+* [radare2](https://github.com/radare/radare2) - CLI disassembler, debugger, and reverse-engineering
+* [gdb](http://www.gnu.org/software/gdb/) - GNU debugging tool for reverse-engineering
+* [vim](http://www.vim.org/) - The CLI text editor
 
-## Description of Files
-<h6>0-preprocessor</h6>
-Script that runs a C file through the preprocessor and saves the result into another file.
-<h6>1-compiler</h6>
-Script that generates the assembly code of a C code and save it in an output file.
-The C file name will be saved in the variable $CFILE. The output file should be named the same as the C file, but with the extension .s instead of .c. Example: if the C file is main.c, the output file should be main.s
-<h6>2-assembler</h6>
-Script that compiles a C file but does not link. The C file name will be saved in the variable $CFILE The output file should be named the same as the C file, but with the extension .o instead of .c. Example: if the C file is main.c, the output file should be main.o
-<h6>3-name</h6>
-Script that compiles a C file and creates an executable named cisfun. The C file name will be saved in the variable $CFILE.
-<h6>4-puts.c</h6>
-Write a C program that prints exactly ``Programming is like building a multilingual puzzle``, followed by a new line.
-
-
-Use the function puts. You are not allowed to use printf. Your program should end with the value 0.
-<h6>5-printf.c</h6>
-Write a C program that prints exactly ``with proper grammar, but the outcome is a piece of art,``, followed by a new line.
-
-
-Use the function printf. You are not allowed to use the function puts. Your program should return 0. Your program should compile without warning when using the -Wall gcc option
-<h6>6-size.c</h6>
-Write a C program that prints the size of various types on the computer it is compiled and run on.
-
-
-Warnings are allowed. Your program should return 0. You might have to install the package libc6-dev-i386 on your Linux (Vagrant) to test the -m32 gcc option.
+## Links
+See [links.md](links.md) for a list of links that are supplimental to the material.
+## Feedback
+I welcome any feedback on the code, as they aid in the ability to understand core concepts for low level programming in C. However, because they are primarily for my personal education, this repository is not open to contribution.
+## Author
+**Ian Xaun Liu-Johnston**
+I have coded all of these exercises during my studies. The exercises themselves are part of the low level programming curriculum at [Holberton School](https://holbertonschool.com)
+* [Twitter](https://twitter.com/Concativerse) - @Concativerse
+* [Medium](https://medium.com/@Concativerse) - Technical articles on C programming.
+* [Linkedin](https://www.linkedin.com/in/ian-liu-johnston-32a40a115)
+* [Personal Website](http://ianxaunliu-johnston.com) - 
