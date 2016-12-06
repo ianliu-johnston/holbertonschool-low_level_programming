@@ -6,7 +6,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int expo;
-	long int i;
+	int i;
 
 	if (n == 0)
 		_putchar('0');
@@ -14,5 +14,5 @@ void print_binary(unsigned long int n)
 		;
 	i--;
 	for (; i >= 0; i--)
-		(n & (1 << i)) ? _putchar('1') : _putchar('0');
+		((n >> i) & 1) ? _putchar('1') : _putchar('0');
 }
