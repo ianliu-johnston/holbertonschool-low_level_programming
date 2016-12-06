@@ -1,13 +1,12 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
-  * set_bit - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * set_bit - sets bit at index to 1
+  * @n: pointer to number
+  * Return: 1 on success, -1 on failure
   */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	n++;
-	index++;
-	return (0);
+	*n = *n ^ (1 << index);
+	return ((index > sizeof(unsigned int) || index == 0) ? 1 : -1);
 }
-
