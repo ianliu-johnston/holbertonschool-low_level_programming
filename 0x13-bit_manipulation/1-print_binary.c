@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
-  * main - define function
+  * print_binary - define function
   * @void - describe argument
   * Return: what does it return?
   */
-int main(void)
+void print_binary(unsigned long int n)
 {
 	return (0);
 }

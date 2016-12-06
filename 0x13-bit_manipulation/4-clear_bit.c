@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
-  * main - define function
+  * clear_bit - define function
   * @void - describe argument
   * Return: what does it return?
   */
-int main(void)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	return (0);
 }

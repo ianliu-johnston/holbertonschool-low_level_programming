@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
-  * main - define function
+  * get_endianness - define function
   * @void - describe argument
   * Return: what does it return?
   */
-int main(void)
+int get_endianness(void)
 {
 	return (0);
 }
