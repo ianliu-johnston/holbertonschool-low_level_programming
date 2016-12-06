@@ -8,9 +8,6 @@
   */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	/*
-	unsigned long int expo;
-	*/
 	int i, res;
 
 	res = 0;
