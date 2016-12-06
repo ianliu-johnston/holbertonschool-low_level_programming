@@ -14,8 +14,8 @@ echo Checking to see if Betty checks is in the home directory
 ls ~/Betty/
 if [[ $? == 0 ]]; then
 	echo Found Betty checks. Making symbolic links. Run with ./_betty-s *.c or ./_betty-d *.c
-	ln -s ~/Betty/betty-doc.pl _betty-s
-	ln -s ~/Betty/betty-style.pl _betty-d
+	ln -s ~/Betty/betty-doc.pl _betty-d
+	ln -s ~/Betty/betty-style.pl _betty-s
 fi
 echo -e "a.out\n*.swp\n~*\n_betty-s\n_betty-d\n_putchar.c\n" >> .gitignore
 echo -e "#include <unistd.h>\nint _putchar(char c)\n{\n\treturn (write(1, &c, 1));\n}\n" > _putchar.c
