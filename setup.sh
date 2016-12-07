@@ -60,7 +60,12 @@ do
 	ITER=$(($i*2))
 	START=$( grep -m$ITER -n -e "<pre><code>" -e "</code></pre>" $INPUT | tail -2 | cut -d : -f 1 | grep -n "" | grep "[1,3,5,7,9]:" | cut -d : -f2 )
 	END=$( grep -m$ITER -n -e "<pre><code>" -e "</code></pre>" $INPUT | tail -2 | cut -d : -f 1 | grep -n "" | grep -v "[1,3,5,7,9]:" | cut -d : -f2 )
-	tail -n +$START $INPUT | head -n $(($END-$START)) | grep -v "@ubuntu" | sed 's/\&amp;/\&/g;s/&lt;/</g;s/&gt;/>/g;s/&quot;/"/g' | tac | sed '1,/}/d' | tac | sed '$s/$/\n}/' > main.$(($i-1)).c
+	tail -n +$START $INPUT | head -n $(($END-$START)) | grep -v "@ubuntu" | sed "s/\&amp;/\&/g;s/&lt;/</g;s/&gt;/>/g;s/&quot;/\"/g;s/&#39;/'/g" | tac | sed '1,/}/d' | tac | sed '$s/$/\n}/' > main.$(($i-1)).c
+	head -1 main.$(($i-1)).c | grep "#include"
+	if [ $? -eq 1 ]; then
+		NUM=$(($(grep -n -m1 '#include' main.0.c | cut -d : -f1) - 1))
+		sed -i "1s/^/\/** /;2,$(echo $NUM)s/^/  * /g;$(($(echo $NUM)+1))i\  **\/" main.$(($i-1)).c
+	fi
 done
 ln -s ../$HEADER.h $HEADER.h
 mv $INPUT ../
