@@ -5,8 +5,7 @@ ls $INPUT
 if [[ $? != 0 ]]; then
 	exit 1
 fi
-echo "Enter the name of your header file"
-read HEADER
+HEADER=$(grep ".h&quot;" $INPUT | head -1 | cut -d ';' -f2 | cut -d '.' -f1)
 mkdir $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
 cp $INPUT $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
 cd $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
