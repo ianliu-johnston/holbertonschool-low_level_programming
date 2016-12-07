@@ -14,6 +14,7 @@ This is a simple list of links to resources not directly related to the content 
 
 ## Linux
 * [the /etc/shadow file](http://www.slashroot.in/how-are-passwords-stored-linux-understanding-hashing-shadow-utils)
+* [Inodes on Unix youtube](https://www.youtube.com/watch?v=tMVj22EWg6A)
 
 ## Bash
 * [Difference between TTY and the program called Terminal](http://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con)
