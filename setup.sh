@@ -65,4 +65,5 @@ done
 ln -s ../$HEADER.h $HEADER.h
 mv $INPUT ../
 cd ..
+find . -depth -type f -empty -exec rm '{}' \;
 rm ../$INPUT
