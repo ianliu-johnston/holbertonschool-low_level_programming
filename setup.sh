@@ -20,7 +20,7 @@ echo -e "a.out\n*.swp\n~*\n_betty-s\n_betty-d\n_putchar.c\n" >> .gitignore
 echo -e "#include <unistd.h>\nint _putchar(char c)\n{\n\treturn (write(1, &c, 1));\n}\n" > _putchar.c
 #Create the files
 touch $(grep File: $INPUT | cut -d \> -f3 | cut -d \< -f1)
-echo -e "#include \"dog.h\"\n/**\n  * main - define function\n  * @void: describe argument\n  * Return: 0 on success\n  */\nint main(void)\n{\n\treturn (0);\n}\n" >> template
+echo -e "#include \"dog.h\"\n/**\n  * main - define function\n  * @void: describe argument\n  * Return: 0 on success\n  */\nint main(void)\n{\n\treturn (0);\n}" >> template
 find . -type f -name "*.c" -empty -exec cp template '{}' \;
 rm template
 #Create the header
@@ -35,7 +35,7 @@ while read c; do
 	sed -i "s/main - /$NAME - /g" $(ls -1 | grep "[0-9]-" | sort -h | grep -n "" | grep "$I:" | cut -d : -f2)
 done<$HEADER.h
 echo "#define HEADER_H" | cat - $HEADER.h > $HEADER.h.tmp
-echo "#ifndef HEADER_H" | cat - $HEADER.h.tmp > $HEADER.h
+echo -e "#ifndef HEADER_H\n" | cat - $HEADER.h.tmp > $HEADER.h
 echo "int _putchar(char c);" >> $HEADER.h
 echo "#endif" >> $HEADER.h
 rm $HEADER.h.tmp
