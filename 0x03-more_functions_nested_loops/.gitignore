@@ -1,2 +1,7 @@
 a.out
-main.c
+*.swp
+~*
+_betty-s
+_betty-d
+_putchar.c
+
