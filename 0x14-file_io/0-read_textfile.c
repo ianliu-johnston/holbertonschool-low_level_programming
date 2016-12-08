@@ -20,12 +20,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	while (letters > BUFSIZE && read_status != 0)
 	{
 		read_status = read(txt_file, buffer, BUFSIZE);
-		write(STDIN_FILENO, buffer, read_status);
+		write(STDOUT_FILENO, buffer, read_status);
 		total += read_status;
 		letters -= BUFSIZE;
 	}
 	read_status = read(txt_file, buffer, letters);
-	write(STDIN_FILENO, buffer, read_status);
+	write(STDOUT_FILENO, buffer, read_status);
 	total += read_status;
 	close(txt_file);
 	return (total);
