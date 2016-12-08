@@ -1,9 +1,19 @@
 # Holberton School - 0x01-variables_if_else_while
-
+Basic C Syntax: Variables, loops, conditionals
 ## New commands / functions used:
-``asdf``
+``if``, ``else if``, ``else``, ``while``, ``char``, ``printf``, ``int``, ``unsigned int``
+
 ## Helpful links
-asd
+* [Keywords and Identifiers](http://publications.gbdirect.co.uk/c_book/chapter2/keywords_and_identifiers.html)
+* [integers](http://publications.gbdirect.co.uk/c_book/chapter2/integral_types.html)
+* [Arithmetic Operators](https://www.tutorialspoint.com/cprogramming/c_arithmetic_operators.htm)
+* [If statements](http://www.cprogramming.com/tutorial/c/lesson2.html)
+* [if else statements](https://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm)
+* [Relational Operators](https://www.tutorialspoint.com/cprogramming/c_relational_operators.htm)
+* [Logical Operators](http://fresh2refresh.com/c-programming/c-operators-expressions/c-logical-operators/)
+* [While loop tutorialspoint](https://www.tutorialspoint.com/cprogramming/c_while_loop.htm)
+* [While loop youtube](https://www.youtube.com/watch?v=Ju1LYO9pkaI)
+
 ## Description of Files
 <h6>0-positive_or_negative.c</h6>
 The variable n will store a different value every time you will run this program. if the number is greater than 0: is positive, if the number is 0: is zero, if the number is less than 0: is negative
