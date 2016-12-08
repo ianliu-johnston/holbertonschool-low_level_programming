@@ -1,9 +1,9 @@
 #Holberton School - 0x05-pointers_arrays_strings
 More pointers, arrays, and strings
 ## New commands / functions used:
-``gcc``
+See 0x04 for new commands
 ## Helpful Links
-*
+* See 0x04 for the list of resources
 
 ## Description of Files
 <h6>0-strcat.c</h6>
