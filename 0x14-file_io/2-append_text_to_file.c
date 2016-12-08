@@ -18,7 +18,8 @@ int append_text_to_file(const char *filename, char *text_content)
 	for (len = 0; text_content[len]; len++)
 		;
 	wr_stat = write(append_file, text_content, len);
-	printf("wr_stat: %d\n", wr_stat);
 	close(append_file);
+	if (wr_stat == -1)
+		return (-1);
 	return (1);
 }
