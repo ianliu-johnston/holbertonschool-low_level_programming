@@ -1,7 +1,7 @@
 #Holberton School - 0x14-file_io
 File input, output and other manipulations.
 ## New commands / functions used:
-``open``, ``close``, ``read``, ``write``, ``O_RDONLY``, ``O_WRONLY``, ``O_RDWR`` 
+``open``, ``close``, ``read``, ``write``, ``O_RDONLY``, ``O_WRONLY``, ``O_RDWR``, ``STDIN_FILENO`` 
 ## Helpful Links
 * [Wikipedia on file descriptors](https://en.wikipedia.org/wiki/File_descriptor)
 * [ShellWaveX - read, write, and close on Youtube](https://www.youtube.com/watch?v=dP3N8g7h8gY)
