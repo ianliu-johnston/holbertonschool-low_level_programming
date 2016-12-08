@@ -5,6 +5,7 @@ File input, output and other manipulations.
 ## Helpful Links
 * [Wikipedia on file descriptors](https://en.wikipedia.org/wiki/File_descriptor)
 * [ShellWaveX - read, write, and close on Youtube](https://www.youtube.com/watch?v=dP3N8g7h8gY)
+* [Understanding Linux open() system call](https://www.ibm.com/developerworks/community/blogs/58e72888-6340-46ac-b488-d31aa4058e9c/entry/understanding_linux_open_system_call?lang=en)
 
 ## Description of Files
 <h6>0-read_textfile.c</h6>
