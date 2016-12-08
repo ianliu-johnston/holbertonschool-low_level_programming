@@ -1,7 +1,7 @@
 # Holberton School - 0x02-functions_nested_loops
 Basics of nested loops and 2D loops
 ## New commands / functions used:
-``gcc, printf, puts, putchar``
+``#include``
 ## Helpful Links
 * [Nested While Loops youtube](https://www.youtube.com/watch?v=Z3iGeQ1gIss)
 * [Overview of the Anatomy of a Function, Youtube](https://www.youtube.com/watch?v=qMlnFwYdqIw)
