@@ -8,13 +8,15 @@
   */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int append_file;
+	int append_file, len;
 
+	if (!filename)
+		return (-1);
 	append_file = open(filename, O_WRONLY | O_APPEND);
 	for (len = 0; text_content[len]; len++)
 		;
 	write(append_file, text_content, len);
 	close(append_file);
-	return (0);
+	return (1);
 }
 
