@@ -25,9 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		write(STDIN_FILENO, buffer, read_status);
 		total += read_status;
 		letters -= BUFSIZE;
-		printf("\t\t\t letters: %d\n", (int)letters);
 	}
-	printf("hit\n");
 	read_status = read(txt_file, buffer, letters);
 	write(STDIN_FILENO, buffer, read_status);
 	total += read_status;
