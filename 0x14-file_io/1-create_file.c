@@ -7,18 +7,19 @@
   */
 int create_file(const char *filename, char *text_content)
 {
-	int new_file;
-	int len;
+	int new_file, len, wr_stat;
 
 	if (filename == NULL)
 		return (-1);
 	new_file = open(filename, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
-	if (new_file == 0)
+	if (new_file == -1)
 		return (-1);
+	if (text_content == NULL)
+		return (1);
 	for (len = 0; text_content[len]; len++)
 		;
-	write(new_file, text_content, len);
+	wr_stat = write(new_file, text_content, len);
 	close(new_file);
-	return (1);
+	return (wr_stat == -1 ? -1 : 1);
 }
 

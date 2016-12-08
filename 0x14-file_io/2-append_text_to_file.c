@@ -15,11 +15,11 @@ int append_text_to_file(const char *filename, char *text_content)
 	append_file = open(filename, O_WRONLY | O_APPEND);
 	if (append_file == -1)
 		return (-1);
+	if (text_content == NULL)
+		return (1);
 	for (len = 0; text_content[len]; len++)
 		;
 	wr_stat = write(append_file, text_content, len);
 	close(append_file);
-	if (wr_stat == -1)
-		return (-1);
-	return (1);
+	return (wr_stat == -1 ? -1 : 1);
 }
