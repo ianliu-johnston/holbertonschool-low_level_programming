@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
   * append_text_to_file - appends text to a file
   * @filename: file to append to, if NULL, return -1
@@ -7,7 +8,7 @@
   */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int append_file, len;
+	int append_file, len, wr_stat;
 
 	if (filename == NULL)
 		return (-1);
@@ -16,7 +17,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	for (len = 0; text_content[len]; len++)
 		;
-	write(append_file, text_content, len);
+	wr_stat = write(append_file, text_content, len);
+	printf("wr_stat: %d\n", wr_stat);
 	close(append_file);
 	return (1);
 }
