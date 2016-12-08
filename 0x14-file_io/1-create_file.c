@@ -7,8 +7,16 @@
   */
 int create_file(const char *filename, char *text_content)
 {
-	filename++;
-	text_content++;
-	return (0);
+	int new_file;
+	int len;
+
+	if (filename == NULL)
+		return (-1);
+	new_file = open(filename, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
+	for (len = 0; text_content[len]; len++)
+		;
+	write(new_file, text_content, len);
+	close(new_file);
+	return (1);
 }
 
