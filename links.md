@@ -32,6 +32,7 @@ This is a simple list of links to resources not directly related to the content 
 
 ## Git
 * [Markdown Cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf) - Raw html mostly works also.
+* How to roll back a file to a previous commit: ``git checkout <hash> file.e
 
 ## Straight up Hacking
 * [Poison Tap](https://samy.pl/poisontap/)
