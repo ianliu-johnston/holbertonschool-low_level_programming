@@ -25,10 +25,10 @@ int main(int ac, char *av[])
 	{
 		rd_stat = read(fd_from, buffer, BUFSIZE);
 		if (rd_stat == -1)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		wr_stat = write(fd_to, buffer, rd_stat);
 		if (wr_stat != rd_stat || wr_stat == -1)
-			dprintf(STDERR_FILENO, "Can't write to file %s\n", av[2]), exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
 	if (close(fd_from) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from), exit(100);
