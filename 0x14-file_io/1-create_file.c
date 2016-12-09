@@ -18,8 +18,8 @@ int create_file(const char *filename, char *text_content)
 		return (1);
 	for (len = 0; text_content[len]; len++)
 		;
-	wr_stat = write(new_file, text_content, len);
+	if (len > 0)
+		wr_stat = write(new_file, text_content, len);
 	close(new_file);
 	return (wr_stat == -1 ? -1 : 1);
 }
-
