@@ -13,7 +13,7 @@ int main(int ac, char *av[])
 	char buffer[BUFSIZE];
 
 	if (ac != 3)
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", av[0]), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
