@@ -24,13 +24,13 @@ int main(int ac, char *av[])
 	{
 		wr_stat = write(fd_to, buffer, rd_stat);
 		if (wr_stat != rd_stat || wr_stat == -1)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
+			dprintf(STDERR_FILENO, "Can't write to file %s\n", av[2]), exit(99);
 	}
 	if (rd_stat == -1)
-		dprintf(STDERR_FILENO, "Can't write to file %s\n", av[2]), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 
 	if (close(fd_from) == -1)
-		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd_from), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from), exit(100);
 	if (close(fd_to) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to), exit(100);
 	return (0);
