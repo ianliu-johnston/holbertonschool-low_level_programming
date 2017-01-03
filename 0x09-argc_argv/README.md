@@ -25,4 +25,4 @@ multiplies two user supplied numbers, and prints the result to stdout, followed 
 adds any number of positive intgers, supplied by the user, and prints the result to stdout, followed by a new line. If any number contains anything other than digits,  prints "error" to stdout and returns 1.
 
 <h6>100-change.c</h6>
-prints the minimum number of coins to make change for an amount of money. Argument is supplied by the user. If exactly one argument is not supplied, prints "Error" and returns 1. USEAGE: ./change ###, where ### is any positive integer.
+prints the minimum number of coins to make change for an amount of money. Argument is supplied by the user. If exactly one argument is not supplied, prints "Error" and returns 1. USAGE: ``./change ###``, where ### is any positive integer.
