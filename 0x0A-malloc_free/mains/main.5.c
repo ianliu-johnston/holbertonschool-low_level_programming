@@ -20,14 +20,3 @@ int main(int ac, char *av[])
     free(s);
     return (0);
 }
-/*
- julien@ubuntu:~/0x0a. malloc, free$ ./args I will "show you" how great I am
- ./args
- I
- will
- show you
- how
- great
- I
- am
- */

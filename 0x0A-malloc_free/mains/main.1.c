@@ -11,21 +11,13 @@ int main(void)
 {
     char *s;
 
-    char *s1 = "betty ";
-    char *s2 = "Holberton";
-    s = str_concat(s1, s2);
+    s = _strdup("Holberton");
     if (s == NULL)
     {
-        printf("fail\n");
+        printf("failed to allocate memory\n");
         return (1);
     }
     printf("%s\n", s);
     free(s);
     return (0);
 }
-/*
-Expected output:
-$~> ./a.out | cat -e 
-Betty Holberton$
-$~> 
-*/
