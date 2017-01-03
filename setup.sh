@@ -1,14 +1,18 @@
 #!/bin/bash
-echo "Enter the file name of your HTML page."
-read INPUT
-ls $INPUT
-if [[ $? != 0 ]]; then
+if [[ -z $1 ]]; then
+	echo "Usage: ./setup.sh <html_file>"
 	exit 1
 fi
+if [[ ! -r $1 ]]; then
+	echo "File does not exist or is unreadable"
+	exit 1
+fi
+INPUT=$1
 HEADER=$(grep ".h&quot;" $INPUT | head -1 | cut -d ';' -f2 | cut -d '.' -f1)
-mkdir $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
-cp $INPUT $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
-cd $(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
+DIR=$(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
+mkdir $DIR
+cp $INPUT $DIR
+cd $DIR
 echo Checking to see if Betty checks is in the home directory
 ls ~/Betty/
 if [[ $? == 0 ]]; then
@@ -45,7 +49,10 @@ echo "Description" >> README.md
 echo "## New commands / functions used:" >> README.md
 echo "\`\`gcc\`\`" >> README.md
 echo "## Helpful Links" >> README.md
-echo -e "*\n" >> README.md
+A=$(grep -n "<h2>" $INPUT | grep -A1 "Readme" | cut -d : -f 1 | head -1)
+B=$(grep -n "<h2>" $INPUT | grep -A1 "Readme" | cut -d : -f 1 | tail -1)
+tail -n +$A $INPUT | head -n $(($B-$A)) | grep "<a href=" | sed 's/<a href=\"/\n/g' | grep "http"| cut -d \" -f1 | sed 's/^/* [link](/;s/$/)/' >> README.md
+echo "" >> README.md
 echo "## Description of Files" >> README.md
 head -8 README.md > README.md.tmp
 ls -1 | grep "[0-9]-" | sort -h | sed 's/^/<h6>/g;s/$/<\/h6>\n/g' >> README.md.tmp
