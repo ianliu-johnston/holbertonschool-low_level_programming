@@ -6,5 +6,5 @@
   */
 void free_dlistint(dlistint_t *head)
 {
-	return (0);
+	head++;
 }

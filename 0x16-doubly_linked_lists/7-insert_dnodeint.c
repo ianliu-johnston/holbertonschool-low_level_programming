@@ -6,5 +6,8 @@
   */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int index, int n)
 {
+	head++;
+	index++;
+	n++;
 	return (0);
 }
