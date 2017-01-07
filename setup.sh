@@ -24,12 +24,11 @@ echo -e "a.out\n*.swp\n~*\n_betty-s\n_betty-d\n_putchar.c\n" >> .gitignore
 echo -e "#include <unistd.h>\nint _putchar(char c)\n{\n\treturn (write(1, &c, 1));\n}\n" > _putchar.c
 #Create the files
 touch $(grep File: $INPUT | cut -d \> -f3 | cut -d \< -f1)
-echo -e "#include \"dog.h\"\n/**\n  * main - define function\n  * @void: describe argument\n  * Return: 0 on success\n  */\nint main(void)\n{\n\treturn (0);\n}" >> template
+echo -e "#include \"$HEADER\"\n/**\n  * main - define function\n  * @void: describe argument\n  * Return: 0 on success\n  */\nint main(void)\n{\n\treturn (0);\n}" >> template
 find . -type f -name "*.c" -empty -exec cp template '{}' \;
 rm template
 #Create the header
 grep Prototype: $INPUT | cut -d \> -f3 | cut -d \< -f1 >> $HEADER.h
-find . -type f -name "*.c" -exec sed -i "s/dog/$HEADER/g" '{}' \;
 I=0
 while read c; do
 	I=$(($I+1))	
@@ -43,15 +42,19 @@ echo -e "#ifndef HEADER_H\n" | cat - $HEADER.h.tmp > $HEADER.h
 echo "int _putchar(char c);" >> $HEADER.h
 echo "#endif" >> $HEADER.h
 rm $HEADER.h.tmp
+# Add Struct definitions to the header.
+#A=$(grep -n "Requirements" $INPUT | cut -d : -f 1)
+#B=$(grep -n "" $INPUT | tail -n +$A | grep -m1 -n "</code></pre>" | cut -d : -f1)
+#tail -n +$A $INPUT | head -n $(($B-$A)) | grep "<pre><code>" | sed 's/<a href=\"/\n/g' | grep "http"| cut -d \" -f1 | sed 's/^/* [link](/;s/$/)/' >> README.md
 #README.md
 echo "#Holberton School - "$(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1) > README.md
 echo "Description" >> README.md
 echo "## New commands / functions used:" >> README.md
 echo "\`\`gcc\`\`" >> README.md
 echo "## Helpful Links" >> README.md
-A=$(grep -n "<h2>" $INPUT | grep -A1 "Readme" | cut -d : -f 1 | head -1)
-B=$(grep -n "<h2>" $INPUT | grep -A1 "Readme" | cut -d : -f 1 | tail -1)
-tail -n +$A $INPUT | head -n $(($B-$A)) | grep "<a href=" | sed 's/<a href=\"/\n/g' | grep "http"| cut -d \" -f1 | sed 's/^/* [link](/;s/$/)/' >> README.md
+C=$(grep -n "<h2>" $INPUT | grep -A1 "Readme" | cut -d : -f 1 | head -1)
+D=$(grep -n "<h2>" $INPUT | grep -A1 "Readme" | cut -d : -f 1 | tail -1)
+tail -n +$C $INPUT | head -n $(($D-$C)) | grep "<a href=" | sed 's/<a href=\"/\n/g' | grep "http"| cut -d \" -f1 | sed 's/^/* [link](/;s/$/)/' >> README.md
 echo "" >> README.md
 echo "## Description of Files" >> README.md
 ls -1 | grep "[0-9]-" | sort -h | sed 's/^/<h6>/g;s/$/<\/h6>\n/g' >> README.md
