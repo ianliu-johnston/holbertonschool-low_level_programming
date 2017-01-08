@@ -1,21 +1,22 @@
 #!/usr/bin/python3
-set1 = [n for n in range(1, 1000)] 
-set2 = set1
-result = ""
-palindromes = []
+def palcheck(num):
+    number_string = str(num)
+    length = round(len(number_string)/2)
+    a = number_string[0:length]
+    b = number_string[length:]
+    b = b[::-1]
+    if a in b:
+        print(num)
+        print(a, b[::-1])
+        return 1
+    else:
+        return 0
+
+result = 0
 k = 0
-for i in set1:
-	for j in set2:
-		if (i * j) > result and i * j != 0:
-			result = i * j
-			result = str(result)
-for palcheck in result:
-	palcheck = str(palcheck)
-	length = round(len(palcheck)/2)
-	a = palcheck[0:length]
-	b = palcheck[length:]
-	b = b[::-1]
-	print(a, b)
-	if a in b:
-		palindromes.append(palcheck)
-print(palindromes[-1])
+for i in range(999, 101, -1):
+    for j in range(999, 101, -1):
+        if palcheck(i * j) == 1 and i * j > result:
+            result = i * j
+            print('{:d} * {:d} = {:d}'.format(i, j, i * j), "is a palindrome")
+print(result)
