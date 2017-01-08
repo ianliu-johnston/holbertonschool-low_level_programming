@@ -14,17 +14,20 @@ int main(void)
     dlistint_t *node;
 
     head = NULL;
-    add_dnodeint_end(&head, 0);
     add_dnodeint_end(&head, 1);
-    add_dnodeint_end(&head, 2);
-    add_dnodeint_end(&head, 3);
-    add_dnodeint_end(&head, 4);
-    add_dnodeint_end(&head, 98);
-    add_dnodeint_end(&head, 402);
-    add_dnodeint_end(&head, 1024);
+    add_dnodeint_end(&head, 11);
+    add_dnodeint_end(&head, 21);
+    add_dnodeint_end(&head, 31);
+    add_dnodeint_end(&head, 41);
+    add_dnodeint_end(&head, 51);
+    add_dnodeint_end(&head, 61);
+    add_dnodeint_end(&head, 71);
     print_dlistint(head);
-    node = get_dnodeint_at_index(head, 5);
-    printf("%d\n", node->n);
+    node = get_dnodeint_at_index(head, 7);
+	if (node)
+		printf("-----\n%d\n", node->n);
+	else
+		printf("Could not access index\n");
     free_dlistint(head);
     head = NULL;
     return (EXIT_SUCCESS);
