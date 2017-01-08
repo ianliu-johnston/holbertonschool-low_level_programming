@@ -1,8 +1,9 @@
 #include "lists.h"
 /**
-  * *add_nodeint - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * add_nodeint - Adds a node to the beginning of a doubly linked list
+  * @head: head of the linked list
+  * @n: value to add to the list
+  * Return: pointer to the element added
   */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {

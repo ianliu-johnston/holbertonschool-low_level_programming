@@ -1,8 +1,7 @@
 #include "lists.h"
 /**
-  * free_dlistint - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * free_dlistint - frees a linked list
+  * @head: head of the list
   */
 void free_dlistint(dlistint_t *head)
 {

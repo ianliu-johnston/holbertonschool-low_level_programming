@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
-  * sum_dlistint - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * sum_dlistint - sums all nodes in a linked list
+  * @head: head of the list
+  * Return: the sum of the nodes
   */
 int sum_dlistint(dlistint_t *head)
 {
