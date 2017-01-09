@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+/**
+  * f2_f3 - copied from server
+  * @p: argv[1]
+  * @pl: length of argv[1]
+  * @flag: determine if f2 or f3
+  * Return: element of key array.
+  */
 int f2_f3(char *p, int pl, char flag)
 {
 	int res, i;
@@ -15,6 +22,12 @@ int f2_f3(char *p, int pl, char flag)
 	}
 	return ((res ^ (flag == 0 ? 0x4F : 0x55)) & 0x3F);
 }
+/**
+  * f4 - copied from server
+  * @p: argv[1]
+  * @pl: length of argv[1]
+  * Return: element of key array.
+  */
 int f4(char *p, int pl)
 {
 	int i;
@@ -26,7 +39,12 @@ int f4(char *p, int pl)
 	srand(res ^ 0xE);
 	return (rand() & 0x3F);
 }
-
+/**
+  * f5 - copied from server
+  * @p: argv[1]
+  * @pl: length of argv[1]
+  * Return: element of key array.
+  */
 int f5(char *p, int pl)
 {
 	int i, res = 0;
@@ -35,7 +53,11 @@ int f5(char *p, int pl)
 		res += p[i] * p[i];
 	return ((res ^ 0xEF) & 0x3F);
 }
-
+/**
+  * f6 - copied from server
+  * @p: argv[1]
+  * Return: element of key array.
+  */
 int f6(char p)
 {
 	int i, res = 0;
@@ -45,8 +67,9 @@ int f6(char p)
 	return ((res ^ 0xE5) & 0x3F);
 }
 /**
-  * main - define function
-  * @void: describe argument
+  * main - generates a key, mostly copied from server.
+  * @ac: argument count
+  * @av: argument vectors
   * Return: 0 on success
   */
 int main(int ac, char *av[])
