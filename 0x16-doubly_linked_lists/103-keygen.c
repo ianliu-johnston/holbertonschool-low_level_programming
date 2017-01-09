@@ -1,24 +1,19 @@
 #include <stdio.h>
 #include <string.h>
-int f1(int pl)
-{
-	return ((pl ^ 0x3B) & 0x3F);
-}
-int f2(char *p, int pl)
+#include <stdlib.h>
+int f2_f3(char *p, int pl, char flag)
 {
 	int res, i;
 
-	for (i = 0, res = 0; i < pl; i++)
-		res += p[i];
-	return ((res ^ 0x4F) & 0x3F);
-}
-int f3(char *p, int pl)
-{
-	int res, i;
-
-	for(res = 1, i = 0; i < pl; i++)
-		res *= p[i];
-	return ((res ^ 0x55) & 0x3F);
+	res = flag == 0 ? 0 : 1;
+	for (i = 0; i < pl; i++)
+	{
+		if (flag == 0)
+			res += p[i];
+		else
+			res *= p[i];
+	}
+	return ((res ^ (flag == 0 ? 0x4F : 0x55)) & 0x3F);
 }
 int f4(char *p, int pl)
 {
@@ -36,7 +31,7 @@ int f5(char *p, int pl)
 {
 	int i, res = 0;
 
-	for(i = 0; i < pl; i++)
+	for (i = 0; i < pl; i++)
 		res += p[i] * p[i];
 	return ((res ^ 0xEF) & 0x3F);
 }
@@ -45,7 +40,7 @@ int f6(char p)
 {
 	int i, res = 0;
 
-	for(i = 0; i < p; i++)
+	for (i = 0; i < p; i++)
 		res = rand();
 	return ((res ^ 0xE5) & 0x3F);
 }
@@ -65,11 +60,11 @@ int main(int ac, char *av[])
 		return (-1);
 	p = av[1];
 	pl = strlen(p);
-	res = f1(pl);
+	res = ((pl ^ 0x3B) & 0x3F);
 	key[0] = h[res];
-	res = f2(p, pl);
+	res = f2_f3(p, pl, 0);
 	key[1] = h[res];
-	res = f3(p, pl);
+	res = f2_f3(p, pl, 1);
 	key[2] = h[res];
 	res = f4(p, pl);
 	key[3] = h[res];
@@ -79,5 +74,5 @@ int main(int ac, char *av[])
 	key[5] = h[res];
 	key[6] = '\0';
 	printf("%s\n", key);
-	return(0);
+	return (0);
 }
