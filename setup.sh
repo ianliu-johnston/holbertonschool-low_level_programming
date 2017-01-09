@@ -31,7 +31,7 @@ rm template
 grep Prototype: $INPUT | cut -d \> -f3 | cut -d \< -f1 >> $HEADER.h
 I=0
 while read c; do
-	I=$(($I+1))	
+	I=$(($I+1))
 	PROTO=$(echo $c | rev | cut -c 2- | rev)
 	NAME=$(echo $c | cut -d '(' -f 1 | rev | cut -d ' ' -f1 | rev)
 	sed -i "s/int main(void)/$PROTO/g" $(ls -1 | grep "[0-9]-" | sort -h | grep -n "" | grep "$I:" | cut -d : -f2)
@@ -77,6 +77,6 @@ do
 done
 ln -s ../$HEADER.h $HEADER.h
 mv $INPUT ../
+find . -type f -name "*.sh" -exec chmod u+x '{}' \;
 cd ..
-find . -depth -type f -empty -exec rm '{}' \;
 rm ../$INPUT
