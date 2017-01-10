@@ -3,6 +3,8 @@ This is a simple list of links to resources not directly related to the content 
 
 ## C
 * [Pragma](https://gcc.gnu.org/onlinedocs/cpp/Pragmas.html)
+* [Why to set your pointers to NULL after freeing malloced space](http://stackoverflow.com/questions/1025589/setting-variable-to-null-after-free/#1025604)
+* [LD_PRELOAD environmental variable: Code injection with the dynamic linker](https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/)
 
 ## Assembly
 * [Modern x86 Assembly blogpost](http://t-a-w.blogspot.com/2007/03/modern-x86-assembly.html)
@@ -19,7 +21,8 @@ This is a simple list of links to resources not directly related to the content 
 ## Bash
 * [Difference between TTY and the program called Terminal](http://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con)
 * View headers of programs: ``View headers of programs: echo | gcc -E -xc -include 'string.h' -``
-* Debugging tools: ``strace``, ``ltrace``, ``objdump``, ``gdb``
+* Debugging tools: ``strace``, ``ltrace``, ``objdump``, ``gdb``, ``radare2``
+* [COMMAND_PROMPT environmental variable](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x264.html)
 
 ### Docker
 * Delete all docker containers and images: ``docker rm $(docker ps -a -q)  && docker rmi $(docker images -q)``
