@@ -10,6 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
+	int i;
     dlistint_t *head;
 
 	if (argc != 2)
@@ -18,14 +19,10 @@ int main(int argc, char *argv[])
 		return(1);
 	}
     head = NULL;
-    add_dnodeint_end(&head, 0);
-    add_dnodeint_end(&head, 1);
-    add_dnodeint_end(&head, 2);
-    add_dnodeint_end(&head, 3);
-    add_dnodeint_end(&head, 4);
-    add_dnodeint_end(&head, 5);
-    add_dnodeint_end(&head, 6);
-    add_dnodeint_end(&head, 7);
+	for (i = 0; i < 7; i++)
+	{
+		insert_dnodeint_at_index(&head, i, i);
+	}
     print_dlistint(head);
     printf("-----------------\n");
     insert_dnodeint_at_index(&head, atoi(argv[1]), 4096);
