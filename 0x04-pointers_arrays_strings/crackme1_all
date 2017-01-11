@@ -1,0 +1,100 @@
+---/tmp/correction/holberton_corrections/corrections/216/888/output----
+Tada! Congrats
+---/tmp/correction/holberton_corrections/corrections/216/888/101-crackme.c----
+#include <stdio.h>
+
+/**
+ * checksum - Calculate the sum of every character of a string
+ *
+ * @p: A pointer to the first character of a string
+ * Return: The sum of every character in @p
+ */
+unsigned long int checksum(char *p)
+{
+	unsigned long int c;
+
+	c = 0;
+	while (*p)
+	{
+		c += *p;
+		p++;
+	}
+	return (c);
+}
+
+/**
+ * main - Entry point
+ *
+ * @ac: Arguments counter
+ * @av: Arguments array
+ * Return: 1 on error, 0 otherwise
+ */
+int main(int ac, char **av)
+{
+	unsigned long int c;
+
+	if (ac != 2)
+	{
+		printf("Usage: %s password\n", av[0]);
+		return (1);
+	}
+	c = checksum(av[1]);
+	/* printf("%lu\n", c); */
+	/* "Talk is cheap. Show me the code." */
+	if (c != 2772)
+	{
+		printf("Wrong password\n");
+		return (1);
+	}
+	printf("Tada! Congrats\n");
+	return (0);
+}
+---/tmp/correction/holberton_corrections/corrections/216/888/test.sh----
+#!/bin/bash
+
+# Check if an array contains a certain value
+function contains() {
+	local n=$#
+	local value=${!n}
+	for ((i=1;i < $#;i++)) {
+		if [ "${!i}" == "${value}" ]; then
+			echo "y"
+			return 0
+		fi
+	}
+	echo "n"
+	return 1
+}
+
+# Check for duplicated password generation
+for i in {1..11}
+do
+	# Launch the Keygen executable
+	output=$(./101-keygen)
+	# echo "${i} -> ${output}"
+	# Check if the printed password was previously printed
+	if [ $(contains "${outputs[@]}" "${output}") == "y" ]
+	then
+		echo "Duplicated"
+		exit 1
+	fi
+	# If not, store the printed password for future checks
+	outputs[$i]=$output
+	# Test the password against de crack-me executable
+	res=$(./101-crackme "${output}")
+	echo "RES:${res}"
+	# Check the result, and quit if it fails
+	if [ $? -ne 0 ]
+	then
+		echo "Fail"
+		exit 1
+	fi
+	# Wait for a second before running again the keygen
+	# If we don't wait, the 'time(NULL)' call in the keygen program
+	# won't have enough time to change
+	# So the 'rand()' calls will give the same results ...
+	sleep 1
+done
+
+echo "OK"
+
