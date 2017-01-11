@@ -20,9 +20,23 @@ This is a simple list of links to resources not directly related to the content 
 
 ## Bash
 * [Difference between TTY and the program called Terminal](http://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con)
+* [COMMAND_PROMPT environmental variable](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x264.html)
+### Commands
+#### System Information
+* List the Distribution of Linux: ``lsb_release -a``
+* Display kernel release information: ``uname -a``
+* Display network information: ``netstat``, ``ifconfig``, ``arp``
+* Display logged on users: ``w``
+* Display partition layout and disk space usage: ``df -h``
+* Display all user info: ``cat /etc/passwd``
+* Display currently running processes from all users: ``ps aux``
+* Display environmental variables: ``env``
+* Display a (very long) list of all programs installed and referenced to by $PATH: ``ls $(echo $PATH | tr ':' '\n')``
+* Display a list devices connected through pci: ``lspci``
+* Display a list of devices connected through usb: ``lsusb``
+#### Program Information
 * View headers of programs: ``View headers of programs: echo | gcc -E -xc -include 'string.h' -``
 * Debugging tools: ``strace``, ``ltrace``, ``objdump``, ``gdb``, ``radare2``
-* [COMMAND_PROMPT environmental variable](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x264.html)
 
 ### Docker
 * Delete all docker containers and images: ``docker rm $(docker ps -a -q)  && docker rmi $(docker images -q)``
