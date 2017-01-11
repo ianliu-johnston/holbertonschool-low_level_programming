@@ -22,6 +22,7 @@ This is a simple list of links to resources not directly related to the content 
 * [Difference between TTY and the program called Terminal](http://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con)
 * [For Loops in Bash](https://www.cyberciti.biz/faq/bash-loop-over-file/)
 * [COMMAND_PROMPT environmental variable](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x264.html)
+
 ### Commands
 #### System Information
 * List the Distribution of Linux: ``lsb_release -a``
@@ -35,6 +36,7 @@ This is a simple list of links to resources not directly related to the content 
 * Display a (very long) list of all programs installed and referenced to by $PATH: ``ls $(echo $PATH | tr ':' '\n')``
 * Display a list devices connected through pci: ``lspci``
 * Display a list of devices connected through usb: ``lsusb``
+
 #### Program Information
 * View headers of programs: ``View headers of programs: echo | gcc -E -xc -include 'string.h' -``
 * Debugging tools: ``strace``, ``ltrace``, ``objdump``, ``gdb``, ``radare2``
@@ -52,7 +54,7 @@ This is a simple list of links to resources not directly related to the content 
 * [Markdown Cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf) - Raw html mostly works also.
 * How to roll back a file to a previous commit: ``git checkout <hash> file.e
 
-## Straight up Hacking
+## Security
 * [Poison Tap](https://samy.pl/poisontap/)
 * [Samy Kamkar](https://samy.pl/)
 * [Fork Bomb](https://en.wikipedia.org/wiki/Fork_bomb) - ``:(){ :|:& };:`` DANGER!DANGER! This will crash your terminal if you don't have safeguards in place.
