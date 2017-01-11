@@ -20,6 +20,7 @@ This is a simple list of links to resources not directly related to the content 
 
 ## Bash
 * [Difference between TTY and the program called Terminal](http://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con)
+* [For Loops in Bash](https://www.cyberciti.biz/faq/bash-loop-over-file/)
 * [COMMAND_PROMPT environmental variable](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x264.html)
 ### Commands
 #### System Information
