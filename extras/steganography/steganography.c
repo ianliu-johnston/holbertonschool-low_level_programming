@@ -47,21 +47,31 @@ char *input_buf(const char *file_r_path, char *buf)
   */
 int main(int ac, char *av[])
 {
-	char *buf, *filepath;
+	char *buf, *file_in, *file_out;
 
-	if (ac != 2)
-		printf("Usage: %s <filepath>/file\n", av[0]), exit(1);
-	else if (access(av[1], W_OK))
-		printf("Error: File Not Found\n"), exit(2);
+	if (ac != 3)
+		printf("Usage: %s <filepath>/to_hide <filepath>/picture.jpg\n", av[0]), exit(1);
+	else if (access(av[1], F_OK))
+		printf("Error: File %s Not Found\n", av[1]), exit(2);
+	else if (access(av[1], R_OK))
+		printf("%s: No read permissions \n", av[1]), exit(3);
+	else if (access(av[2], F_OK))
+		printf("Error: File %s Not Found\n", av[2]), exit(4);
+	else if (access(av[2], F_OK))
+		printf("%s: No write permissions \n", av[2]), exit(5);
 
-	filepath = av[1];
+	file_in = av[1];
+	file_out = av[2];
+	printf("%s\n", file_out);
 	buf = malloc(BUFSIZE * sizeof(char));
 	if (!buf)
 		exit(97);
-	buf = input_buf(filepath, buf);
+	buf = input_buf(file_in, buf);
 	if (!buf)
 		exit(99);
+	/*
 	printf("%s", buf);
+	*/
 	free(buf);
 	return (0);
 }
