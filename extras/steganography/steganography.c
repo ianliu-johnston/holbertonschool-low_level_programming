@@ -10,21 +10,17 @@
   * input_buf - entry point
   * Return: 0 on success
   */
-char *input_buf(const char *file_r_path, char *buf)
+char *input_buf(int *fd_r, char *buf)
 {
 	int buffer_size = BUFSIZE;
 	int offset = 0;
 	int total, bytes_read;
-	int file_r;
 	char *tmp_ptr;
 
 	total = bytes_read = 1;
-	file_r = open(file_r_path, O_RDONLY);
-	if (file_r == -1)
-		perror("Could Not Open."), exit(98);
 	while(bytes_read > 0)
 	{
-		bytes_read = read(file_r, buf + offset, BUFSIZE);
+		bytes_read = read(fd_r, buf + offset, BUFSIZE);
 		total += bytes_read;
 		if (total + bytes_read >= buffer_size)
 		{
@@ -38,7 +34,6 @@ char *input_buf(const char *file_r_path, char *buf)
 		}
 	}
 	buf[total] = '\0';
-	close(file_r);
 	return (buf);
 }
 /**
@@ -47,31 +42,25 @@ char *input_buf(const char *file_r_path, char *buf)
   */
 int main(int ac, char *av[])
 {
-	char *buf, *file_in, *file_out;
+	char *buf;
 
 	if (ac != 3)
 		printf("Usage: %s <filepath>/to_hide <filepath>/picture.jpg\n", av[0]), exit(1);
-	else if (access(av[1], F_OK))
-		printf("Error: File %s Not Found\n", av[1]), exit(2);
-	else if (access(av[1], R_OK))
-		printf("%s: No read permissions \n", av[1]), exit(3);
-	else if (access(av[2], F_OK))
-		printf("Error: File %s Not Found\n", av[2]), exit(4);
-	else if (access(av[2], F_OK))
-		printf("%s: No write permissions \n", av[2]), exit(5);
 
-	file_in = av[1];
-	file_out = av[2];
-	printf("%s\n", file_out);
 	buf = malloc(BUFSIZE * sizeof(char));
 	if (!buf)
 		exit(97);
+
+	file_r = open(av[1], O_RDONLY);
+	if (file_r == -1)
+		printf("Could Not Open."), exit(98);
 	buf = input_buf(file_in, buf);
 	if (!buf)
 		exit(99);
-	/*
-	printf("%s", buf);
-	*/
+	close(file_in);
+
+	file_w = open(av[2], 0_WRONLY);
+	close(file_w);
 	free(buf);
 	return (0);
 }
