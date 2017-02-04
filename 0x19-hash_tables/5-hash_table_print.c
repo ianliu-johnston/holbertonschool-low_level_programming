@@ -1,20 +1,38 @@
 #include "hash_tables.h"
 /**
-  * hash_table_print - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * hash_table_print - print the hash table
+  * @ht: the hash table
   */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i;
-	char *end;
+	unsigned long int i, cp_bytes;
+	char *buffer, *bufhead;
 
-	i = 0;
-	while (ht->array[i])
+	i = cp_bytes = 0;
+	buffer = malloc(1024 * sizeof(char));
+	bufhead = buffer;
+	buffer[0] = '{';
+	buffer++;
+	while (i <= ht->size)
 	{
-		end = ht->array[i]->next ? ", " : "\n";
-		printf("%s:%s%s", ht->array[i]->key, ht->array[i]->value, end);
-		ht->array[i] = ht->array[i]->next;
+		if (ht->array[i] != NULL)
+		{
+			buffer[0] = '\'';
+			buffer++;
+			cp_bytes = strlen(ht->array[i]->key);
+			memcpy(buffer, ht->array[i]->key, cp_bytes);
+			buffer += cp_bytes;
+			memcpy(buffer, "': '", 4);
+			buffer += 4;
+			cp_bytes = strlen(ht->array[i]->value);
+			memcpy(buffer, ht->array[i]->value, cp_bytes);
+			buffer += cp_bytes;
+			memcpy(buffer, "', ", 3);
+			buffer += 3;
+		}
+		i++;
 	}
-	putchar('\n');
+	buffer -= 2;
+	memcpy(buffer, "}\n\0", 3);
+	printf("%s", bufhead);
 }
