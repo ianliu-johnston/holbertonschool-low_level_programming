@@ -1,10 +1,16 @@
-#include "hash_tables"
+#include "hash_tables.h"
 /**
-  * hash_djb2 - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * hash_djb2 - hashing algorithm by dan bernstein
+  * @str: Describe.
+  * Return: hashed value
+  * This code is from http://www.cse.yorku.ca/~oz/hash.html
   */
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	return (0);
+	unsigned long hash = 5381;
+	int c;
+
+	while (c = *str++)
+		hash = ((hash << 5) + hash) + c;
+	return (hash);
 }
