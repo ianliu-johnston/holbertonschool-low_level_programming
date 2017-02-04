@@ -33,13 +33,12 @@ hash_node_t *create_node(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *new_node, *next, *prev;
+	hash_node_t *new_node;
 
-	new_node = next = prev = NULL;
-	if (!ht || !key || strlen(key) <= 0 || !value)
+	new_node = NULL;
+	if (!ht || !key || strlen(key) <= 0 || *key < 0)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
-	next = ht->array[index];
 	new_node = create_node(key, value);
 	if (new_node == NULL)
 		return (0);
