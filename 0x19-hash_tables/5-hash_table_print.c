@@ -5,11 +5,14 @@
   */
 void hash_table_print(const hash_table_t *ht)
 {
+	char flag = 0;
 	unsigned long int i, cp_bytes;
 	char *buffer, *bufhead;
 
 	i = cp_bytes = 0;
 	buffer = malloc(1024 * sizeof(char));
+	if (buffer == NULL)
+		return;
 	bufhead = buffer;
 	buffer[0] = '{';
 	buffer++;
@@ -17,6 +20,7 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (ht->array[i] != NULL)
 		{
+			flag = 1;
 			buffer[0] = '\'';
 			buffer++;
 			cp_bytes = strlen(ht->array[i]->key);
@@ -32,7 +36,7 @@ void hash_table_print(const hash_table_t *ht)
 		}
 		i++;
 	}
-	buffer -= 2;
+	if (flag != 0) buffer -= 2;
 	memcpy(buffer, "}\n\0", 3);
 	printf("%s", bufhead);
 }
