@@ -16,10 +16,17 @@ hash_node_t *create_node(const char *key, const char *value)
 		return (NULL);
 	new_node->key = strdup(key);
 	if (new_node->key == NULL)
+	{
+		free(new_node);
 		return (NULL);
+	}
 	new_node->value = strdup(value);
 	if (new_node->value  == NULL)
+	{
+		free(new_node->key);
+		free(new_node);
 		return (NULL);
+	}
 	new_node->next = NULL;
 	return (new_node);
 }
