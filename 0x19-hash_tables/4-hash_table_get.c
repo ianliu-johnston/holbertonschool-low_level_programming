@@ -1,4 +1,4 @@
-#include "hash_tables"
+#include "hash_tables.h"
 /**
   * *hash_table_get - define function
   * @void: describe argument
@@ -6,5 +6,13 @@
   */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	return (0);
+	unsigned long int index;
+
+	index = 0;
+	if (!ht || !key)
+		return (NULL);
+	index = key_index((const unsigned char *)key, ht->size);
+	if (ht->array[index])
+		return(ht->array[index]->value);
+	return (NULL);
 }
