@@ -5,43 +5,24 @@
   */
 void hash_table_print(const hash_table_t *ht)
 {
-	char flag = 0;
-	unsigned long int i, cp_bytes;
-	char *buffer, *bufhead;
+	unsigned long int i, j;
+	hash_node_t *tmp;
 
-	i = cp_bytes = 0;
+	i = j = 0;
 	if (!ht)
 		return;
-	buffer = malloc(1024 * sizeof(char));
-	if (buffer == NULL)
-		return;
-	bufhead = buffer;
-	buffer[0] = '{';
-	buffer++;
-	while (i <= ht->size)
+	putchar('{');
+	for (i = j = 0; i <= ht->size; i++)
 	{
 		if (ht->array[i] != NULL)
 		{
-			flag = 1;
-			buffer[0] = '\'';
-			buffer++;
-			cp_bytes = strlen(ht->array[i]->key);
-			memcpy(buffer, ht->array[i]->key, cp_bytes);
-			buffer += cp_bytes;
-			memcpy(buffer, "': '", 4);
-			buffer += 4;
-			cp_bytes = strlen(ht->array[i]->value);
-			memcpy(buffer, ht->array[i]->value, cp_bytes);
-			buffer += cp_bytes;
-			memcpy(buffer, "', ", 3);
-			buffer += 3;
+			tmp = ht->array[i];
+			while (tmp)
+			{
+				printf("%s'%s': '%s'", j == 0 ? "" : ", ", tmp->key, tmp->value), j++;
+				tmp = tmp->next;
+			}
 		}
-		i++;
 	}
-	if (flag != 0)
-		buffer -= 2;
-	memcpy(buffer, "}\n\0", 3);
-	printf("%s", bufhead);
-	free(buffer);
-	buffer = NULL;
+	printf("}\n");
 }
