@@ -41,11 +41,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node = create_node(key, value);
 	if (new_node == NULL)
 		return (0);
-	/* check for collisions */
-	if (next == NULL) /* no collisions */
-		ht->array[index] = new_node;
-	printf("%lu\n", index);
-	printf("%p\n", (void *)next);
-	printf("%p\n", (void *)ht->array[index]);
+	ht->array[index] = new_node;
 	return (1);
 }
