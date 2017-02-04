@@ -10,6 +10,8 @@ void hash_table_print(const hash_table_t *ht)
 	char *buffer, *bufhead;
 
 	i = cp_bytes = 0;
+	if (!ht)
+		return;
 	buffer = malloc(1024 * sizeof(char));
 	if (buffer == NULL)
 		return;
@@ -40,4 +42,6 @@ void hash_table_print(const hash_table_t *ht)
 		buffer -= 2;
 	memcpy(buffer, "}\n\0", 3);
 	printf("%s", bufhead);
+	free(buffer);
+	buffer = NULL;
 }
