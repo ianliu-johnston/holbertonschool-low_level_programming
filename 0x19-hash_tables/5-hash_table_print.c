@@ -36,7 +36,8 @@ void hash_table_print(const hash_table_t *ht)
 		}
 		i++;
 	}
-	if (flag != 0) buffer -= 2;
+	if (flag != 0)
+		buffer -= 2;
 	memcpy(buffer, "}\n\0", 3);
 	printf("%s", bufhead);
 }
