@@ -1,17 +1,19 @@
 #Holberton School - 0x19-hash_tables
-Description
-## New commands / functions used:
-``gcc``
+Creating hash tables.
+
 ## Helpful Links
-* [link](https://www.youtube.com/watch?v=MfhjkfocRR0)
-* [link](https://en.wikipedia.org/wiki/Hash_function)
-* [link](https://en.wikipedia.org/wiki/Hash_table)
-* [link](http://www.cse.yorku.ca/%7Eoz/hash.html)
+* [Youtube: Primer on hash tables](https://www.youtube.com/watch?v=MfhjkfocRR0)
+* [Wikipedia on Hash functions](https://en.wikipedia.org/wiki/Hash_function)
+* [Wikipedia on Hash Tables](https://en.wikipedia.org/wiki/Hash_table)
+* [Hashing algorithms](http://www.cse.yorku.ca/%7Eoz/hash.html)
+* [Ordered Hash Tables](http://www.phpinternalsbook.com/hashtables/basic_structure.html)
 
 ## Description of Files
 <h6>0-hash_table_create.c</h6>
+Create and initialize a hash table.
 
 <h6>1-djb2.c</h6>
+djb2 hashing algorithm.
 
 <h6>2-key_index.c</h6>
 
