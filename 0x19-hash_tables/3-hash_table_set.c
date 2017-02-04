@@ -2,7 +2,7 @@
 /**
  * create_node - creates a new key-value entry
  * @key: key to add
- * @node: value to add to key
+ * @value: value to add to key
  * Return: the node
  */
 hash_node_t *create_node(const char *key, const char *value)
@@ -24,9 +24,11 @@ hash_node_t *create_node(const char *key, const char *value)
 	return (new_node);
 }
 /**
-  * hash_table_set - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * hash_table_set - set a key:value pair
+  * @ht: Hash table to set
+  * @key: key to set
+  * @value: value to set at key
+  * Return: 1 on success, 0 on failure
   */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
