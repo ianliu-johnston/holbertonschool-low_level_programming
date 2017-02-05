@@ -12,7 +12,7 @@ void hash_table_print(const hash_table_t *ht)
 	if (!ht)
 		return;
 	putchar('{');
-	for (i = j = 0; i <= ht->size; i++)
+	for (i = j = 0; i < ht->size; i++)
 	{
 		if (ht->array[i] != NULL)
 		{
