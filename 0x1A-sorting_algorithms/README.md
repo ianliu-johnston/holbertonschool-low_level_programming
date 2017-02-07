@@ -11,6 +11,12 @@ Sorting Algorithms in C.
 * [Sorting Algorithm Animations](https://www.toptal.com/developers/sorting-algorithms)
 
 ## Description of Files
+<h6>sort.h</h6>
+Header file, contains all function prototypes and structs
+
+<h6>default_functions.c</h6>
+Functions that came with the project.
+
 <h6>0-bubble_sort.c</h6>
 Bubble Sort
 
@@ -22,6 +28,3 @@ Selection Sort
 
 <h6>3-quick_sort.c</h6>
 Quick Sort
-
-<h6>default_functions.c</h6>
-Functions that came with the project.
