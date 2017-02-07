@@ -23,7 +23,7 @@ fi
 echo -e "a.out\n*.swp\n~*\n_betty-s\n_betty-d\n_putchar.c\n" >> .gitignore
 echo -e "#include <unistd.h>\nint _putchar(char c)\n{\n\treturn (write(1, &c, 1));\n}\n" > _putchar.c
 #Create the files
-touch $(grep File: $INPUT | cut -d \> -f3 | cut -d \< -f1)
+touch $(grep File: $INPUT | cut -d \> -f3 | cut -d \< -f1 | tr -d ',')
 echo -e "#include \"$HEADER\"\n/**\n  * main - define function\n  * @void: describe argument\n  * Return: 0 on success\n  */\nint main(void)\n{\n\treturn (0);\n}" >> template
 find . -type f -name "*.c" -empty -exec cp template '{}' \;
 rm template
