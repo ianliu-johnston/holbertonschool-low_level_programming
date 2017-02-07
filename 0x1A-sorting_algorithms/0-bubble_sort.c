@@ -1,10 +1,11 @@
 #include "sort.h"
 /**
-  * bubble_sort - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * bubble_sort - The bubble sort algorithm
+  * @array: Array to be sorted
+  * @size: Size of the array
   */
 void bubble_sort(int *array, size_t size)
 {
-	return (0);
+	(char *)array;
+	(int)size;
 }
