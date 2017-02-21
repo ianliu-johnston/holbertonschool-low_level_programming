@@ -1,0 +1,30 @@
+Implementation and Analysis
+
+data structure: Array
+Time complexity(Best, worst, and average case): O(n^2)
+Worst case space complexity: O(n) total space, O(1) Auxiliary space.
+
+
+The numbers of comparisions
+
+In the worst case(when the list is in reverse-order), we will have to make n-1 comparisions in the first pass,
+n-2 comparisions in the 2nd pass, n-3 in the 3rd, and so on, until we make 1 comparision in the final pass.
+
+The total number of comparisions is given by:
+(n-1) + (n-2) + (n-3) + ....+3 + 2 + 1 = n(n-1)/2=O(n^2)
+
+The numbers of swaps
+
+In the worst case(when the list is in revers-order), we must make an exchange for every comparision we make.
+
+The total number of swaps is n(n-1)/2 =O(n^2).
+
+In the best case(the list is already in order) in which no swaps are made.
+
+In average case, the total number opf swap is n(n-1)/4, this is still o(n^2).
+
+Consequently, regardless of comparisons or swaps, bubble sort takes an inordinate amount of time to execute for large n.
+
+The optimization
+
+Use a bool variable (isSorted) to keep track and check if there is any iteration in which no element is swapped, if this happens, it implies that the list is sorted, then the code will break and stop.

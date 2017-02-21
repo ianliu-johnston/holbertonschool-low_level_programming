@@ -1,0 +1,16 @@
+Selection Sort
+
+Constantly select the smallest of the remaining elements.
+
+Find the smallest element in the array and swap it with the first element of the array.
+
+Find the smallest element in the remaining elements and swap it with the second element of the array until the entire array is sorted.
+
+Operaions:
+
+     (N-1) + (N-2) + (N-3) + ... + 2 + 1 to N ^ 2/2
+     Number of exchanges = N
+     The run time is independent of the input
+     Data movement is minimal
+
+Animation: https://www.kancloud.cn/kancloud/data-structure-and-algorithm-notes/72912
