@@ -7,6 +7,3 @@
 [submodule "0x15-simple_shell"]
 	path = 0x15-simple_shell
 	url = https://github.com/ianliu-johnston/simple_shell.git
-[submodule "0x1A-sorting_algorithms"]
-	path = 0x1A-sorting_algorithms
-	url = https://github.com/ianliu-johnston/0x1A-sorting_algorithms.git
