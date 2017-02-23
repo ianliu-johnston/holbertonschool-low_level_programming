@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "sort.h"
-
 /**
  * create_listint - Creates a doubly linked list from an array of integers
  *
@@ -40,12 +37,9 @@ void insertion_sort_arr(int array[], size_t size);
  *
  * Return: Always 0
  */
-int main(void)
+int insertion_main(int *array, size_t n)
 {
     listint_t *list;
-
-    int array[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
-    size_t n = sizeof(array) / sizeof(array[0]);
 
     list = create_listint(array, n);
     if (!list)
