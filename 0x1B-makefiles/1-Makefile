@@ -1,0 +1,7 @@
+CC=gcc
+SRC=src/holberton.c src/main.c
+
+holberton: src/holberton.o src/main.o
+	$(CC) -Wall -Werror -Wextra -pedantic src/holberton.o src/main.o -o holberton
+all: $(SRC)
+	$(CC) -Wall -Werror -Wextra -pedantic -c $(SRC) -o holberton
