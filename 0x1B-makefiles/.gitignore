@@ -3,5 +3,5 @@ a.out
 ~*
 _betty-s
 _betty-d
-_putchar.c
-
+*.o
+holberton
