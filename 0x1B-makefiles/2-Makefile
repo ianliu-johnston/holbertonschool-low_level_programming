@@ -1,0 +1,10 @@
+CC=gcc
+SRC=src/holberton src/main
+OBJ=$(SRC).o
+NAME=-o holberton
+
+holberton: $(SRC).c
+	$(CC) -Wall -Werror -Wextra -pedantic -c $(SRC)
+
+all: $(OBJ)
+	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) $(NAME)
