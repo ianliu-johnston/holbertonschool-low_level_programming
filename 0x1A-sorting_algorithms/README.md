@@ -28,3 +28,37 @@ Selection Sort
 
 <h6>3-quick_sort.c</h6>
 Quick Sort
+
+<h6>0-O</h6>
+Big O notation for bubble sort
+
+<h6>1-O</h6>
+Big O notation for insertion sort
+
+<h6>2-O</h6>
+Big O notation for selection sort
+
+<h6>3-O</h6>
+Big O notation for quick sort
+
+<h6>4-O</h6>
+Big O notation 
+
+<h6>5-O</h6>
+Big O notation 
+
+<h6>6-O</h6>
+Big O notation 
+
+<h6>7-O</h6>
+Big O notation 
+
+<h6>8-O</h6>
+Big O notation 
+
+<h6>9-O</h6>
+Big O notation 
+
+<h6>10-O</h6>
+Big O notation 
+
