@@ -12,7 +12,6 @@ void (*is_builtin(char *req_algo))()
 	is_algo_t which[] = {
 		{"bubble", bubble_sort},
 		{"selection", selection_sort},
-		{"insertion", insertion_main},
 		{"quick", quick_sort},
 		{"shell", shell_sort},
 		{"counting", counting_sort},
@@ -43,7 +42,7 @@ int main(int ac, char *av[])
     size_t n = ac > 3 ? (size_t)ac - 2 : sizeof(array) / sizeof(array[0]);
 
 
-	if (ac == 0)
+	if (ac < 2)
 	{
 		printf("Usage: %s <algorithm> <array of integers>\n", av[0]);
 		exit(EXIT_FAILURE);
