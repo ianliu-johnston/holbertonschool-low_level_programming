@@ -13,6 +13,7 @@ Introduction to make files
 * [Use files from here](https://github.com/holbertonschool/0x1B.c)
 * [Simple tutorial on make](http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/)
 * [Youtube: Crash Course on Make](https://www.youtube.com/watch?v=_r7i5X0rXJk)
+* [GNU Make](https://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_6.html)
 
 ## Description of Files
 <h6>0-Makefile</h6>
