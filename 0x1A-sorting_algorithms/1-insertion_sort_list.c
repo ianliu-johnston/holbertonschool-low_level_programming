@@ -35,7 +35,7 @@ void insertion_sort_list(listint_t **list)
 			if (swap->prev)
 				walk = swap->prev;
 			j--;
-			print_list2(*list, i, j);
+			print_list(*list);
 		/*
 		printf("\x1b[35m%02d AFTER: walk = %d, swap = %d, head = %d\n\x1b[0m", i, walk->n, swap->n, head->n);
 		*/
