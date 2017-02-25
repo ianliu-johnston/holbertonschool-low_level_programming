@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdio.h>
 #include <ctype.h>
 #include <string.h>
 typedef struct is_algo{

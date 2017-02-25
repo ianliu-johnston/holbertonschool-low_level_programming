@@ -1,7 +1,6 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-#include <stdio.h>
 #include <stdlib.h>
 /**
  * struct listint_s - Doubly linked list node
