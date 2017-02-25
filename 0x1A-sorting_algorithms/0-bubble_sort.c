@@ -23,6 +23,8 @@ void bubble_sort(int *array, size_t size)
 	size_t i, j;
 	char isSorted;
 
+	if (!array || size < 2)
+		return;
 	for (i = 1; i < size; i++)
 	{
 		isSorted = 1;
