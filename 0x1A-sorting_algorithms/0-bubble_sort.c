@@ -1,10 +1,9 @@
 #include "sort.h"
 
 /**
- * swap: swap array elements
+ * swap - swap array elements
  * @xp: ptr to array element
  * @yp: prt to array element
- * Return: void
  */
 void swap(int *xp, int *yp)
 {
@@ -25,10 +24,10 @@ void bubble_sort(int *array, size_t size)
 
 	if (array == NULL || size < 2)
 		return;
-	for (i = 1; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		isSorted = 1;
-		for (j = 0; j < size - 1; j++)
+		for (j = 0; j < size - i - 1; j++)
 		{
 			if (array[j] > array[j + 1])
 			{
