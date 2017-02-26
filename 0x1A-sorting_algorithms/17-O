@@ -1,5 +1,14 @@
 O(n)
-O(n^2)
-O(n^2)
+O(2n)
+O(2n)
 O(n)
-O(n)
+O(2n)
+
+
+
+Accessing the nth element
+Inserting after the nth element (Considering you have a pointer to the node to insert)
+Removing the nth element (Considering you have a pointer to the node to remove)
+Searching for an element in a linked list of size n
+Setting the value of the nth element (Considering you have a pointer to the node to set the value of)
+
