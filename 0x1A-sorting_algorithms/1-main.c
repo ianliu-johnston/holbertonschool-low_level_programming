@@ -86,6 +86,10 @@ void printarr(int array[], size_t i, size_t j)
 	printf("\n");
 }
 
+
+
+
+
 void insertion_sort_arr(int array[], size_t size)
 {
 	size_t i, j, tmp;

@@ -6,45 +6,36 @@
   */
 void insertion_sort_list(listint_t **list)
 {
-	int i, j;
-	listint_t *head, *walk, *swap;
+	listint_t *big_step, *small_step, *right_slide;
 
-	i = j = 0;
-	head = *list;
+	if (!*list || !list)
+		return;
+	big_step = small_step = *list;
 	/* Start at the second node */
-	head = head->next;
-	while (head->next)
+	big_step = big_step->next;
+	while (big_step->next)
 	{
-		walk = head;
-		j = i;
-		while (j > 0 && walk->prev && (walk->prev)->n > walk->n)
+		small_step = big_step;
+		while (small_step->prev && (small_step->prev)->n > small_step->n)
 		{
-			/*
-		printf("\x1b[35m%02d BEFORE: walk = %d, swap = %d, head = %d\n\x1b[0m", i, walk->n, swap->n, head->n);
-		*/
-			swap = walk;
-			walk = walk->prev;
-			if (walk->prev)
-				walk->prev->next = swap;
-			if (swap->next)
-				swap->next->prev = walk;
-			walk->next = swap->next;
-			swap->prev = walk->prev;
-			walk->prev = swap;
-			swap->next = walk;
-			if (swap->prev)
-				walk = swap->prev;
-			j--;
+			right_slide = small_step;
+			small_step = small_step->prev;
+
+			if (small_step->prev)
+				small_step->prev->next = right_slide;
+			if (right_slide->next)
+				right_slide->next->prev = small_step;
+
+			small_step->next = right_slide->next;
+			right_slide->prev = small_step->prev;
+			small_step->prev = right_slide;
+			right_slide->next = small_step;
+
+			if (right_slide->prev)
+				small_step = right_slide->prev;
 			print_list(*list);
-		/*
-		printf("\x1b[35m%02d AFTER: walk = %d, swap = %d, head = %d\n\x1b[0m", i, walk->n, swap->n, head->n);
-		*/
 		}
-		i++;
-		head = head->next;
+		big_step = big_step->next;
 		print_list(*list);
-		/*
-		print_list_rev(*list, i, j);
-		*/
 	}
 }
