@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdio.h>
 /**
  * create_listint - Creates a doubly linked list from an array of integers
  *
@@ -62,61 +63,6 @@ void print_list_rev(const listint_t *list, int i, int j)
 	printf("\n");
 }
 /**
- * print_list_rev - Prints a doubly linkedd list of integers in reverse
- * @list: The list to be printed
- */
-void print_list_rev(const listint_t *list, int i, int j)
-{
-	int n = 0;
-	const listint_t *tail;
-
-	while(list)
-	{
-		tail = list;
-		list = list->next;
-		n++;
-	}
-	printf("\x1b[33m%02d: \x1b[0m", i);
-	while (tail)
-	{
-		if (tail->next)
-			printf(" ");
-		if (n == i)
-			printf("\x1b[31m%02d\x1b[0m", tail->n);
-		else if (n == j)
-			printf("\x1b[32m%02d\x1b[0m", tail->n);
-		else
-			printf("%02d", tail->n);
-		tail = tail->prev;
-		n--;
-	}
-	printf("\n");
-}
-/**
- * print_list2 - Prints a list of integers
- * @list: The list to be printed
- */
-void print_list2(const listint_t *list, int i, int j)
-{
-	int n = 0;
-
-	printf("\x1b[33m%02d: \x1b[0m", i);
-	while (list)
-	{
-		if (n > 0)
-			printf(" ");
-		if (n == i)
-			printf("\x1b[31m%02d\x1b[0m", list->n);
-		else if (n == j)
-			printf("\x1b[32m%02d\x1b[0m", list->n);
-		else
-			printf("%02d", list->n);
-		list = list->next;
-		n++;
-	}
-	printf("\n");
-}
-/**
  * printarr - Prints an array of integers
  * @list: The list to be printed
  */
@@ -157,27 +103,17 @@ void insertion_sort_arr(int array[], size_t size)
 		printarr(array, i, j);
 	}
 }
-void print_list_rev(const listint_t *list, int i, int j);
-void insertion_sort_arr(int array[], size_t size);
 /**
  * main - Entry point
  *
  * Return: Always 0
  */
-int insertion_main(int *array, size_t n)
+void insertion_main(int *array, size_t n)
 {
     listint_t *list;
 
     list = create_listint(array, n);
     if (!list)
-        return (EXIT_FAILURE);
-	printf("START: ");
-    print_list(list);
-	print_list_rev(list, -1, -1);
-    printf("\n");
+        return;
     insertion_sort_list(&list);
-    printf("\n");
-    insertion_sort_arr(array, n);
-
-    return (0);
 }

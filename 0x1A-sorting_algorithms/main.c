@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+
 typedef struct is_algo{
 	char *algo;
 	void (*f)();
@@ -12,6 +13,7 @@ void (*is_builtin(char *req_algo))()
 	size_t i = 0;
 	is_algo_t which[] = {
 		{"bubble", bubble_sort},
+		{"insertion", insertion_main},
 		{"selection", selection_sort},
 		{"quick", quick_sort},
 		{"shell", shell_sort},
