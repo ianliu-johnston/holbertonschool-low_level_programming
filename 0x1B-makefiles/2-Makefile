@@ -1,11 +1,11 @@
 # Slightly less basic Makefile than number 1
 
 CC=gcc
-SRC = holberton.c main.c
-OBJ := $(SRC:.c=.o)
+SRC=holberton.c main.c
+OBJ=$(SRC:.c=.o)
 NAME=holberton
 
 all: $(SRC) $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $(NAME)
+	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $@
