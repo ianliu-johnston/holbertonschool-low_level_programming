@@ -1,7 +1,7 @@
-CC=gcc
-SRC=src/holberton.c src/main.c
+# Slightly less basic Makefile
 
-holberton: src/holberton.o src/main.o
-	$(CC) -Wall -Werror -Wextra -pedantic src/holberton.o src/main.o -o holberton
+CC=gcc
+SRC=holberton.c main.c
+
 all: $(SRC)
-	$(CC) -Wall -Werror -Wextra -pedantic -c $(SRC) -o holberton
+	$(CC) -Wall -Werror -Wextra -pedantic $(SRC) -o holberton
