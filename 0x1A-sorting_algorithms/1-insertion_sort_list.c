@@ -44,7 +44,7 @@ void insertion_sort_list(listint_t **list)
 
 	big_step = small_step = *list;
 	big_savespot = small_savespot = i = 0;
-	if (!*list || !list)
+	if (!list || !*list)
 		return;
 	while (big_step)
 	{
