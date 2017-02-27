@@ -10,8 +10,10 @@ listint_t *get_head(listint_t *list)
 	return(tmp);
 }
 
-void swap_dll(listint_t *left, listint_t *right)
+int swap_dll(listint_t *left, listint_t *right)
 {
+	if (!left || !right)
+		return (EXIT_FAILURE);
 	if (left->prev)
 		left->prev->next = right;
 	if (right->next)
@@ -20,6 +22,7 @@ void swap_dll(listint_t *left, listint_t *right)
 	right->prev = left->prev;
 	left->prev = right;
 	right->next = left;
+	return (EXIT_SUCCESS);
 }
 /**
   * insertion_sort_list - insertion sort algorithm
@@ -27,7 +30,7 @@ void swap_dll(listint_t *left, listint_t *right)
   */
 void insertion_sort_list(listint_t **list)
 {
-	unsigned int big_savespot, small_savespot, i;
+	unsigned int big_savespot, small_savespot, i, stat;
 	listint_t *big_step, *small_step;
 
 	big_step = small_step = *list;
@@ -40,8 +43,9 @@ void insertion_sort_list(listint_t **list)
 		small_savespot = big_savespot;
 		while (small_step->prev && small_step->n < (small_step->prev)->n)
 		{
-			swap_dll(small_step->prev, small_step);
-
+			stat = swap_dll(small_step->prev, small_step);
+			if (stat == 1)
+				return;
 			small_step = get_head(*list);
 			for (i = 0; i < small_savespot; i++)
 				small_step = small_step->next;
