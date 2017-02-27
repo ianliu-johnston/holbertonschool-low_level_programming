@@ -111,7 +111,6 @@ void insertion_main(int *array, size_t n)
 	while (list)
 	{
 		tmp = list;
-		printf("%d\n", list->n);
 		list = list->next;
 		free(tmp);
 	}

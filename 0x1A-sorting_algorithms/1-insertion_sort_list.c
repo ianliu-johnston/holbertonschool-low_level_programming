@@ -1,5 +1,9 @@
 #include "sort.h"
-
+/**
+ * get_head - gets the head of the list
+ * @list: the list
+ * Return: the head of the list
+ */
 listint_t *get_head(listint_t *list)
 {
 	listint_t *tmp;
@@ -7,9 +11,14 @@ listint_t *get_head(listint_t *list)
 	tmp = list;
 	while (tmp->prev)
 		tmp = tmp->prev;
-	return(tmp);
+	return (tmp);
 }
-
+/**
+ * swap_dll - swaps nodes in a linked list
+ * @left: left node
+ * @right: right node
+ * Return: status
+ */
 int swap_dll(listint_t *left, listint_t *right)
 {
 	if (!left || !right)
