@@ -1,7 +1,7 @@
 # Slightly less basic Makefile than number 1
 
 CC=gcc
-SRC=holberton.c main.c
+SRC = holberton.c main.c
 OBJ := $(SRC:.c=.o)
 NAME=holberton
 
