@@ -10,11 +10,8 @@ listint_t *get_head(listint_t *list)
 	return(tmp);
 }
 
-int swap_dll(listint_t *left, listint_t *right)
+void swap_dll(listint_t *left, listint_t *right)
 {
-	if (!left || !right)
-		return (EXIT_FAILURE);
-
 	if (left->prev)
 		left->prev->next = right;
 	if (right->next)
@@ -23,7 +20,6 @@ int swap_dll(listint_t *left, listint_t *right)
 	right->prev = left->prev;
 	left->prev = right;
 	right->next = left;
-	return (EXIT_SUCCESS);
 }
 /**
   * insertion_sort_list - insertion sort algorithm
