@@ -1,3 +1,4 @@
 # Very basic Makefile
+
 all: holberton.c main.c
-	gcc -Wall -Werror -Wextra -pedantic src/holberton.c src/main.c -o holberton
+	gcc -Wall -Werror -Wextra -pedantic holberton.c main.c -o holberton
