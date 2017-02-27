@@ -9,14 +9,14 @@ for i in reversed(range(1, size)):
         a = array[j]
         b = array[int(j/2)]
 #        print("{:d} > {:d}: {:d}".format(a, b, a > b))
-#        print("{:d}".format(j))
         if (a > b):
             array[j] = b
             array[int(j/2)] = a
             print(array)
-#    array[0], array[i] = array[i], array[0]
+    array[0], array[i] = array[i], array[0]
 #    print("{:d}: ".format(i), end="")
     print(array)
+
 
 print(array)
 print("\n")
