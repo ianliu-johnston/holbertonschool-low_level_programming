@@ -31,7 +31,32 @@ void (*is_builtin(char *req_algo))()
 	}
 	return(NULL);
 }
-
+void print_err(const char *prog_name, int err_code)
+{
+	fprintf(stderr, "Usage: %s <algorithm> <array of integers>\n", prog_name);
+	if (err_code == 1)
+		fprintf(stderr, "Algorithm not found.\n");
+	else if (err_code == -1)
+	{
+		printf("\tSorts an array of integers with a specified algorithm. For a default array, do not include any arguments after the algorithm name.\n");
+		printf("\tIncluded Algorithm keywords:\n");
+		printf("\tbubble, ");
+		printf("insertion, ");
+		printf("selection, ");
+		printf("quick, ");
+		printf("shell, ");
+		printf("counting, ");
+		printf("merge, ");
+		printf("heap\n");
+		printf("\tExample:\n");
+		printf("\t%s bubble 52 23 11 1 50 6\n", prog_name);
+	}
+	exit(EXIT_FAILURE);
+}
+void print_help(const char *prog_name)
+{
+	print_err(prog_name, -1);
+}
 /**
  * main - Entry point
  *
@@ -44,34 +69,45 @@ int main(int ac, char *av[])
 	int array[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
     size_t n = ac > 3 ? (size_t)ac - 2 : sizeof(array) / sizeof(array[0]);
 
-
 	if (ac < 2)
-	{
-		printf("Usage: %s <algorithm> <array of integers>\n", av[0]);
-		exit(EXIT_FAILURE);
-	}
+		print_err(av[0], 0);
 	if (ac > 3)
 	{
 		usr_arr = malloc((ac - 3) * sizeof(int));
+		if(!usr_arr)
+			return (EXIT_FAILURE);
 		for(i = 0; i < ac - 2; i++)
 		{
 			for (j = 0; av[i + 2][j]; j++)
 				if (j != 0 && !(isdigit(av[i + 2][j])))
-					printf("Usage: %s <algorithm> <array of integers>\n", av[0]), \
-						exit(EXIT_FAILURE);
+					print_err(av[0], 0);
 			usr_arr[i] = atoi(av[i + 2]);
 		}
 	}
 
-    print_array(ac > 2 ? usr_arr: array, n);
+	/*
+	printf("\x1b[32m");
+	*/
+	print_array(ac > 2 ? usr_arr: array, n);
     putchar('\n');
-	if (is_builtin(av[1]) != NULL)
+	/*
+	printf("\x1b[0m");
+	*/
+	if (strncmp(av[1], "help", 4) == 0)
+		print_help(av[0]);
+	else if (is_builtin(av[1]) != NULL)
 		is_builtin(av[1])(ac > 3 ? usr_arr: array, n);
 	else
-		printf("Algorithm not found.\nUsage: %s <sorting algorithm> <array of integers>\n", av[0]);
+		print_err(av[0], 1);
     putchar('\n');
+	/*
+	printf("\x1b[32m");
+	*/
     print_array(ac > 2 ? usr_arr: array, n);
+	/*
+	printf("\x1b[0m");
+	*/
 	if (ac > 2)
 		free(usr_arr);
-    return (0);
+    return (EXIT_SUCCESS);
 }

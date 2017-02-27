@@ -35,32 +35,24 @@ listint_t *create_listint(const int *array, size_t size)
  * print_list_rev - Prints a doubly linkedd list of integers in reverse
  * @list: The list to be printed
  */
-void print_list_rev(const listint_t *list, int i, int j)
+void print_list_rev(const listint_t *list)
 {
-	int n = 0;
 	const listint_t *tail;
 
+	printf("\x1b[31m");
 	while(list)
 	{
 		tail = list;
 		list = list->next;
-		n++;
 	}
-	printf("\x1b[33m%02d: \x1b[0m", i);
 	while (tail)
 	{
-		if (tail->next)
-			printf(" ");
-		if (n == i)
-			printf("\x1b[31m%02d\x1b[0m", tail->n);
-		else if (n == j)
-			printf("\x1b[32m%02d\x1b[0m", tail->n);
-		else
-			printf("%02d", tail->n);
+		if(tail->next)
+			printf(", ");
+		printf("%02d", tail->n);
 		tail = tail->prev;
-		n--;
 	}
-	printf("\n");
+	printf("\n\x1b[0m");
 }
 /**
  * printarr - Prints an array of integers
@@ -86,10 +78,6 @@ void printarr(int array[], size_t i, size_t j)
 	printf("\n");
 }
 
-
-
-
-
 void insertion_sort_arr(int array[], size_t size)
 {
 	size_t i, j, tmp;
@@ -114,10 +102,17 @@ void insertion_sort_arr(int array[], size_t size)
  */
 void insertion_main(int *array, size_t n)
 {
-    listint_t *list;
+    listint_t *list, *tmp;
 
     list = create_listint(array, n);
     if (!list)
         return;
     insertion_sort_list(&list);
+	while (list)
+	{
+		tmp = list;
+		printf("%d\n", list->n);
+		list = list->next;
+		free(tmp);
+	}
 }

@@ -30,10 +30,10 @@ void insertion_sort_list(listint_t **list)
 	unsigned int big_savespot, small_savespot, i;
 	listint_t *big_step, *small_step;
 
+	big_step = small_step = *list;
 	big_savespot = small_savespot = i = 0;
 	if (!*list || !list)
 		return;
-	big_step = small_step = *list;
 	while (big_step)
 	{
 		small_step = big_step;
@@ -53,7 +53,8 @@ void insertion_sort_list(listint_t **list)
 		big_step = get_head(*list);
 		for (i = 0; i < big_savespot; i++)
 			big_step = big_step->next;
-		big_step = big_step->next;
 		big_savespot++;
+		big_step = big_step->next;
 	}
+	*list = get_head(*list);
 }
