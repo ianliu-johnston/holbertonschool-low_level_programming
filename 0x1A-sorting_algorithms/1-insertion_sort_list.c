@@ -1,5 +1,4 @@
 #include "sort.h"
-#include "1-insertion.h"
 
 listint_t *get_head(listint_t *list)
 {
