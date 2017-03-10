@@ -1,4 +1,4 @@
-<pre><code>alex@/tmp/binary_trees$ cat 10-main.c 
+<pre><code>alex@/tmp/binary_trees$ cat 13-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -11,7 +11,7 @@
 int main(void)
 {
     binary_tree_t *root;
-    size_t depth;
+    size_t nodes;
 
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
@@ -20,11 +20,11 @@ int main(void)
     binary_tree_insert_right(root, 128);
     binary_tree_print(root);
 
-    depth = binary_tree_depth(root);
-    printf("Depth of %d: %lu\n", root->n, depth);
-    depth = binary_tree_depth(root->right);
-    printf("Depth of %d: %lu\n", root->right->n, depth);
-    depth = binary_tree_depth(root->left->right);
-    printf("Depth of %d: %lu\n", root->left->right->n, depth);
+    nodes = binary_tree_nodes(root);
+    printf("Nodes in %d: %lu\n", root->n, nodes);
+    nodes = binary_tree_nodes(root->right);
+    printf("Nodes in %d: %lu\n", root->right->n, nodes);
+    nodes = binary_tree_nodes(root->left->right);
+    printf("Nodes in %d: %lu\n", root->left->right->n, nodes);
     return (0);
 }

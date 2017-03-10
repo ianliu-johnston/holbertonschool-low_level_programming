@@ -1,7 +1,28 @@
-<pre><code>alex@/tmp/binary_trees$ cat 131-main.c
+<pre><code>alex@/tmp/binary_trees$ cat 134-main.c 
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
+
+/**
+ * print_array - Prints an array of integers
+ *
+ * @array: The array to be printed
+ * @size: Number of elements in @array
+ */
+void print_array(const int *array, size_t size)
+{
+    size_t i;
+
+    i = 0;
+    while (array && i < size)
+    {
+        if (i > 0)
+            printf(", ");
+        printf("%d", array[i]);
+        ++i;
+    }
+    printf("\n");
+}
 
 /**
  * main - Entry point
@@ -10,33 +31,22 @@
  */
 int main(void)
 {
-    heap_t *root;
-    heap_t *node;
+    heap_t *tree;
+    int array[] = {
+        79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
+        20, 22, 98, 1, 62, 95
+    };
+    size_t n = sizeof(array) / sizeof(array[0]);
+    int *sorted;
+    size_t sorted_size;
 
-    root = NULL;
-    node = heap_insert(&root, 98);
-    printf("Inserted: %d\n", node->n);
-    binary_tree_print(root);
-    node = heap_insert(&root, 402);
-    printf("\nInserted: %d\n", node->n);
-    binary_tree_print(root);
-    node = heap_insert(&root, 12);
-    printf("\nInserted: %d\n", node->n);
-    binary_tree_print(root);
-    node = heap_insert(&root, 46);
-    printf("\nInserted: %d\n", node->n);
-    binary_tree_print(root);
-    node = heap_insert(&root, 128);
-    printf("\nInserted: %d\n", node->n);
-    binary_tree_print(root);
-    node = heap_insert(&root, 256);
-    printf("\nInserted: %d\n", node->n);
-    binary_tree_print(root);
-    node = heap_insert(&root, 512);
-    printf("\nInserted: %d\n", node->n);
-    binary_tree_print(root);
-    node = heap_insert(&root, 50);
-    printf("\nInserted: %d\n", node->n);
-    binary_tree_print(root);
+    print_array(array, n);
+    tree = array_to_heap(array, n);
+    if (!tree)
+        return (1);
+    binary_tree_print(tree);
+    sorted = heap_to_sorted_array(tree, &sorted_size);
+    print_array(sorted, sorted_size);
+    free(sorted);
     return (0);
 }

@@ -1,4 +1,4 @@
-<pre><code>alex@/tmp/binary_trees$ cat 103-main.c
+<pre><code>alex@/tmp/binary_trees$ cat 111-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -6,26 +6,32 @@
 /**
  * main - Entry point
  *
- * Return: 0 on success, error code on failure
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    binary_tree_t *root;
+    bst_t *root;
+    bst_t *node;
 
-    root = binary_tree_node(NULL, 98);
-    root->right = binary_tree_node(root, 128);
-    root->right->right = binary_tree_node(root->right, 402);
-    binary_tree_print(root);
-    printf("Rotate-left %d\n", root->n);
-    root = binary_tree_rotate_left(root);
-    binary_tree_print(root);
-    printf("\n");
-
-    root->right->right = binary_tree_node(root->right, 450);
-    root->right->left = binary_tree_node(root->right, 420);
-    binary_tree_print(root);
-    printf("Rotate-left %d\n", root->n);
-    root = binary_tree_rotate_left(root);
+    root = NULL;
+    node = bst_insert(&root, 98);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 402);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 12);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 46);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 128);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 256);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 512);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 1);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 128);
+    printf("Node should be nil -> %p\n", (void *)node);
     binary_tree_print(root);
     return (0);
 }

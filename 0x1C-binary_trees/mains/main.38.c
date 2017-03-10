@@ -1,52 +1,39 @@
-<pre><code>alex@/tmp/binary_trees$ cat 130-main.c
+<pre><code>alex@/tmp/binary_trees$ cat 133-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
 
 /**
- * basic_tree - Build a basic binary tree
- *
- * Return: A pointer to the created tree
- */
-binary_tree_t *basic_tree(void)
-{
-    binary_tree_t *root;
-
-    root = binary_tree_node(NULL, 98);
-    root->left = binary_tree_node(root, 90);
-    root->right = binary_tree_node(root, 85);
-    root->left->right = binary_tree_node(root->left, 80);
-    root->left->left = binary_tree_node(root->left, 79);
-    return (root);
-}
-
-/**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 0 on success, error code on failure
  */
 int main(void)
 {
-    binary_tree_t *root;
-    int heap;
+    heap_t *tree;
+    int array[] = {
+        79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
+        20, 22, 98, 1, 62, 95
+    };
+    size_t n = sizeof(array) / sizeof(array[0]);
+    int extract;
 
-    root = basic_tree();
+    tree = array_to_heap(array, n);
+    if (!tree)
+        return (1);
+    binary_tree_print(tree);
 
-    binary_tree_print(root);
-    heap = binary_tree_is_heap(root);
-    printf("Is %d heap: %d\n", root->n, heap);
-    heap = binary_tree_is_heap(root->left);
-    printf("Is %d heap: %d\n", root->left->n, heap);
+    extract = heap_extract(&tree);
+    printf("Extracted: %d\n", extract);
+    binary_tree_print(tree);
 
-    root->right->left = binary_tree_node(root->right, 97);
-    binary_tree_print(root);
-    heap = binary_tree_is_heap(root);
-    printf("Is %d heap: %d\n", root->n, heap);
+    extract = heap_extract(&tree);
+    printf("Extracted: %d\n", extract);
+    binary_tree_print(tree);
 
-    root = basic_tree();
-    root->right->right = binary_tree_node(root->right, 79);
-    binary_tree_print(root);
-    heap = binary_tree_is_heap(root);
-    printf("Is %d heap: %d\n", root->n, heap);
+    extract = heap_extract(&tree);
+    printf("Extracted: %d\n", extract);
+    binary_tree_print(tree);
+    binary_tree_delete(tree);
     return (0);
 }

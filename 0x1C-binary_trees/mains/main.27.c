@@ -1,6 +1,5 @@
-<pre><code>alex@/tmp/binary_trees$ cat 104-main.c
+<pre><code>alex@/tmp/binary_trees$ cat 112-main.c 
 #include <stdlib.h>
-#include <stdio.h>
 #include "binary_trees.h"
 
 /**
@@ -10,22 +9,16 @@
  */
 int main(void)
 {
-    binary_tree_t *root;
+    bst_t *tree;
+    int array[] = {
+        79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
+        20, 22, 98, 1, 62, 95
+    };
+    size_t n = sizeof(array) / sizeof(array[0]);
 
-    root = binary_tree_node(NULL, 98);
-    root->left = binary_tree_node(root, 64);
-    root->left->left = binary_tree_node(root->left, 32);
-    binary_tree_print(root);
-    printf("Rotate-right %d\n", root->n);
-    root = binary_tree_rotate_right(root);
-    binary_tree_print(root);
-    printf("\n");
-
-    root->left->left = binary_tree_node(root->left, 20);
-    root->left->right = binary_tree_node(root->left, 56);
-    binary_tree_print(root);
-    printf("Rotate-right %d\n", root->n);
-    root = binary_tree_rotate_right(root);
-    binary_tree_print(root);
+    tree = array_to_bst(array, n);
+    if (!tree)
+        return (1);
+    binary_tree_print(tree);
     return (0);
 }

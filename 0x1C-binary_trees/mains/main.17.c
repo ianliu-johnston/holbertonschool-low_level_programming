@@ -1,4 +1,4 @@
-<pre><code>alex@/tmp/binary_trees$ cat 13-main.c
+<pre><code>alex@/tmp/binary_trees$ cat 16-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -11,20 +11,28 @@
 int main(void)
 {
     binary_tree_t *root;
-    size_t nodes;
+    int perfect;
 
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
     root->right = binary_tree_node(root, 402);
     binary_tree_insert_right(root->left, 54);
     binary_tree_insert_right(root, 128);
-    binary_tree_print(root);
+    root->left->left = binary_tree_node(root->left, 10);
+    root->right->left = binary_tree_node(root->right, 10);
 
-    nodes = binary_tree_nodes(root);
-    printf("Nodes in %d: %lu\n", root->n, nodes);
-    nodes = binary_tree_nodes(root->right);
-    printf("Nodes in %d: %lu\n", root->right->n, nodes);
-    nodes = binary_tree_nodes(root->left->right);
-    printf("Nodes in %d: %lu\n", root->left->right->n, nodes);
+    binary_tree_print(root);
+    perfect = binary_tree_is_perfect(root);
+    printf("Perfect: %d\n\n", perfect);
+
+    root->right->right->left = binary_tree_node(root->right->right, 10);
+    binary_tree_print(root);
+    perfect = binary_tree_is_perfect(root);
+    printf("Perfect: %d\n\n", perfect);
+
+    root->right->right->right = binary_tree_node(root->right->right, 10);
+    binary_tree_print(root);
+    perfect = binary_tree_is_perfect(root);
+    printf("Perfect: %d\n", perfect);
     return (0);
 }

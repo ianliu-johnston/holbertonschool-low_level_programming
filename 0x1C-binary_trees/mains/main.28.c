@@ -1,4 +1,4 @@
-<pre><code>alex@/tmp/binary_trees$ cat 110-main.c
+<pre><code>alex@/tmp/binary_trees$ cat 113-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -6,29 +6,26 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 0 on success, error code on failure
  */
 int main(void)
 {
-    binary_tree_t *root;
-    int bst;
+    bst_t *tree;
+    int array[] = {
+        79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
+        20, 22, 98, 1, 62, 95
+    };
+    size_t n = sizeof(array) / sizeof(array[0]);
+    bst_t *node;
 
-    root = binary_tree_node(NULL, 98);
-    root->left = binary_tree_node(root, 12);
-    root->right = binary_tree_node(root, 128);
-    root->left->right = binary_tree_node(root->left, 54);
-    root->right->right = binary_tree_node(root, 402);
-    root->left->left = binary_tree_node(root->left, 10);
-
-    binary_tree_print(root);
-    bst = binary_tree_is_bst(root);
-    printf("Is %d bst: %d\n", root->n, bst);
-    bst = binary_tree_is_bst(root->left);
-    printf("Is %d bst: %d\n", root->left->n, bst);
-
-    root->right->left = binary_tree_node(root->right, 97);
-    binary_tree_print(root);
-    bst = binary_tree_is_bst(root);
-    printf("Is %d bst: %d\n", root->n, bst);
+    tree = array_to_bst(array, n);
+    if (!tree)
+        return (1);
+    binary_tree_print(tree);
+    node = bst_search(tree, 32);
+    printf("Found: %d\n", node->n);
+    binary_tree_print(node);
+    node = bst_search(tree, 512);
+    printf("Node should be nil -> %p\n", (void *)node);
     return (0);
 }

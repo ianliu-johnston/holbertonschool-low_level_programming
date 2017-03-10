@@ -1,4 +1,4 @@
-<pre><code>alex@/tmp/binary_trees$ cat 11-main.c 
+<pre><code>alex@/tmp/binary_trees$ cat 14-main.c 
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -11,20 +11,24 @@
 int main(void)
 {
     binary_tree_t *root;
-    size_t size;
+    int balance;
 
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
     root->right = binary_tree_node(root, 402);
     binary_tree_insert_right(root->left, 54);
     binary_tree_insert_right(root, 128);
+    binary_tree_insert_left(root, 45);
+    binary_tree_insert_right(root->left, 50);
+    binary_tree_insert_left(root->left->left, 10);
+    binary_tree_insert_left(root->left->left->left, 8);
     binary_tree_print(root);
 
-    size = binary_tree_size(root);
-    printf("Size of %d: %lu\n", root->n, size);
-    size = binary_tree_size(root->right);
-    printf("Size of %d: %lu\n", root->right->n, size);
-    size = binary_tree_size(root->left->right);
-    printf("Size of %d: %lu\n", root->left->right->n, size);
+    balance = binary_tree_balance(root);
+    printf("Balance of %d: %+d\n", root->n, balance);
+    balance = binary_tree_balance(root->right);
+    printf("Balance of %d: %+d\n", root->right->n, balance);
+    balance = binary_tree_balance(root->left->left->right);
+    printf("Balance of %d: %+d\n", root->left->left->right->n, balance);
     return (0);
 }

@@ -1,4 +1,4 @@
-<pre><code>alex@/tmp/binary_trees$ cat 2-main.c 
+<pre><code>alex@/tmp/binary_trees$ cat 5-main.c 
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -11,14 +11,20 @@
 int main(void)
 {
     binary_tree_t *root;
+    int ret;
 
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
     root->right = binary_tree_node(root, 402);
-    binary_tree_print(root);
-    printf("\n");
     binary_tree_insert_right(root->left, 54);
     binary_tree_insert_right(root, 128);
     binary_tree_print(root);
+
+    ret = binary_tree_is_root(root);
+    printf("Is %d a root: %d\n", root->n, ret);
+    ret = binary_tree_is_root(root->right);
+    printf("Is %d a root: %d\n", root->right->n, ret);
+    ret = binary_tree_is_root(root->right->right);
+    printf("Is %d a root: %d\n", root->right->right->n, ret);
     return (0);
 }

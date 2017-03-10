@@ -1,6 +1,6 @@
-<pre><code>alex@/tmp/binary_trees$ cat 123-main.c
-#include <stdio.h>
+<pre><code>alex@/tmp/binary_trees$ cat 131-main.c
 #include <stdlib.h>
+#include <stdio.h>
 #include "binary_trees.h"
 
 /**
@@ -10,37 +10,33 @@
  */
 int main(void)
 {
-    avl_t *tree;
-    int array[] = {
-        79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
-        20, 22, 98, 1, 62, 95
-    };
-    size_t n = sizeof(array) / sizeof(array[0]);
+    heap_t *root;
+    heap_t *node;
 
-    tree = array_to_avl(array, n);
-    if (!tree)
-        return (1);
-    binary_tree_print(tree);
-
-    tree = avl_remove(tree, 47);
-    printf("Removed 47...\n");
-    binary_tree_print(tree);
-
-    tree = avl_remove(tree, 79);
-    printf("Removed 79...\n");
-    binary_tree_print(tree);
-
-    tree = avl_remove(tree, 32);
-    printf("Removed 32...\n");
-    binary_tree_print(tree);
-
-    tree = avl_remove(tree, 34);
-    printf("Removed 34...\n");
-    binary_tree_print(tree);
-
-    tree = avl_remove(tree, 22);
-    printf("Removed 22...\n");
-    binary_tree_print(tree);
-    binary_tree_delete(tree);
+    root = NULL;
+    node = heap_insert(&root, 98);
+    printf("Inserted: %d\n", node->n);
+    binary_tree_print(root);
+    node = heap_insert(&root, 402);
+    printf("\nInserted: %d\n", node->n);
+    binary_tree_print(root);
+    node = heap_insert(&root, 12);
+    printf("\nInserted: %d\n", node->n);
+    binary_tree_print(root);
+    node = heap_insert(&root, 46);
+    printf("\nInserted: %d\n", node->n);
+    binary_tree_print(root);
+    node = heap_insert(&root, 128);
+    printf("\nInserted: %d\n", node->n);
+    binary_tree_print(root);
+    node = heap_insert(&root, 256);
+    printf("\nInserted: %d\n", node->n);
+    binary_tree_print(root);
+    node = heap_insert(&root, 512);
+    printf("\nInserted: %d\n", node->n);
+    binary_tree_print(root);
+    node = heap_insert(&root, 50);
+    printf("\nInserted: %d\n", node->n);
+    binary_tree_print(root);
     return (0);
 }
