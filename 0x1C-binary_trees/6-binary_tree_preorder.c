@@ -6,5 +6,5 @@
   */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
-	return (0);
+	printf("Function Not Implemented. Your values: %p: %p\n", tree, func);
 }
