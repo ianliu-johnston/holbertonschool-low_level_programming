@@ -28,8 +28,10 @@ Insertion Sort
 Selection Sort
 
 <h6>3-quick_sort.c</h6>
-Quick Sort
+Quick Sort <not implemented>
 
+<h6>10*-*</h6>
+Functions are not implemented.
 
 <h6>*-O</h6>
 Answers to Big O quiz.
