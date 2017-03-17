@@ -1,5 +1,6 @@
 #Holberton School - 0x17-dynamic_libraries
-Description
+Compile dynamic Libraries.
+
 ## New commands / functions used:
 1. ``mkdir libtobuild && cd libtobuild && cp ../files_to_find .`` - basic setup directory with all source.
 2. ``cp $(grep -F -f files_to_find $(find ~/holbertonschool-low_level_programming/ -type f -name "*.c") | grep -v -e "0x08" -e "0x17" -e "putchar" -e "main" | cut -d : -f1) .`` - Copies all C files found into the current working directory, with any of the prototypes found in the file: files_to_find. Excludes any files found with specific patterns.
@@ -45,7 +46,7 @@ Contains all the prototypes of the above functions.
 Script that creates a dynamic library called liball.so from the current directory.
 
 ### Task 2:
-A [blog post](http://ianxaunliu-johnston.com) post describing the differences between static and dynamic libraries.
+A [blog post]() post describing the differences between static and dynamic libraries.
 
 ### Task 3:
 <h6>100-operations.so</h6>
