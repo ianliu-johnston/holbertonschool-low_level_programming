@@ -1,10 +1,14 @@
 #include "binary_trees.h"
 /**
-  * binary_tree_postorder - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * binary_tree_postorder - traverse a tree in post order
+  * @tree: Tree to traverse
+  * @func: Function pointer to the print function
   */
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
-	printf("Function Not Implemented. Your values: %p: %p\n", (void *)tree, func);
+	if (!tree || !func)
+		return;
+	binary_tree_postorder(tree->left, func);
+	binary_tree_postorder(tree->right, func);
+	func(tree->n);
 }
