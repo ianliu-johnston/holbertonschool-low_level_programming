@@ -44,8 +44,10 @@ binary_tree_t *(*is_arg_tree(char *s))()
 		{"new_tree", binary_tree_node},
 		{"insert_left", binary_tree_insert_left},
 		{"insert_right", binary_tree_insert_right},
+		/*
 		{"binary_tree_sibling", binary_tree_sibling},
 		{"binary_tree_uncle", binary_tree_uncle},
+		*/
 		{NULL, NULL}
 	};
 
@@ -133,9 +135,9 @@ int main(void)
 		tok2 = strtok(NULL, " \t\n");
 		printf("status: %d, line: %s, cmd: %s, tok1: %s\n", (int)status, saveptr, cmd, tok1);
 		if (is_arg(cmd))
-			is_arg(cmd)(root, tok1, tok2);
-		if (is_arg_tree(cmd))
-			is_arg(cmd)(root, tok1, tok2);
+			is_arg(cmd)(tok1, tok2);
+		else if (is_arg_tree(cmd))
+			is_arg_tree(cmd)(tok1, tok2);
 		else
 			fprintf(stderr, "Command %s not found.\n", cmd);
 		if(!pipe_flag) printf("~> ");

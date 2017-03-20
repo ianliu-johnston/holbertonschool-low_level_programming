@@ -6,5 +6,11 @@
   */
 void binary_tree_delete(binary_tree_t *tree)
 {
-	printf("Function Not Implemented. Your values: %p\n", (void *)tree);
+	if (tree == NULL)
+		return;
+	if(tree->left)
+		binary_tree_delete(tree->left);
+	if(tree->right)
+		binary_tree_delete(tree->right);
+	free(tree);
 }
