@@ -1,4 +1,4 @@
-#include "binary_trees"
+#include "binary_trees.h"
 /**
   * *binary_tree_insert_right - define function
   * @void: describe argument
@@ -6,5 +6,6 @@
   */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
-	return (0);
+	printf("Function Not Implemented. Your values: %p: %d\n", (void *)parent, value);
+	return (NULL);
 }

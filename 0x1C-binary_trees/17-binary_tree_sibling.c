@@ -1,4 +1,4 @@
-#include "binary_trees"
+#include "binary_trees.h"
 /**
   * binary_tree_inorder - define function
   * @void: describe argument
@@ -6,5 +6,5 @@
   */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
-	return (0);
+	printf("Function Not Implemented. %p, %p\n", (void *)tree, func);
 }

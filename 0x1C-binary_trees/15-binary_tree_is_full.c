@@ -1,4 +1,4 @@
-#include "binary_trees"
+#include "binary_trees.h"
 /**
   * binary_tree_is_root - define function
   * @void: describe argument
@@ -6,5 +6,6 @@
   */
 int binary_tree_is_root(const binary_tree_t *node)
 {
+	printf("Function Not Implemented. %p\n", (void *)node);
 	return (0);
 }

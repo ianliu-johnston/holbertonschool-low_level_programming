@@ -1,4 +1,4 @@
-#include "binary_trees"
+#include "binary_trees.h"
 /**
   * binary_tree_delete - define function
   * @void: describe argument
@@ -6,5 +6,5 @@
   */
 void binary_tree_delete(binary_tree_t *tree)
 {
-	return (0);
+	printf("Function Not Implemented. %p\n", (void *)tree);
 }

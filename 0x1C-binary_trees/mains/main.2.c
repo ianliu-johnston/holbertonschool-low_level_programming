@@ -1,4 +1,3 @@
-<pre><code>alex@/tmp/binary_trees$ cat 1-main.c 
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -16,9 +15,13 @@ int main(void)
     root->left = binary_tree_node(root, 12);
     root->right = binary_tree_node(root, 402);
     binary_tree_print(root);
-    printf("\n");
+	printf("---------------------------\n");
     binary_tree_insert_left(root->right, 128);
     binary_tree_insert_left(root, 54);
+    binary_tree_print(root);
+	printf("---------------------------\n");
+    binary_tree_insert_left(root->right, 128);
+    binary_tree_insert_left(root, 13980);
     binary_tree_print(root);
     return (0);
 }

@@ -1,0 +1,147 @@
+#include "binary_trees.h"
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+
+typedef struct is_type_void {
+	char *cmd;
+	void (*f)();
+} is_type_void_t;
+
+typedef struct is_type_int {
+	char *cmd;
+	int (*f)();
+} is_type_int_t;
+
+typedef struct is_type_sizet {
+	char *cmd;
+	int (*f)();
+} is_type_sizet_t;
+
+typedef struct is_type_tree {
+	char *cmd;
+	binary_tree_t *(*f)();
+} is_type_tree_t;
+
+void help(void)
+{
+	printf("help: Display this message\n");
+	printf("exit/quit quit the program\n");
+	printf("print\t prints the current tree\n");
+	printf("new <parent> <value>\t Creates a new node\n");
+	printf("insert_left <parent> <value>\t inserts a new left child node\n");
+	printf("insert_right <parent> <value>\t inserts a new right child node\n");
+}
+void quit(void)
+{
+	fprintf(stderr, "Full freeing not complete\n");
+	exit(EXIT_SUCCESS);
+}
+binary_tree_t *(*is_arg_tree(char *s))()
+{
+	int i = 0;
+	is_type_tree_t tree_fxns[] = {
+		{"new_tree", binary_tree_node},
+		{"insert_left", binary_tree_insert_left},
+		{"insert_right", binary_tree_insert_right},
+		{"binary_tree_sibling", binary_tree_sibling},
+		{"binary_tree_uncle", binary_tree_uncle},
+		{NULL, NULL}
+	};
+
+	if (!s)
+		return (NULL);
+	i = 0;
+	while (tree_fxns[i].cmd != NULL)
+	{
+		if (strncmp(tree_fxns[i].cmd, s, strlen(tree_fxns[i].cmd)) == 0)
+			return (tree_fxns[i].f);
+		i++;
+	}
+	return (NULL);
+}
+/**
+  * is_arg - checks if arg in arglist
+  * @s: string to compare.
+  * Return: function pointer
+  **/
+void (*is_arg(char *s))()
+{
+	int i = 0;
+	is_type_void_t void_fxns[] = {
+		{"help", help}, {"exit", quit}, {"quit", quit},
+		{"print", binary_tree_print},
+		{NULL, NULL}
+	};
+	if (!s)
+		return (NULL);
+	while (void_fxns[i].cmd != NULL)
+	{
+		if (strncmp(void_fxns[i].cmd, s, strlen(void_fxns[i].cmd)) == 0)
+			return (void_fxns[i].f);
+		i++;
+	}
+	return (NULL);
+}
+/**
+  * main - entry point
+  * @ac: Argument count
+  * @av: Argument vectors
+  * Return: 0 on success
+  **/
+int main(void)
+{
+	char pipe_flag;
+	char *lineptr = NULL;
+	char *saveptr = NULL;
+	char *cmd = NULL;
+	char *tok1, *tok2;
+	size_t len = 0;
+	ssize_t status;
+	binary_tree_t *root;
+	/**
+	  * For determining if you're interactive or scripted
+	  **/
+   	struct stat fstat_buf;
+
+	if (fstat(STDIN_FILENO, &fstat_buf) == -1)
+		fprintf(stderr, "Could not read from stdin\n"), exit(EXIT_FAILURE);
+	pipe_flag = (fstat_buf.st_mode & S_IFMT) == S_IFCHR ? 0 : 1;
+
+	/**
+	  * Default tree just for reference.
+	  **/
+
+	root = binary_tree_node(NULL, 98);
+	root->left = binary_tree_node(root, 6);
+	root->left->left = binary_tree_node(root->left, 23);
+	root->left->right = binary_tree_node(root->left, 36);
+	root->right = binary_tree_node(root, 236);
+	root->right->left = binary_tree_node(root->right, 16);
+
+	if(pipe_flag == 0)
+	{
+		printf("Binary Tree building tool\n");
+		printf("Ian Liu-Johnston 2017\n");
+		printf("Type help for a list of available commands\n~> ");
+	}
+	while((status = getline(&lineptr, &len, stdin)) != -1)
+	{
+		saveptr = strndup(lineptr, (size_t)status);
+		cmd = strtok(saveptr, " \t\n");
+		tok1 = strtok(NULL, " \t\n");
+		tok2 = strtok(NULL, " \t\n");
+		printf("status: %d, line: %s, cmd: %s, tok1: %s\n", (int)status, saveptr, cmd, tok1);
+		if (is_arg(cmd))
+			is_arg(cmd)(root, tok1, tok2);
+		if (is_arg_tree(cmd))
+			is_arg(cmd)(root, tok1, tok2);
+		else
+			fprintf(stderr, "Command %s not found.\n", cmd);
+		if(!pipe_flag) printf("~> ");
+		free(saveptr);
+		saveptr = NULL;
+	}
+	free(lineptr);
+	return (EXIT_SUCCESS);
+}
