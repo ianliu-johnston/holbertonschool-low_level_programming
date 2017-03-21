@@ -1,11 +1,15 @@
 #include "binary_trees.h"
 /**
-  * *binary_tree_insert_right - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * binary_tree_leaves - counts leaf nodes
+  * @tree: tree to measure
+  * Return: number of leaf nodes
   */
-binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
+size_t binary_tree_leaves(const binary_tree_t *tree)
 {
-	printf("Function Not Implemented. Your values: %p: %d\n", (void *)parent, value);
-	return (NULL);
+	if (!tree)
+		return (0);
+	if (!tree->left && !tree->right)
+		return (1);
+	return (binary_tree_leaves(tree->right) + binary_tree_leaves(tree->left));
+
 }
