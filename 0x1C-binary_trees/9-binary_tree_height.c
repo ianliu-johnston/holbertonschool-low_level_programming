@@ -6,6 +6,10 @@
   */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	printf("Function Not Implemented. Your values: %p\n", (void *)tree);
-	return (0);
+	size_t right, left;
+	if (!tree || (!tree->left && !tree->right))
+		return (0);
+	left = binary_tree_height(tree->left) + 1;
+	right = binary_tree_height(tree->right) + 1;
+	return(right > left ? right : left);
 }
