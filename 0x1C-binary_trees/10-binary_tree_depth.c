@@ -1,11 +1,14 @@
 #include "binary_trees.h"
 /**
-  * *binary_tree_node - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * binary_tree_depth - returns the depth of a binary tree
+  * @node: Node to measure the depth from
+  * Return: depth of the binary tree
   */
-binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
+size_t binary_tree_depth(const binary_tree_t *node)
 {
-	printf("Function Not Implemented. Your values: %p: %d\n", (void *)parent, value);
-	return (NULL);
+	int i;
+
+	for (i = 0; node && node->parent; ++i)
+		node = node->parent;
+	return (i);
 }
