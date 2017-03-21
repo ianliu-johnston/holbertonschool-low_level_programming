@@ -1,11 +1,12 @@
 #include "binary_trees.h"
 /**
-  * *binary_tree_insert_left - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * binary_tree_size - returns the size of a binary tree
+  * @tree: tree to measure
+  * Return: size of the tree
   */
-binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
+size_t binary_tree_size(const binary_tree_t *tree)
 {
-	printf("Function Not Implemented. Your values: %p: %d\n", (void *)parent, value);
-	return (NULL);
+	if (!tree)
+		return (0);
+	return (binary_tree_size(tree->left) + 1 + binary_tree_size(tree->right));
 }
