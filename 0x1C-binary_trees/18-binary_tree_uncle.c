@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 /**
-  * binary_tree_uncle - checks if uncle
+  * binary_tree_uncle - finds the parent's sibling of the current node
   * @node: node to check
-  * Return: ptr
+  * Return: pointer to the uncle.
   */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
