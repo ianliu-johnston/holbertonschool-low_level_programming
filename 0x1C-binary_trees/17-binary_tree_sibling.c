@@ -1,10 +1,11 @@
 #include "binary_trees.h"
 /**
-  * binary_tree_inorder - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * binary_tree_sibling - checks if
+  * @node: node to check
+  * Return: ptr
   */
-void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
+binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-	printf("Function Not Implemented. %p, %p\n", (void *)tree, func);
+	printf("Function Not Implemented. %p\n", (void *)node);
+	return (NULL);
 }

@@ -1,10 +1,11 @@
 #include "binary_trees.h"
 /**
-  * binary_tree_postorder - define function
-  * @void: describe argument
-  * Return: 0 on success
+  * binary_tree_uncle - checks if uncle
+  * @node: node to check
+  * Return: ptr
   */
-void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
+binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	printf("Function Not Implemented. %p, %p\n", (void *)tree, func);
+	printf("Function Not Implemented. %p\n", (void *)node);
+	return (NULL);
 }
