@@ -1,4 +1,11 @@
 #!/bin/bash
+########################################################
+#  Bash Script to setup Holberton School Project Files #
+#     Usage: ./setup.sh <file>.html                    #
+#  Author: Ian Liu-Johnston                            #
+#  No restriction on duplication or modification       #
+#  https://github.com/ianliu-johnston                  #
+########################################################
 if [[ -z $1 ]]; then
 	echo "Usage: ./setup.sh <html_file>"
 	exit 1
