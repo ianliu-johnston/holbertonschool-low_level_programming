@@ -1,4 +1,3 @@
-<pre><code>alex@/tmp/binary_trees$ cat 123-main.c
 #include <stdio.h>
 #include <stdlib.h>
 #include "binary_trees.h"
