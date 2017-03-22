@@ -14,27 +14,25 @@ if [[ ! -r $1 ]]; then
 	echo "File does not exist or is unreadable"
 	exit 1
 fi
+########## Copy pre-commit hooks if not there ##########
+if [[ ! -f .git/hooks/pre-commit ]]; then
+	cp pre-commit .git/hooks/pre-commit
+fi
+############## Setup headers and directory #############
 INPUT=$1
 HEADER=$(grep ".h&quot;" $INPUT | head -1 | cut -d ';' -f2 | cut -d '.' -f1)
 DIR=$(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1)
 mkdir $DIR
 cp $INPUT $DIR
 cd $DIR
-echo Checking to see if Betty checks is in the home directory
-ls ~/Betty/
-if [[ $? == 0 ]]; then
-	echo Found Betty checks. Making symbolic links. Run with ./_betty-s *.c or ./_betty-d *.c
-	ln -s ~/Betty/betty-doc.pl _betty-d
-	ln -s ~/Betty/betty-style.pl _betty-s
-fi
-echo -e "a.out\n*.swp\n~*\n_betty-s\n_betty-d\n_putchar.c\n" >> .gitignore
+echo -e "a.out\n*.swp\n~*\n_putchar.c\n" >> .gitignore
 echo -e "#include <unistd.h>\nint _putchar(char c)\n{\n\treturn (write(1, &c, 1));\n}\n" > _putchar.c
-#Create the files
+#################### Create the files ##################
 touch $(grep File: $INPUT | cut -d \> -f3 | cut -d \< -f1 | tr -d ',')
 echo -e "#include \"$HEADER\"\n/**\n  * main - define function\n  * @void: describe argument\n  * Return: 0 on success\n  */\nint main(void)\n{\n\treturn (0);\n}" >> template
 find . -type f -name "*.c" -empty -exec cp template '{}' \;
 rm template
-#Create the header
+#################### Create the header #################
 grep Prototype: $INPUT | cut -d \> -f3 | cut -d \< -f1 >> $HEADER.h
 I=0
 while read c; do
@@ -49,11 +47,11 @@ echo -e "#ifndef HEADER_H\n" | cat - $HEADER.h.tmp > $HEADER.h
 echo "int _putchar(char c);" >> $HEADER.h
 echo "#endif" >> $HEADER.h
 rm $HEADER.h.tmp
-# Add Struct definitions to the header.
+########## Add struct definitions to the header ########
 #A=$(grep -n "Requirements" $INPUT | cut -d : -f 1)
 #B=$(grep -n "" $INPUT | tail -n +$A | grep -m1 -n "</code></pre>" | cut -d : -f1)
 #tail -n +$A $INPUT | head -n $(($B-$A)) | grep "<pre><code>" | sed 's/<a href=\"/\n/g' | grep "http"| cut -d \" -f1 | sed 's/^/* [link](/;s/$/)/' >> README.md
-#README.md
+#################### Create the README.md ##############
 echo "#Holberton School - "$(grep Directory: $INPUT | head -1 | cut -d \> -f3 | cut -d \< -f1) > README.md
 echo "Description" >> README.md
 echo "## New commands / functions used:" >> README.md
@@ -65,7 +63,7 @@ tail -n +$C $INPUT | head -n $(($D-$C)) | grep "<a href=" | sed 's/<a href=\"/\n
 echo "" >> README.md
 echo "## Description of Files" >> README.md
 ls -1 | grep "[0-9]-" | sort -h | sed 's/^/<h6>/g;s/$/<\/h6>\n/g' >> README.md
-#MAINS
+#################### Create All Mains ##################
 mkdir mains
 cd mains/
 mv ../$INPUT .
@@ -83,7 +81,12 @@ do
 	fi
 done
 ln -s ../$HEADER.h $HEADER.h
-mv $INPUT ../
+#################### Cleanup ###########################
 find . -type f -name "*.sh" -exec chmod u+x '{}' \;
+#SCRIPTS=$(head -v -n1 $(ls -1) | grep "bash" -B1 | grep "==>" | cut -d ' ' -f2)
+#while read -r LINE; do
+#	chmod +x $LINE
+#done < "$SCRIPTS"
+rm $INPUT
 cd ..
 rm ../$INPUT

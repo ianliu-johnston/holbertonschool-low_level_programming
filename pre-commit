@@ -1,0 +1,77 @@
+#!/bin/bash
+########################################################
+#                                                      #
+# This pre-commit hook will run style checks           #
+# on every bash script, .c or .h file                  #
+# that you push to a git repository,                   # 
+# and will stop your commit if any                     #
+# file fails the checks.                               #
+#                                                      #
+########################################################
+EXIT=0
+############# Check C files and header files ###########
+CFILES=$(git diff --cached --name-only | grep -e ".c" -e ".h")
+if [[ ! -z $CFILES ]]; then
+	echo "Checking style on C files"
+	echo "$CFILES"
+	if [[ ! -a ~/Betty ]]; then
+		echo "Cannot find betty style checks. Try running this command:"
+		echo "git clone https://github.com/holbertonschool/Betty.git ~/Betty"
+		exit 1
+	fi
+
+	bettycheck="$(/home/$(whoami)/Betty/betty-doc.pl $CFILES 2>&1)$(/home/$(whoami)/Betty/betty-style.pl $CFILES 2>&1)"
+	if [[ $bettycheck =~ WARNING ]] || [[ $bettycheck =~ ERROR ]] ||
+	  [[ $bettycheck =~ warning ]] || [[ $bettycheck =~ error ]] ;
+	then
+		echo -e "\e[31mFails Betty style checks:"
+		echo -e "Use --no-verify to push anyways.\e[0m"
+		git reset
+		EXIT=1
+	else
+		echo -e "\e[32mC Style Checks Pass!\e[0m"
+	fi
+fi
+############# Check Bash scripts #######################
+SHFILES=$(head -v -n1 $(git diff --cached --name-only) 2> /dev/null | grep "bash" -B1 | grep "==>" | cut -d ' ' -f2)
+if [[ ! -z $SHFILES ]]; then
+	echo "Checking style on Bash Scripts: "
+	echo $SHFILES
+	if [[ -z $(which shellcheck) ]]; then
+		echo "shellcheck is not installed. Try running this command:"
+		echo "sudo apt-get install shellcheck"
+		exit 1
+	fi
+	shellcheck="$(shellcheck $SHFILES | grep '\^\-\- SC[0-9][0-9][0-9][0-9]:' )"
+	if [[ ! -z $shellcheck ]]; then
+		echo -e "\e[31mFails shell style checks:"
+		echo -e "Use --no-verify to push anyways.\e[0m"
+		git reset
+		EXIT=1
+	else
+		echo -e "\e[32mShell Style Checks Pass!\e[0m"
+	fi
+fi
+############# Check Python scripts #####################
+################ in progress... ########################
+#PYFILES=$(head -v -n1 $(git diff --cached --name-only) | grep "python" -B1 | grep "==>" | cut -d ' ' -f2)
+#if [[ ! -z $PYFILES ]]; then
+#	echo "Checking style on Python Scripts: "
+#	echo $PYFILES
+#	pep8check="$(pep8 $PYFILES | grep '\^\-\- SC[0-9][0-9][0-9][0-9]:' )"
+#	if [[ ! -z $pep8check ]]; then
+#		echo -e "\e[31mFails pep8 style checks:"
+#		echo -e "Use --no-verify to push anyways.\e[0m"
+#		git reset
+#		exit 1
+#	else
+#		echo -e "\e[32mPython Style Checks Pass!\e[0m"
+#	fi
+#fi
+############# Every thing went smooth ##################
+if [[ $EXIT -eq 0 ]]; then
+    exit 0
+fi
+############# Somethings messed up... ##################
+git reset
+exit 1
