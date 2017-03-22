@@ -6,6 +6,8 @@
   */
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
+	if (!node)
+		return (NULL);
 	printf("Function Not Implemented. %p\n", (void *)node);
 	return (NULL);
 }

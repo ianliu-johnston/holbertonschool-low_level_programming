@@ -3,10 +3,10 @@ Creating and manipulating binary trees
 
 ## Helpful Links
 * [Binary Tree on Wikipedia](https://en.wikipedia.org/wiki/Binary_tree)
-* [link](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)
-* [link](https://www.tutorialspoint.com/data_structures_algorithms/tree_traversal.htm)
-* [link](https://en.wikipedia.org/wiki/Binary_search_tree)
-* [](https://www.youtube.com/watch?v=H5JubkIy_p8)
+* [Tutorials point on Binary Trees](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)
+* [Tutorials point on Traversing Binary Trees](https://www.tutorialspoint.com/data_structures_algorithms/tree_traversal.htm)
+* [Wikipedia on Binary Search Trees](https://en.wikipedia.org/wiki/Binary_search_tree)
+* [Youtube](https://www.youtube.com/watch?v=H5JubkIy_p8)
 * [Tree Traversal- Geeks for Geeks](http://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
 
 ## Description of Files

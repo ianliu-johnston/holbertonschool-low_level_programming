@@ -16,10 +16,10 @@
  */
 struct binary_tree_s
 {
-    int n;
-    struct binary_tree_s *parent;
-    struct binary_tree_s *left;
-    struct binary_tree_s *right;
+	int n;
+	struct binary_tree_s *parent;
+	struct binary_tree_s *left;
+	struct binary_tree_s *right;
 };
 
 /* Type Definitions */
@@ -47,7 +47,7 @@ int binary_tree_is_root(const binary_tree_t *node);
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
-void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int)); /* Extra */
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 /* Tree Data */
 size_t binary_tree_height(const binary_tree_t *tree);
@@ -60,17 +60,20 @@ size_t binary_tree_nodes(const binary_tree_t *tree);
 int binary_tree_balance(const binary_tree_t *tree);
 int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
-int binary_tree_is_complete(const binary_tree_t *tree); /* Extra */
+/*
+* int binary_tree_is_complete(const binary_tree_t *tree);
+*/
 
 /* Node Relationships */
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second); /* Extra */
+binary_tree_t *binary_trees_ancestor(
+		const binary_tree_t *first, const binary_tree_t *second);
 
 /** EXTRAS **/
 /* Tree Rotation */
-binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree); /* Extra */
-binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree); /* Extra */
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 
 /* Binary Tree to bst */
 int binary_tree_is_bst(const binary_tree_t *tree);
