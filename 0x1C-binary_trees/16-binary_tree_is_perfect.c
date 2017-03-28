@@ -9,11 +9,15 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int left, right;
 
-	if (!tree)
+	if (!tree || (!tree->left && !tree->right))
 		return (1);
 	if (binary_tree_balance(tree) != 0)
 		return (0);
-	left = binary_tree_is_perfect(tree->left);
-	right = binary_tree_is_perfect(tree->right);
-	return (left && right);
+	if (tree->left && tree->right)
+	{
+		left = binary_tree_is_perfect(tree->left);
+		right = binary_tree_is_perfect(tree->right);
+		return (left && right);
+	}
+	return (0);
 }
