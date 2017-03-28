@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include "9-binary_tree_height.c"
 /**
   * binary_tree_balance - Checks to see if the binary tree is balanced
   * @tree: tree to measure
@@ -10,19 +11,9 @@ int binary_tree_balance(const binary_tree_t *tree)
 {
 	int left, right;
 
-	left = right = 0;
-	printf("current node: %d\n", tree->n);
-	if (!tree || (!tree->left && !tree->right))
+	if (!tree)
 		return (0);
-	if (tree->left && !tree->right)
-	{
-		left = binary_tree_balance(tree->left) + 1;
-		printf("left = %d\n", left);
-	}
-	if (tree->right && !tree->left)
-	{
-		right = binary_tree_balance(tree->right) - 1;
-		printf("right = %d\n", right);
-	}
-	return (left + right);
+	left = tree->left ? binary_tree_height(tree->left) + 1 : 0;
+	right = tree->right ? binary_tree_height(tree->right) + 1 : 0;
+	return (left - right);
 }
