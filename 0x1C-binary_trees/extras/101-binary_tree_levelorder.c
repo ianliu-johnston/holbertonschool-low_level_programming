@@ -1,4 +1,4 @@
-#include "binary_trees"
+#include "binary_trees.h"
 /**
   * *binary_tree_node - define function
   * @void: describe argument
@@ -6,5 +6,5 @@
   */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-	return (0);
+	return (NULL);
 }
