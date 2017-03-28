@@ -6,6 +6,15 @@
   */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	printf("Function Not Implemented. %p\n", (void *)node);
+	binary_tree_t *parent;
+
+	if (!node || !node->parent)
+		return (NULL);
+
+	parent = node->parent;
+	if (parent->parent && parent->parent->left != parent)
+		return (parent->parent->left);
+	else if (parent->parent && parent->parent->right != parent)
+		return (parent->parent->right);
 	return (NULL);
 }
