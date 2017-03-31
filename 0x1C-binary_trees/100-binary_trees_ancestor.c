@@ -1,7 +1,5 @@
 #include "binary_trees.h"
-/*
-* #include "10-binary_tree_depth.c"
-*/
+#include "10-binary_tree_depth.c"
 /**
   * binary_trees_ancestor - Finds the lowest common ancestor of two nodes
   * @first: first node to evaluate
