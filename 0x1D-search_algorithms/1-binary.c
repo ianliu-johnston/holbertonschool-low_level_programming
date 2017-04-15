@@ -22,13 +22,13 @@ int helper(int *array, size_t size, size_t first, size_t last, int value)
 		printf(", %d", array[i]);
 	putchar('\n');
 
-	if (first > last)
+	if (first >= last)
 		return (-1);
 	if (value == array[(first + last) / 2])
 		return ((first + last) / 2);
 
 	if (value < array[(first + last) / 2])
-		return (helper(array, size, first, ((first + last) / 2) - 1, value));
+		return (helper(array, size, first, ((first + last) / 2), value));
 	if (value > array[(first + last) / 2])
 		return (helper(array, size, (first + last) / 2 + 1, last, value));
 	return (-1);
