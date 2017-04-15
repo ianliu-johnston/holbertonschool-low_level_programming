@@ -14,6 +14,20 @@ int main(void)
     };
     size_t size = sizeof(array) / sizeof(array[0]);
 
+/*
+	size_t i;
+    size_t size2 = 24;
+	int *arr2;
+	arr2 = malloc(sizeof(int) * size2);
+	for (i = 0; i < size2; i++)
+		arr2[i] = i << 2;
+
+    printf("Found %d at index: %d\n\n\n", 4, binary_search(arr2, size2, 4));
+    printf("Found %d at index: %d\n\n\n", 24, binary_search(arr2, size2, 24));
+    printf("Found %d at index: %d\n\n\n", 88, binary_search(arr2, size2, 48));
+	free(arr2);
+	*/
+
     printf("Found %d at index: %d\n\n", 2, binary_search(array, size, 2));
     printf("Found %d at index: %d\n\n", 5, binary_search(array, 4, 5));
     printf("Found %d at index: %d\n", 999, binary_search(array, size, 999));
