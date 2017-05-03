@@ -23,7 +23,7 @@ popd
 INPUT="$1"
 HEADER=$(grep ".h&quot;" "$INPUT" | head -1 | cut -d ';' -f2 | cut -d '.' -f1)
 DIR=$(grep Directory: "$INPUT" | head -1 | cut -d \> -f3 | cut -d \< -f1)
-mkdir "$DIR"
+mkdir -p "$DIR"
 cp "$INPUT" "$DIR"
 cd "$DIR"
 echo -e "a.out\n*.swp\n~*\n_putchar.c\n" >> .gitignore

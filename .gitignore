@@ -1,2 +1,7 @@
 a.out
 *.swp
+a.out
+*.swp
+~*
+_putchar.c
+
