@@ -1,4 +1,4 @@
-#Holberton School - 0x1D-search_algorithms
+# Holberton School - 0x1D-search_algorithms
 Description
 ## New commands / functions used:
 ``gcc``
