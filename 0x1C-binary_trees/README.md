@@ -1,4 +1,4 @@
-#Holberton School - 0x1C-binary_trees
+# Holberton School - 0x1C-binary_trees
 Creating and manipulating binary trees
 
 ## Helpful Links
